@@ -1,0 +1,1 @@
+export const loginBackground = '#F3EDE0'
