@@ -11,6 +11,8 @@ import {
 
 import SplashScreen from 'react-native-splash-screen';
 import Login from './src/screens/Login';
+import { NavigationContainer } from '@react-navigation/native';
+import { RootNavigator } from './src/Navigator/RootNavigator';
 
 
 function App(): React.JSX.Element {
@@ -18,7 +20,9 @@ function App(): React.JSX.Element {
     SplashScreen.hide();
   }, []);
   return (
-   <Login/>
+    <NavigationContainer>
+      <RootNavigator/>
+    </NavigationContainer>
   );
 }
 

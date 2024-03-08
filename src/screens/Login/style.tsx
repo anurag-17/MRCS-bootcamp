@@ -6,19 +6,20 @@ export const styles = StyleSheet.create({
     mainContainer:{
         backgroundColor:loginBackground,
         flex:1,
+        justifyContent:'space-between'
     },
     tagline:{
         alignSelf:'center',
         fontFamily:Fonts.WIX_BOLD,
         fontSize:25,
-        marginTop:55,
+        marginTop:'20%',
 
     },
     appIcon:{
-        width:130,
-        height:130,
+        width:135,
+        height:135,
         alignSelf:'center',
-        marginVertical:100
+        marginVertical:'30%'
     },
     button: {
         height: 40,
@@ -32,13 +33,15 @@ export const styles = StyleSheet.create({
         color: 'white',
         fontSize: 14,
         fontFamily:Fonts.WIX_BOLD,
-        alignSelf:'center'
+        alignSelf:'center',
+
       },
       policyText:{
-        marginTop:45,
         alignSelf:'center',
         textAlign:'center',
+        fontSize:12,
         fontFamily:Fonts.WIX_REGULAR,
         marginHorizontal:10,
+        marginBottom:10,
       }
 })
