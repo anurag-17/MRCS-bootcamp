@@ -29,8 +29,9 @@ export const styles = StyleSheet.create({
     title:{
         fontFamily:Fonts.WIX_BOLD,
         color:LightPrimaryTextColor,
-        marginLeft:20,
         marginTop:10,
+        
+        marginBottom:40,
         fontSize:24,
         alignSelf:'center'
     },
@@ -54,7 +55,7 @@ export const styles = StyleSheet.create({
     },
     invalidInput:{
         color: 'red', 
-        marginLeft: 15,
+        marginLeft: 20,
         fontFamily:Fonts.WIX_REGULAR
     },
     forgotPasswordText:{

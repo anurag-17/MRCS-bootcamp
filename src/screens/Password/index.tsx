@@ -19,6 +19,8 @@ function Password() {
     const isValid = await authenticateLogin();
     setIsValidPassword(isValid);
     setLoader(false)
+    navigation.navigate("Home")
+
   };
 
   const authenticateLogin = async (): Promise<boolean> => {

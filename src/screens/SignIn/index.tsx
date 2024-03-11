@@ -5,6 +5,7 @@ import { styles } from './style'
 import { DarkBlue, LightGrayColor } from '../../theme/Colors'
 import CustomButton from '../../components/CustomButton'
 import { NavigationProp, useNavigation } from '@react-navigation/native'
+import AnimatedPlaceholderInput from '../../components/AnimatedPlaceHolderInput'
 
 function SignIn() {
   
@@ -55,6 +56,14 @@ function SignIn() {
         onChangeText={(text) => setEmail(text)}
         
       />
+      {/* <AnimatedPlaceholderInput
+        label='Enter your email'
+        placeholderTextColor={'gray'}
+        labelColor={isValidEmail?'':'red'}
+        value={email}
+        placeholder="E.g example@mail.com"
+        onChangeText={(text) => setEmail(text)}
+        /> */}
       {!isValidEmail && (
         <Text style={styles.invalidInput}>
           Invalid email address

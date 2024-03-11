@@ -1,6 +1,6 @@
 import React from 'react';
 import { TouchableOpacity, Text, ActivityIndicator, StyleSheet, ViewStyle, TextStyle } from 'react-native';
-import { LightBlueButton } from '../../theme/Colors';
+import { LightBlue } from '../../theme/Colors';
 import Fonts from '../../assets/Fonts';
 
 interface CustomButtonProps {
@@ -26,7 +26,7 @@ const CustomButton: React.FC<CustomButtonProps> = ({ onPress, title, validate = 
 const styles = StyleSheet.create({
   button: {
     height: 40,
-    backgroundColor: LightBlueButton,
+    backgroundColor: LightBlue,
     borderRadius: 20,
     justifyContent: 'center',
     alignSelf: 'center',
