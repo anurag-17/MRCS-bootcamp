@@ -1,0 +1,68 @@
+import { StyleSheet } from "react-native";import { LightGrayColor, grayOuterLine as grayBorderLine, secondaryTextColor } from "../../../theme/Colors";
+import Fonts from "../../../assets/Fonts";
+
+
+export const styles  = StyleSheet.create({
+    announceText:{
+        color:secondaryTextColor,
+        fontSize:15,
+        fontFamily:Fonts.WIX_MEDIUM,
+        marginLeft:20,
+        marginTop:20
+    },
+    bootCampContiner:{
+        borderColor:grayBorderLine,
+        height:186,
+        borderRadius:4,
+        borderWidth:1,
+        marginHorizontal:20,
+        marginTop:10
+    },
+    bootCampLogoContainer:{
+        flexDirection:'row',
+        margin:20
+    },
+    roundLogoIcon:{
+        width:36,
+        height:36,
+        alignSelf:'center',
+        marginRight:20
+    },
+    bootCampText:{
+        color:secondaryTextColor,
+        fontFamily:Fonts.WIX_SEMI_BOLD,
+        fontSize:14,
+    },
+    bootCampMockText:{
+        color:secondaryTextColor,
+        fontFamily:Fonts.WIX_MEDIUM,
+        fontSize:18,
+        marginLeft:20
+    },
+    bootCampMockRecordingText:{
+        color:LightGrayColor,
+        fontFamily:Fonts.WIX_MEDIUM,
+        fontSize:15,
+        marginLeft:20,
+        marginTop:5,
+        width:'80%',
+        lineHeight:22
+    },
+    dayText:{
+        color:LightGrayColor,
+        fontFamily:Fonts.WIX_REGULAR,
+        fontSize:12,
+    },
+    scissorsImage:{
+        marginTop:50,
+        height:321,
+        width:'90%',marginHorizontal:20
+    },
+    upcomingText:{
+        color:secondaryTextColor,
+        fontSize:15,
+        fontFamily:Fonts.WIX_MEDIUM,
+        marginLeft:20,
+        marginVertical:20
+    },
+})

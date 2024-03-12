@@ -1,6 +1,10 @@
 export {default as HeaderBell} from './header/headerBell.svg';
 export {default as HeaderChat} from './header/headerChat.svg';
 export {default as HomeLogo} from './home/homeLogo.svg';
+export {default as BootCampRoundLogo} from './home/bootCampRoundLogo.svg';
+export {default as Scissors} from './home/scissors.svg';
+export {default as Share} from './home/share.svg';
+export {default as London} from './home/London.svg';
 
 export {default as BackIcon} from './back.svg'
 

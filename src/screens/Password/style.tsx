@@ -54,7 +54,7 @@ export const styles = StyleSheet.create({
     },
     invalidInput:{
         color: 'red', 
-        marginLeft: 15,
+        marginLeft: 20,
         fontFamily:Fonts.WIX_REGULAR
     },
     forgotPasswordText:{

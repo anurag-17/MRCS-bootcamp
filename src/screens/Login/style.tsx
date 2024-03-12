@@ -1,5 +1,5 @@
 import {StyleSheet}  from "react-native";
-import { loginBackground } from "../../theme/Colors";
+import { LightPrimaryTextColor, loginBackground } from "../../theme/Colors";
 import Fonts from "../../assets/Fonts";
 
 export const styles = StyleSheet.create({
@@ -13,7 +13,7 @@ export const styles = StyleSheet.create({
         fontFamily:Fonts.WIX_BOLD,
         fontSize:25,
         marginTop:'20%',
-
+        color:LightPrimaryTextColor
     },
     appIcon:{
         width:135,
@@ -41,6 +41,7 @@ export const styles = StyleSheet.create({
         textAlign:'center',
         fontSize:12,
         fontFamily:Fonts.WIX_REGULAR,
+        color:LightPrimaryTextColor,
         marginHorizontal:10,
         marginBottom:10,
       }

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Image, KeyboardAvoidingView, Platform, Text, TextInput, TouchableOpacity, View } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { styles } from './style'
@@ -30,6 +30,16 @@ function SignIn() {
     // Basic email validation
     return /^\S+@\S+\.\S{2,}$/d.test(email);
   };
+
+  useEffect(() => {
+    if(email.length>0){
+      const isValid = validateEmail(email);
+      setIsValidEmail(isValid);
+    }
+    else{
+      setIsValidEmail(true)
+    }
+  }, [email]);
   return (
     <SafeAreaView style={styles.mainContainer}>
 
@@ -48,22 +58,24 @@ function SignIn() {
       <Text style={styles.enterEmailTitle}>
         {'Enter your email to continue'}
       </Text>
-      <Text style={[styles.enterEmail,!isValidEmail?{color:'red'}:{}]}>{'Enter your email'}</Text>
+      {/* <Text style={[styles.enterEmail,!isValidEmail?{color:'red'}:{}]}>{'Enter your email'}</Text>
       <TextInput
         placeholder="E.g example@mail.com"
         placeholderTextColor={'gray'}
         style={[styles.emailInput,]}
         onChangeText={(text) => setEmail(text)}
         
-      />
-      {/* <AnimatedPlaceholderInput
+      /> */}
+      <View style={{marginTop:30}}/>
+      <AnimatedPlaceholderInput
         label='Enter your email'
-        placeholderTextColor={'gray'}
+        autoFocus={true}
+        placeholderTextColor={isValidEmail ? 'gray' : 'red'}
         labelColor={isValidEmail?'':'red'}
         value={email}
         placeholder="E.g example@mail.com"
         onChangeText={(text) => setEmail(text)}
-        /> */}
+        />
       {!isValidEmail && (
         <Text style={styles.invalidInput}>
           Invalid email address

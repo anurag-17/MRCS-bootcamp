@@ -19,5 +19,11 @@ export const grayOpacityHomeHeaderIcon ='rgba(217, 217, 217, 0.6)'
 
 export const dividerLineColor='#E9EBF0'
 
+export const secondaryTextColor = '#161616'
+
+export const grayOuterLine = '#D8D8D8'
+
+
+
 
 

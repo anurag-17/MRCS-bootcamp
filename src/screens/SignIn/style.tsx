@@ -35,7 +35,7 @@ export const styles = StyleSheet.create({
     },
     enterEmailTitle:{
         alignSelf:'center',
-        marginTop:5,
+        marginVertical:5,
         color:LightGrayColor,
         fontFamily:Fonts.WIX_REGULAR,
         fontSize:15
@@ -57,7 +57,7 @@ export const styles = StyleSheet.create({
     },
     invalidInput:{
         color: 'red', 
-        marginLeft: 15,
+        marginLeft: 20,
         fontFamily:Fonts.WIX_REGULAR
     }  
 })

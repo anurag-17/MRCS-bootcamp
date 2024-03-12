@@ -2,6 +2,7 @@ import React from 'react'
 import { Text, View,FlatList, TouchableOpacity } from 'react-native'
 import { styles } from './styles'
 import { Communication, Critical, Examination, ForwardArrow, Heart, History, Procedure, Search, Surgical } from '../../../assets/images'
+import { Tab } from 'react-native-collapsible-tab-view'
 
 const NotesTab = () => {
 
@@ -36,12 +37,14 @@ const NotesTab = () => {
     },
   ]
   return (
+    
     <View style={{flex:1,backgroundColor:'white'}}>
         <TouchableOpacity style={styles.serchContainer}>
           <Search style={styles.searchIcon} />
           <Text style={styles.searchText}>{'Search'}</Text>
         </TouchableOpacity>
         <Text style={styles.bootCampText}>{'Boot Camp Notes'}</Text>
+        
         <FlatList
         data={DATA} 
         renderItem={

@@ -5,6 +5,7 @@ import { styles } from './style'
 import { DarkBlue, DarkBlueButton, LightGrayColor } from '../../theme/Colors'
 import CustomButton from '../../components/CustomButton'
 import { NavigationProp, useNavigation } from '@react-navigation/native'
+import AnimatedPlaceholderInput from '../../components/AnimatedPlaceHolderInput'
 
 function Password() {
   
@@ -19,6 +20,7 @@ function Password() {
     const isValid = await authenticateLogin();
     setIsValidPassword(isValid);
     setLoader(false)
+    if(isValid)
     navigation.navigate("Home")
 
   };
@@ -46,14 +48,14 @@ function Password() {
           </TouchableOpacity>
         </View>
         <Text style={styles.title}>{'Enter Your Password to Continue'}</Text>
-        <Text
+        {/* <Text
           style={[
             styles.enterPassword,
             !isValidPassword ? {color: 'red'} : {},
           ]}>
           {'Enter your password'}
-        </Text>
-        <View style={styles.inputContainer}>
+        </Text> */}
+        {/* <View style={styles.inputContainer}>
           <TextInput
             placeholder="Password"
             placeholderTextColor={'gray'}
@@ -74,7 +76,30 @@ function Password() {
               style={styles.eyeImage}
             />}
           </TouchableOpacity>
-        </View>
+        </View> */}
+              <View style={{marginTop:30}}/>
+
+        <AnimatedPlaceholderInput
+          // ref={passwordRef}
+          label="Enter your password"
+          labelColor={isValidPassword ? '' : 'red'}
+          value={password}
+          onEndEditing={() => {
+            if (password.length == 0) {
+              setIsValidPassword(false);
+            }
+          }}
+          autoFocus={true}
+          rightIcon='true'
+          placeholder="Password"
+          placeholderTextColor={isValidPassword ? 'gray' : 'red'}
+          secureTextEntry={!showPassword}
+          showPassword={showPassword}
+          onChangeText={txt => {
+            setPassword(txt);
+          }}
+          rightIconToggle={() => setShowPassword(!showPassword)}
+        />
         {!isValidPassword && (
           <Text style={styles.invalidInput}>
             Please re-enter your email or pawssword to log in

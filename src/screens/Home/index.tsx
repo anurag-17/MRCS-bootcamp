@@ -7,9 +7,9 @@ import { LinearGradient } from 'react-native-linear-gradient'
 import CustomButton from '../../components/CustomButton'
 import { TabsProvider, TabScreen, Tabs } from 'react-native-paper-tabs';
 import HomeTab from './HomeTab'
-import { useSharedValue } from 'react-native-reanimated';
-import { TabbedHeaderPager } from 'react-native-sticky-parallax-header';
 import NotesTab from './NotesTab'
+import MocksTab from './MocksTab'
+import HubTab from './HubTab'
 
 const Home = () => {
 
@@ -54,122 +54,38 @@ const Home = () => {
           </View>
         </View>
       </>
-      {/* <TabsProvider defaultIndex={0} >
-        <Tabs
-          // tabLabelStyle={tabLabelStyleOptions}
-          mode={'scrollable'}
-          showLeadingSpace={false}
-          tabHeaderStyle={{width: '100%'}}
-          disableSwipe>
-            <TabScreen label={'Aome'} icon={null} key={'3'}>
-              <HomeTab /> 
-            </TabScreen>
-            <TabScreen label={'Bome'} icon={null} key={'4'}>
-              <HomeTab />
-            </TabScreen>
-          <TabScreen label={'Home'} icon={null} key={'1'}>
-            <HomeTab />
-          </TabScreen>
-
-          <TabScreen label={'Dome'} icon={null} key={'2'}>
-            <HomeTab />
-          </TabScreen>
-          <TabScreen label={'Gome'} icon={null} key={'5'}>
-            <HomeTab />
-          </TabScreen>
-          <TabScreen label={'Iome'} icon={null} key={'6'}>
-            <HomeTab />
-          </TabScreen>
-          <TabScreen label={'Hmome'} icon={null} key={'7'}>
-            <HomeTab />
-          </TabScreen>
-          <TabScreen label={'Dome'} icon={null} key={'8'}>
-            <HomeTab />
-          </TabScreen>
-          <TabScreen label={'Lome'} icon={null} key={'9'}>
-            <HomeTab />
-          </TabScreen>
-          <TabScreen label={'Some'} icon={null} key={'10'}>
-            <HomeTab />
-          </TabScreen>
-        </Tabs>
-      </TabsProvider> */}
     </>
     
   );
 }
-const TABS = [
-  {
-    title: 'Home',
-  },
-  {
-    title: 'Hall of Fame',
-  },
-  {
-    title: 'Notes',
-  },
-  {
-    title: 'Notes',
-  },
-  {
-    title: 'Notes',
-  },
-  {
-    title: 'Notes',
-  },
-  {
-    title: 'Notes',
-  },
-];
 
   return (
-    // <FlatList
-    // style={{height:1000,flex:1}}
-    // ListHeaderComponent={_renderHeader}
-    // data={['']}
-    // renderItem={()=>             null}
-    // />
+  
     <>
         <StatusBar translucent backgroundColor={'transparent'} />
         <TabsProvider defaultIndex={0}>
         {_renderHeader()}
           <Tabs
             // tabLabelStyle={tabLabelStyleOptions}
+            
+            style={{backgroundColor:'white'}}
             mode={'scrollable'}
             showLeadingSpace={false}
             tabHeaderStyle={{width: '100%'}}
             disableSwipe>
-            <TabScreen label={'Aome'} icon={null} key={'3'} >
+            <TabScreen label={'Home'} icon={null} key={'1'} >
               <HomeTab />
             </TabScreen>
-            <TabScreen label={'Notes'} icon={null} key={'4'}>
+            <TabScreen label={'Notes'} icon={null} key={'2'}>
               <NotesTab />
             </TabScreen>
-            <TabScreen label={'Home'} icon={null} key={'1'}>
-              <HomeTab />
+            <TabScreen label={'Hub'} icon={null} key={'3'}>
+              <HubTab />
             </TabScreen>
-
-            <TabScreen label={'Dome'} icon={null} key={'2'}>
-              <HomeTab />
+            <TabScreen label={'Mocks'} icon={null} key={'4'}>
+              <MocksTab />
             </TabScreen>
-            <TabScreen label={'Gome'} icon={null} key={'5'}>
-              <HomeTab />
-            </TabScreen>
-            <TabScreen label={'Iome'} icon={null} key={'6'}>
-              <HomeTab />
-            </TabScreen>
-            <TabScreen label={'Hmome'} icon={null} key={'7'}>
-              <HomeTab />
-            </TabScreen>
-            <TabScreen label={'Dome'} icon={null} key={'8'}>
-              <HomeTab />
-            </TabScreen>
-            <TabScreen label={'Lome'} icon={null} key={'9'}>
-              <HomeTab />
-            </TabScreen>
-            <TabScreen label={'Some'} icon={null} key={'10'}>
-              <HomeTab />
-            </TabScreen>
+            
           </Tabs>
         </TabsProvider>
     </>

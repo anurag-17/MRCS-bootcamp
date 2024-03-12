@@ -1,6 +1,6 @@
-import { StyleSheet } from "react-native";
+import { Platform, StyleSheet } from "react-native";
 import Fonts from "../../assets/Fonts";
-import { LightPrimaryTextColor } from "../../theme/Colors";
+import { LightPrimaryTextColor, black } from "../../theme/Colors";
 
 
 export const styles = StyleSheet.create({
@@ -9,17 +9,18 @@ export const styles = StyleSheet.create({
     },
     inputContainer: {
       flexDirection: 'row',
-      alignItems: 'center',
       borderBottomWidth:1,
-      height:45,
       borderBottomColor: 'black',
   
     },
     input: {
-      flex: 1,
-      paddingVertical: 10,
+      paddingBottom: 5,
+      flex:1,
+      alignSelf:'flex-start',
+      marginTop:Platform.OS=='ios'?15:0,
       fontFamily:Fonts.WIX_REGULAR,
-  
+      color:black,
+      marginLeft:Platform.OS=='android'?-4:0
     },
     label: {
       position: 'absolute',
