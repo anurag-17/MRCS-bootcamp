@@ -4,6 +4,7 @@ import SignIn from '../screens/SignIn';
 import Password from '../screens/Password';
 import CreatePassword from '../screens/CreatePassword';
 import Home from '../screens/Home';
+import NotesContent from '../screens/Home/NotesTab/NotesContent';
 
 const Stack = createNativeStackNavigator();
 
@@ -16,7 +17,7 @@ const AuthStack = ()=>{
             <Stack.Screen name='Password' component={Password}/>
             <Stack.Screen name='CreatePassword' component={CreatePassword}/>
             <Stack.Screen name='Home' component={Home}/>
-
+            <Stack.Screen name='NotesContent' component={NotesContent}/>
         </Stack.Navigator>
     )
 }

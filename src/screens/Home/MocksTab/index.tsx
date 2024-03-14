@@ -39,8 +39,10 @@ const MocksTab = () => {
         </View>
         }
         data={['','','','']}
+        showsVerticalScrollIndicator={false}
         ItemSeparatorComponent={()=><View style={{height:20}}/>}
-        renderItem={()=><UpComingMock/>}
+        renderItem={()=>  <UpComingMock day={'8'} month={"MAR"} dateTime={'Mar 8, 2024 | 16:00'} status={"Online"} isEnded={false}/>
+      }
       />
   );
 };

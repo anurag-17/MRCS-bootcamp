@@ -18,6 +18,11 @@
 		7699B88040F8A987B510C191 /* libPods-mrcsbootcamp-mrcsbootcampTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-mrcsbootcamp-mrcsbootcampTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		DA66D851003C486E88C282DF /* WixMadeforText-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A6E961067C7B4D768A391D1F /* WixMadeforText-SemiBold.ttf */; };
+		CEF316A416464613BF8530CF /* EBGaramond-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C0597CFA39664DD7B1590F91 /* EBGaramond-Italic.ttf */; };
+		C35499BE643A4F07A72F3E76 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C9CA7AB1C7D148AD90AF94FA /* Poppins-Bold.ttf */; };
+		E91817374DA6456BBA412CF5 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5B96376D39284A4FBBBC60FE /* Poppins-Medium.ttf */; };
+		C2765DF3455A4064A8A93B1E /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DEAE38BA97AF4155BB131567 /* Poppins-Regular.ttf */; };
+		5871B414B81D4D85AD06DE63 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 38BFA9093198417C8F1383A3 /* Poppins-SemiBold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +57,11 @@
 		89C6BE57DB24E9ADA2F236DE /* Pods-mrcsbootcamp-mrcsbootcampTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mrcsbootcamp-mrcsbootcampTests.release.xcconfig"; path = "Target Support Files/Pods-mrcsbootcamp-mrcsbootcampTests/Pods-mrcsbootcamp-mrcsbootcampTests.release.xcconfig"; sourceTree = "<group>"; };
 		A6E961067C7B4D768A391D1F /* WixMadeforText-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "WixMadeforText-SemiBold.ttf"; path = "../src/assets/fonts/WixMadeforText-SemiBold.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		C0597CFA39664DD7B1590F91 /* EBGaramond-Italic.ttf */ = {isa = PBXFileReference; name = "EBGaramond-Italic.ttf"; path = "../src/assets/fonts/EBGaramond-Italic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		C9CA7AB1C7D148AD90AF94FA /* Poppins-Bold.ttf */ = {isa = PBXFileReference; name = "Poppins-Bold.ttf"; path = "../src/assets/fonts/Poppins-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		5B96376D39284A4FBBBC60FE /* Poppins-Medium.ttf */ = {isa = PBXFileReference; name = "Poppins-Medium.ttf"; path = "../src/assets/fonts/Poppins-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		DEAE38BA97AF4155BB131567 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; name = "Poppins-Regular.ttf"; path = "../src/assets/fonts/Poppins-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		38BFA9093198417C8F1383A3 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; name = "Poppins-SemiBold.ttf"; path = "../src/assets/fonts/Poppins-SemiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +163,11 @@
 				7EB553E29EF648258A8FCB40 /* WixMadeforText-Medium.ttf */,
 				4FC1093AF496447F8652D831 /* WixMadeforText-Regular.ttf */,
 				A6E961067C7B4D768A391D1F /* WixMadeforText-SemiBold.ttf */,
+				C0597CFA39664DD7B1590F91 /* EBGaramond-Italic.ttf */,
+				C9CA7AB1C7D148AD90AF94FA /* Poppins-Bold.ttf */,
+				5B96376D39284A4FBBBC60FE /* Poppins-Medium.ttf */,
+				DEAE38BA97AF4155BB131567 /* Poppins-Regular.ttf */,
+				38BFA9093198417C8F1383A3 /* Poppins-SemiBold.ttf */,
 			);
 			name = Resources;
 			path = "";
@@ -268,6 +283,11 @@
 				27AC0B461872451C825D86F7 /* WixMadeforText-Medium.ttf in Resources */,
 				6CCC6D1BF28A44269E1EFD3C /* WixMadeforText-Regular.ttf in Resources */,
 				DA66D851003C486E88C282DF /* WixMadeforText-SemiBold.ttf in Resources */,
+				CEF316A416464613BF8530CF /* EBGaramond-Italic.ttf in Resources */,
+				C35499BE643A4F07A72F3E76 /* Poppins-Bold.ttf in Resources */,
+				E91817374DA6456BBA412CF5 /* Poppins-Medium.ttf in Resources */,
+				C2765DF3455A4064A8A93B1E /* Poppins-Regular.ttf in Resources */,
+				5871B414B81D4D85AD06DE63 /* Poppins-SemiBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

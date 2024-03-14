@@ -21,6 +21,10 @@ export {default as History} from './notes/1 4.svg'
 export {default as Examination} from './notes/1 5.svg'
 export {default as Communication} from './notes/1 6.svg'
 export {default as Procedure} from './notes/1 7.svg'
+export {default as Chat} from './notes/chat.svg'
+export {default as Eye} from './notes/eye.svg'
+
+
 
 
 

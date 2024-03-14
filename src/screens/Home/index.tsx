@@ -10,12 +10,14 @@ import HomeTab from './HomeTab'
 import NotesTab from './NotesTab'
 import MocksTab from './MocksTab'
 import HubTab from './HubTab'
+import { DarkBlue } from '../../theme/Colors'
+import HallOfFameTab from './HallOfFameTab'
+import Fonts from '../../assets/Fonts'
 
 const Home = () => {
 
   const _renderHeader= ()=>
   {return (
-    <>
       <>
         {/* Header  */}
         <LinearGradient
@@ -53,9 +55,7 @@ const Home = () => {
             />
           </View>
         </View>
-      </>
-    </>
-    
+      </>    
   );
 }
 
@@ -66,23 +66,35 @@ const Home = () => {
         <TabsProvider defaultIndex={0}>
         {_renderHeader()}
           <Tabs
+          
             // tabLabelStyle={tabLabelStyleOptions}
-            
-            style={{backgroundColor:'white'}}
+            theme={{colors: {
+              primary:DarkBlue,
+              
+             
+            }
+          }
+            }
+            tabLabelStyle={{fontFamily:Fonts.POPPINS_MEDIUM,fontSize:14}}
+            style={styles.tabsShadowEffect}
             mode={'scrollable'}
+            
             showLeadingSpace={false}
-            tabHeaderStyle={{width: '100%'}}
+            // tabHeaderStyle={styles.tabsShadowEffect}
             disableSwipe>
             <TabScreen label={'Home'} icon={null} key={'1'} >
               <HomeTab />
             </TabScreen>
-            <TabScreen label={'Notes'} icon={null} key={'2'}>
+            <TabScreen label={'Hall of Fame'} icon={null} key={'2'} >
+              <HallOfFameTab />
+            </TabScreen>
+            <TabScreen label={'Notes'} icon={null} key={'3'}>
               <NotesTab />
             </TabScreen>
-            <TabScreen label={'Hub'} icon={null} key={'3'}>
+            <TabScreen label={'Hub'} icon={null} key={'4'}>
               <HubTab />
             </TabScreen>
-            <TabScreen label={'Mocks'} icon={null} key={'4'}>
+            <TabScreen label={'Mocks'} icon={null} key={'5'}>
               <MocksTab />
             </TabScreen>
             

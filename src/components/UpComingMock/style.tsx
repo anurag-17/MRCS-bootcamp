@@ -56,11 +56,14 @@ export const styles = StyleSheet.create({
     flexDirection:'row',
     justifyContent:'space-between',
     alignItems:'center',
-    paddingHorizontal:50,
-    paddingVertical:10
+    height:50
+  
   },
   shareContainer:{
-    flexDirection:'row'
+    flexDirection:'row',
+    flex:1,
+    justifyContent:'center',
+    height:50,
   },
   shareIcon:{
     alignSelf:'center',
@@ -80,10 +83,19 @@ export const styles = StyleSheet.create({
     height:31,
     width:1
   },
+  detailContainer:{
+    flex:1,    
+    height:50,
+    justifyContent:'center',
+    
+  },
   detailsText:{
     fontSize:14,
     color:secondaryTextColor,
     fontFamily:Fonts.WIX_SEMI_BOLD,
+    alignSelf:'center',
+  },
+  eventEndedText:{
     alignSelf:'center'
   }
 });

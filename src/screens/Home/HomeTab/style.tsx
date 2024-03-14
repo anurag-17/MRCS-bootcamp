@@ -1,4 +1,4 @@
-import { StyleSheet } from "react-native";import { LightGrayColor, grayOuterLine as grayBorderLine, secondaryTextColor } from "../../../theme/Colors";
+import { StyleSheet } from "react-native";import { DarkBlue, LightGrayColor, LightPrimaryTextColor, black, darkBg, grayOuterLine as grayBorderLine, secondaryTextColor, white } from "../../../theme/Colors";
 import Fonts from "../../../assets/Fonts";
 
 
@@ -65,4 +65,146 @@ export const styles  = StyleSheet.create({
         marginLeft:20,
         marginVertical:20
     },
+
+    //Welcome Container
+    welcomeContainer:{
+        marginVertical:10,
+        backgroundColor:white,
+        marginHorizontal:20,
+        paddingVertical:40,
+        borderRadius:5,
+        justifyContent:'center',
+        paddingHorizontal:40,
+    
+    },
+    welcomeText:{
+        fontFamily:Fonts.POPPINS_SEMIBOLD,
+        fontWeight:'600',
+        fontSize:18,
+        letterSpacing:5,
+        color:LightPrimaryTextColor
+    },
+    welcomeTagText:{
+        fontFamily:Fonts.EBGARAMOND_ITALIC,
+        fontWeight:'500',
+        fontSize:14,
+        color:black,
+    },
+    welcomeDetailsText:{
+        fontFamily:Fonts.WIX_MEDIUM,
+        fontWeight:'500',
+        fontSize:14,
+        width:'95%',
+        color:secondaryTextColor,
+        marginTop:20,
+        lineHeight:20
+    },
+    //Previous Candidates 
+    previousContainer:{
+        marginHorizontal:20,
+    },
+    whatPreviousRow:{
+        flexDirection:'row',
+        justifyContent:'space-between',
+    },
+    whatPreviousText:{
+        fontFamily:Fonts.WIX_SEMI_BOLD,
+        fontWeight:'600',
+        fontSize:14,
+        color:DarkBlue
+    },
+    viewAllText:{
+        fontFamily:Fonts.WIX_BOLD,
+        fontWeight:'600',
+        fontSize:16,
+        color:DarkBlue
+    },
+    multiImageContainer:{
+        marginTop:20,
+        height:160,
+        flexDirection:'row',
+        justifyContent:'space-between',
+    },
+    firstImage:{
+        height:158,
+        backgroundColor:grayBorderLine,
+        width:'48%',
+        borderRadius:3,
+    },
+    rightImageContainer:{
+        width:'50%',
+        height:158,
+        justifyContent:'space-between'
+    },
+    quarterImageContainer:{
+        flexDirection:'row',
+        justifyContent:'space-between'
+    },
+    quarterImage:{
+        width:'48%',
+        height:75,
+        backgroundColor:grayBorderLine,
+        borderRadius:3,
+    },
+    clockTowerImage:{
+        height:320,
+        width:'90%',
+        alignSelf:'center',
+        marginTop:20,
+        borderRadius:4
+    },
+
+    //Members Continer
+    membersMainContainer:{
+        marginVertical:30,
+        marginHorizontal:20,
+    
+    },
+    memberRow:{
+        flexDirection:'row',
+        justifyContent:'space-between',
+        marginBottom:10
+    },
+    membersNAllText:{
+        fontFamily:Fonts.WIX_BOLD,
+        fontWeight:'bold',
+        fontSize:16,
+        color:DarkBlue
+    },
+    
+    roundProfileImage:{
+        width:42,
+        height:42,
+        borderRadius:50,
+        backgroundColor:grayBorderLine
+    },
+    numberOfMebersText:{
+        marginVertical:15,
+        color:LightGrayColor,
+        fontFamily:Fonts.WIX_REGULAR,
+        fontSize:14,
+
+    },
+    inviteButtonStyle:{
+        height:30,
+        width:'45%',
+        backgroundColor:white,
+        borderRadius:30,
+        borderColor:DarkBlue,
+        borderWidth:1,
+        alignSelf:'flex-start'
+    },
+    inviteButtonTextStyle:{
+        color:DarkBlue,
+        fontFamily:Fonts.WIX_SEMI_BOLD,
+        fontSize:16,
+    },
+    questionText:{
+        marginVertical:25,
+        color:LightGrayColor,
+        fontFamily:Fonts.WIX_REGULAR,
+        fontSize:16
+    }
+    
+
 })

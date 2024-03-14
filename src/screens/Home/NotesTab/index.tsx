@@ -3,6 +3,7 @@ import { Text, View,FlatList, TouchableOpacity } from 'react-native'
 import { styles } from './styles'
 import { Communication, Critical, Examination, ForwardArrow, Heart, History, Procedure, Search, Surgical } from '../../../assets/images'
 import { Tab } from 'react-native-collapsible-tab-view'
+import { NavigationProp, useNavigation } from '@react-navigation/native'
 
 const NotesTab = () => {
 
@@ -36,8 +37,9 @@ const NotesTab = () => {
       icon:<Procedure style={styles.noteIcon}/>
     },
   ]
+  const navigation = useNavigation() as NavigationProp<any>
+
   return (
-    
     <View style={{flex:1,backgroundColor:'white'}}>
         <TouchableOpacity style={styles.serchContainer}>
           <Search style={styles.searchIcon} />
@@ -50,7 +52,7 @@ const NotesTab = () => {
         renderItem={
           ({item,index})=>{
           return (
-            <TouchableOpacity style={styles.noteContainer} key={index}>
+            <TouchableOpacity style={styles.noteContainer} key={index} onPress={()=>navigation.navigate('NotesContent',{name:item.name})}>
               <View style={styles.notTag}>
                 {item.icon}
                 <Text style={styles.noteName}>{item?.name}</Text>
@@ -59,9 +61,7 @@ const NotesTab = () => {
             </TouchableOpacity>
           );}
           }
-
         />
-
     </View>
   )
 }

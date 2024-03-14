@@ -60,6 +60,7 @@ export const styles = StyleSheet.create({
   },
   tabTopContainer: {
     marginTop:-35,
+    paddingBottom:5,
     borderTopLeftRadius: 20,
     borderTopRightRadius: 20,
     borderColor:white,
@@ -68,6 +69,18 @@ export const styles = StyleSheet.create({
       width: 0,
       height: 2,
     },
+    shadowOpacity: 0.18,
+    shadowRadius: 2.0,
+    elevation: 3,
+  },
+ 
+  tabsShadowEffect:{
+    backgroundColor: white,
+    shadowOffset: {
+      width: 0,
+      height: 3,
+    },
+    shadowColor:'black',
     shadowOpacity: 0.18,
     shadowRadius: 2.0,
     elevation: 3,
