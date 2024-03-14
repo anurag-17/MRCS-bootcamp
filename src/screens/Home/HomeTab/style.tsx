@@ -85,7 +85,7 @@ export const styles  = StyleSheet.create({
         color:LightPrimaryTextColor
     },
     welcomeTagText:{
-        fontFamily:Fonts.EBGARAMOND_ITALIC,
+        fontFamily:Fonts.EBGARAMOND_MEDIUM_ITALIC,
         fontWeight:'500',
         fontSize:14,
         color:black,

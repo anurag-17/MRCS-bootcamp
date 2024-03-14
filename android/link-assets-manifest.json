@@ -2,12 +2,20 @@
   "migIndex": 1,
   "data": [
     {
-      "path": "src/assets/fonts/EBGaramond-Italic.ttf",
-      "sha1": "74d842fe0befe3808f6f2cb076e42d2b7a21b94b"
+      "path": "src/assets/fonts/EBGaramond-MediumItalic.ttf",
+      "sha1": "b4eacbe00778b8e806b0541dbf1d25a1270776e6"
+    },
+    {
+      "path": "src/assets/fonts/EBGaramond-Regular.ttf",
+      "sha1": "be26da68f44ee5c3275cafcc5a352a4964f292a0"
     },
     {
       "path": "src/assets/fonts/Poppins-Bold.ttf",
       "sha1": "875cf0cecd647bcf22e79d633d868c1b1ec98dfa"
+    },
+    {
+      "path": "src/assets/fonts/Poppins-Light.ttf",
+      "sha1": "e247a92158e112f8bf7b638c8d95381d66b00dbb"
     },
     {
       "path": "src/assets/fonts/Poppins-Medium.ttf",

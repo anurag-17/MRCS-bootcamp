@@ -6,6 +6,7 @@ export const LightBlue = '#266fe4'
 export const DarkBlueButton = '#479ffe'
 export const tertiaryTextColor = '#20303D'
 export const quarternaryTextColor = '#22303B'
+export const blueTypeTextColor = '#00214B'
 
 
 export const white = '#FFFFFF'

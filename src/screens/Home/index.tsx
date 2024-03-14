@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { styles } from './style'
 import { BackIcon, HeaderBell, HeaderChat, HomeLogo } from '../../assets/images'
@@ -13,8 +13,12 @@ import HubTab from './HubTab'
 import { DarkBlue } from '../../theme/Colors'
 import HallOfFameTab from './HallOfFameTab'
 import Fonts from '../../assets/Fonts'
+import SkillsTab from './SkillsTab'
+import KnowledgeTab from './KnowledgeTab'
+import Study from './StudyTab'
 
 const Home = () => {
+  const [index, setIndex] = useState(0);
 
   const _renderHeader= ()=>
   {return (
@@ -63,7 +67,7 @@ const Home = () => {
   
     <>
         <StatusBar translucent backgroundColor={'transparent'} />
-        <TabsProvider defaultIndex={0}>
+        <TabsProvider defaultIndex={0} onChangeIndex={(i)=>setIndex(i)}>
         {_renderHeader()}
           <Tabs
           
@@ -79,22 +83,31 @@ const Home = () => {
             style={styles.tabsShadowEffect}
             mode={'scrollable'}
             
+            
             showLeadingSpace={false}
-            // tabHeaderStyle={styles.tabsShadowEffect}
             disableSwipe>
-            <TabScreen label={'Home'} icon={null} key={'1'} >
+            <TabScreen label={'Home'}  icon={null} key={'1'} >
               <HomeTab />
             </TabScreen>
             <TabScreen label={'Hall of Fame'} icon={null} key={'2'} >
               <HallOfFameTab />
             </TabScreen>
-            <TabScreen label={'Notes'} icon={null} key={'3'}>
+            <TabScreen  label={'Notes'} icon={null} key={'4'}>
               <NotesTab />
             </TabScreen>
-            <TabScreen label={'Hub'} icon={null} key={'4'}>
+            <TabScreen  label={'Study Programs'} icon={null} key={'5'}>
+              <Study />
+            </TabScreen>
+            <TabScreen label={'Hub'} icon={null} key={'6'}>
               <HubTab />
             </TabScreen>
-            <TabScreen label={'Mocks'} icon={null} key={'5'}>
+            <TabScreen label={'"Skills"'} icon={null} key={'7'}>
+              <SkillsTab />
+            </TabScreen>
+            <TabScreen label={`"Knowledge"`} icon={null} key={'8'}>
+              <KnowledgeTab />
+            </TabScreen>
+            <TabScreen label={'Mocks'} icon={null} key={'9'}>
               <MocksTab />
             </TabScreen>
             

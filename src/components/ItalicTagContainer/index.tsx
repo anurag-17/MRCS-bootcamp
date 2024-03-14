@@ -50,7 +50,7 @@ const styles  =StyleSheet.create( {
         color:LightPrimaryTextColor
     },
     tagText:{
-        fontFamily:Fonts.EBGARAMOND_ITALIC,
+        fontFamily:Fonts.EBGARAMOND_MEDIUM_ITALIC,
         fontWeight:'500',
         fontSize:14,
         color:secondaryTextColor,

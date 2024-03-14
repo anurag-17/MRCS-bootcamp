@@ -78,11 +78,12 @@ export const styles = StyleSheet.create({
     backgroundColor: white,
     shadowOffset: {
       width: 0,
-      height: 3,
+      height: 2,
     },
     shadowColor:'black',
-    shadowOpacity: 0.18,
+    shadowOpacity: 0.9,
     shadowRadius: 2.0,
+  
     elevation: 3,
   },
   homeHeaderLogo:{

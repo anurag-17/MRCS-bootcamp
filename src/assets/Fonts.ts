@@ -7,6 +7,10 @@ export default {
     POPPINS_MEDIUM:'Poppins-Medium',
     POPPINS_SEMIBOLD:'Poppins-SemiBold',
     POPPINS_REGULAR:'Poppins-Regular',
-    EBGARAMOND_ITALIC:'EBGaramond-Italic'
+    POPPINS_LIGHT:'Poppins-Light',
+    EBGARAMOND_ITALIC:'EBGaramond-Italic',
+    EBGARAMOND_MEDIUM_ITALIC:'EBGaramond-MediumItalic',
+    EBGARAMOND_REGULAR:'EBGaramond-Regular'
+
 
 }
