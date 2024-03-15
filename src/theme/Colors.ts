@@ -17,7 +17,7 @@ export const LightGrayColor ='#676767'
 
 export const darkBg = '#0f1219'
 
-export const grayHomeHeaderIcon ='#D9D9D9'
+export const grayD9 ='#D9D9D9'
 export const grayOpacityHomeHeaderIcon ='rgba(217, 217, 217, 0.6)'
 
 export const dividerLineColor='#E9EBF0'
@@ -25,6 +25,14 @@ export const dividerLineColor='#E9EBF0'
 export const secondaryTextColor = '#161616'
 
 export const grayOuterLine = '#D8D8D8'
+
+export const grayLightBlue = '#DCE0DF'
+
+export const grayE8 = '#E8E8E8'
+
+export const grayEC = '#E7ECF0'
+
+
 
 
 

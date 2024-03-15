@@ -16,6 +16,8 @@ import Fonts from '../../assets/Fonts'
 import SkillsTab from './SkillsTab'
 import KnowledgeTab from './KnowledgeTab'
 import Study from './StudyTab'
+import GroupTab from './GroupsTab'
+import ForumTab from './ForumTab'
 
 const Home = () => {
   const [index, setIndex] = useState(0);
@@ -110,7 +112,12 @@ const Home = () => {
             <TabScreen label={'Mocks'} icon={null} key={'9'}>
               <MocksTab />
             </TabScreen>
-            
+            <TabScreen label={'Groups'} icon={null} key={'10'}>
+              <GroupTab />
+            </TabScreen>
+            <TabScreen label={'Forum'} icon={null} key={'11'}>
+              <ForumTab />
+            </TabScreen>
           </Tabs>
         </TabsProvider>
     </>

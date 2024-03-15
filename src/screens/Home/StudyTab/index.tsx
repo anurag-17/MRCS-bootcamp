@@ -58,6 +58,7 @@ const Study = () => {
             onPress={() => console.log('hhelo')}
             containerStyle={{}}
             type='Study'
+            btnTitle={item.isJoined ? `Continue` : `Join`}
           />
         )}
       />

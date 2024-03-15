@@ -1,5 +1,5 @@
 import { StyleSheet,Dimensions,Platform } from "react-native";
-import { DarkBlue, black, darkBg, grayHomeHeaderIcon, grayOpacityHomeHeaderIcon, white } from "../../theme/Colors";
+import { DarkBlue, black, darkBg, grayD9, grayOpacityHomeHeaderIcon, white } from "../../theme/Colors";
 import Fonts from "../../assets/Fonts";
 
 
@@ -37,7 +37,7 @@ export const styles = StyleSheet.create({
     marginRight: 20,
   },
   leftGrayCircleContainer: {
-    backgroundColor: grayHomeHeaderIcon,
+    backgroundColor: grayD9,
     height: 28,
     width: 28,
     borderRadius: 50,

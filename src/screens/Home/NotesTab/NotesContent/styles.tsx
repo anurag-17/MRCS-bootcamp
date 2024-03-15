@@ -1,5 +1,5 @@
 import { StyleSheet,Dimensions,Platform } from "react-native";
-import { DarkBlue, black, darkBg, dividerLineColor, grayHomeHeaderIcon, grayOpacityHomeHeaderIcon, quarternaryTextColor, tertiaryTextColor, white } from "../../../../theme/Colors";
+import { DarkBlue, black, darkBg, dividerLineColor, grayD9, grayOpacityHomeHeaderIcon, quarternaryTextColor, tertiaryTextColor, white } from "../../../../theme/Colors";
 import Fonts from "../../../../assets/Fonts";
 
 

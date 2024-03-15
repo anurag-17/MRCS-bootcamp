@@ -25,6 +25,25 @@ export {default as Chat} from './notes/chat.svg'
 export {default as Eye} from './notes/eye.svg'
 
 
+//Forum svgs 
+
+export {default as AddPost} from '../images/forum/addPost.svg' 
+
+export {default as Comment} from '../images/forum/comment.svg' 
+export {default as EyeF} from '../images/forum/eye.svg' 
+export {default as Filter} from '../images/forum/filter.svg' 
+
+export {default as Like} from '../images/forum/like.svg'
+export {default as Liked} from '../images/forum/liked.svg' 
+
+export {default as ThreeDots} from '../images/forum/threeDots.svg' 
+
+
+
+
+
+
+
 
 
 

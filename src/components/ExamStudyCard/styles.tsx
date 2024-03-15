@@ -1,6 +1,6 @@
 import { StyleSheet } from "react-native";
 import Fonts from "../../assets/Fonts";
-import { white, grayOuterLine, secondaryTextColor, LightGrayColor } from "../../theme/Colors";
+import { white, grayOuterLine, secondaryTextColor, LightGrayColor, grayLightBlue } from "../../theme/Colors";
 
 export const styles = StyleSheet.create({
     container: {
@@ -19,6 +19,13 @@ export const styles = StyleSheet.create({
       width:'100%',
       borderTopRightRadius: 4,
       borderTopLeftRadius: 4,
+    },
+    suggestedImage: {
+      height: 65,
+      width:64,
+      borderRadius:5,
+      alignSelf:'center',
+      marginRight:30
     },
     middleContainr: {
       marginLeft: 20,
@@ -66,5 +73,33 @@ export const styles = StyleSheet.create({
       fontSize: 14,
       color: secondaryTextColor,
       lineHeight:20,
-    }
+    },
+
+    roundProfilesContainer:{
+      flexDirection:'row'
+  },
+  roundProfileImage:{
+      width:21,
+      height:21,
+      borderRadius:50,
+      backgroundColor:grayLightBlue,
+      justifyContent:'center',
+      alignSelf:'center'
+  },
+  roundProfileImageLeftOverLap:{
+    marginLeft:-7
+  },
+  blankProfileImageText:{
+    fontFamily:Fonts.POPPINS_MEDIUM,
+    fontSize:12,
+    alignSelf:"center",
+    color:white,
+    textTransform:'capitalize'
+  },
+  suggestedGroupContainer:{
+    marginLeft: 20,
+    marginVertical:20,
+    flexDirection:'row'
+  },
+
   });
