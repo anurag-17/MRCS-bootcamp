@@ -2,10 +2,11 @@ import React from 'react';
 import { StyleSheet, View, FlatList} from 'react-native';
 import ExamStudyCard from '../../../components/ExamStudyCard';
 import { white } from '../../../theme/Colors';
+import { NavigationProp, useNavigation } from '@react-navigation/native';
 
 
 const Study = () => {
-
+  const navigation = useNavigation() as NavigationProp<any>
   const studyPrograms = [
     {
       key: '1',
@@ -41,6 +42,7 @@ const Study = () => {
       subject: 'Procedure',
     },
   ];
+
   return (
     <View style={styles.container}>
       <FlatList
@@ -55,7 +57,7 @@ const Study = () => {
             stepsPercentage={item.stepsPercentage}
             numberOfParticipants={item.numberOfParticipants}
             subject={item.subject}
-            onPress={() => console.log('hhelo')}
+            onPress={() => navigation.navigate('StudyStack',{ screen: 'StudyInnerTab',params:{subject:item.subject}})}
             containerStyle={{}}
             type='Study'
             btnTitle={item.isJoined ? `Continue` : `Join`}

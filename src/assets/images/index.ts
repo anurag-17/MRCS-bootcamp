@@ -38,8 +38,15 @@ export {default as Liked} from '../images/forum/liked.svg'
 
 export {default as ThreeDots} from '../images/forum/threeDots.svg' 
 
+//Common svgs
 
 
+export {default as BackArrow} from '../images/BackArrow.svg' 
+export {default as WhiteBackArrow} from '../images/WhiteBackArrow.svg' 
+export {default as CommentBlank } from '../images/forum/commentBlank.svg'
+export {default as Cross} from '../images/cross.svg'
+ 
+export {default as Station} from '../images/study/station.svg'
 
 
 

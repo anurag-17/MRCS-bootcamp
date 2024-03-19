@@ -16,6 +16,7 @@ export const LightPrimaryTextColor ='#20303C'
 export const LightGrayColor ='#676767'
 
 export const darkBg = '#0f1219'
+export const black11 = '#111111'
 
 export const grayD9 ='#D9D9D9'
 export const grayOpacityHomeHeaderIcon ='rgba(217, 217, 217, 0.6)'
@@ -31,6 +32,8 @@ export const grayLightBlue = '#DCE0DF'
 export const grayE8 = '#E8E8E8'
 
 export const grayEC = '#E7ECF0'
+
+export const yellow = '#FFC107'
 
 
 

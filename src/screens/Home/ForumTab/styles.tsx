@@ -1,4 +1,4 @@
-import { StyleSheet } from "react-native";import { DarkBlue, LightGrayColor, blueTypeTextColor, grayOuterLine as grayBorderLine, grayE8, grayEC, grayOuterLine, secondaryTextColor, white } from "../../../theme/Colors";
+import { StyleSheet } from "react-native";import { DarkBlue, LightGrayColor, black11, blueTypeTextColor, grayOuterLine as grayBorderLine, grayD9, grayE8, grayEC, grayOuterLine, secondaryTextColor, white } from "../../../theme/Colors";
 import Fonts from "../../../assets/Fonts";
 
 
@@ -44,6 +44,13 @@ export const styles  = StyleSheet.create({
         overflow:'hidden'
 
     },
+    createPostContainer:{
+        flexDirection:'row',
+        marginHorizontal:20,
+        justifyContent:'space-between',
+        marginTop:5,
+        marginBottom:15
+    },
     
     addPostIcon:{
         height:22,
@@ -60,13 +67,129 @@ export const styles  = StyleSheet.create({
         borderLeftWidth:1,
         paddingLeft:10,
         justifyContent:'center',
-        borderLeftColor:grayOuterLine
+        borderLeftColor:grayOuterLine,
+    },
+    postContainer:{
+        borderBottomColor:grayEC,
+        borderBottomWidth:8,
+        paddingHorizontal:20,
+        backgroundColor:white
     },
     fatDivider:{
-        marginTop:12,
         backgroundColor:grayEC,
-        height:7,
-        width:'100%'
+        height:8,
+        marginVertical:7
+    },
+    rowSpaceBetween:{
+        flexDirection:'row',
+        justifyContent:"space-between"
+    },
+    recentText:{
+        fontFamily:Fonts.POPPINS_MEDIUM,
+        fontSize:14,
+        color:secondaryTextColor,
+        marginVertical:14
+    },
+    text13light:{
+        fontFamily:Fonts.POPPINS_LIGHT,
+        fontSize:13,
+        color:secondaryTextColor,
+    },
+    text13medium:{
+        fontFamily:Fonts.POPPINS_MEDIUM,
+        fontSize:13,
+        color:LightGrayColor,
+    },
+    text13semi:{
+        fontFamily:Fonts.POPPINS_SEMIBOLD,
+        fontSize:13,
+        color:LightGrayColor,
+        alignSelf:'center'
+    },
+    text18semi:{
+        fontFamily:Fonts.POPPINS_SEMIBOLD,
+        fontSize:18,
+        color:black11,
+    },
+    filterContainer:{
+        alignSelf:'center',
+        flexDirection:'row'
+    },
+    filterIcon:{
+        height:15,
+        width:19,
+        alignSelf:'center',
+        marginRight:10
+    },
+    profileContainer:{
+        flexDirection:'row'
+    },
+
+    profiPicBig:{
+        height:37,
+        width:37,
+        borderRadius:50,
+        alignSelf:'center',
+        backgroundColor:grayE8,
+        marginRight:15
+    },
+    threeDots:{
+        width:3.6,
+        height:16,
+        alignSelf:'center'
+    },
+    reactionRow:{
+        flexDirection:'row',
+        justifyContent:'space-between',
+        marginTop:15,
+    },
+    grayDivider:{
+        backgroundColor:grayBorderLine,
+        height:1,
+        marginTop:15
+    },
+    verticalLine:{
+        backgroundColor:grayOuterLine,
+        height:31,
+        width:1
+      },
+    likeIcon:{
+        height:16,
+        width:17,
+        alignSelf:'center',
+        marginRight:5
+    },
+    commentIcon:{
+        height:10,
+        width:16,
+        alignSelf:'center',
+        marginRight:5
+    },
+    eyeIcon:{
+        height:16,
+        width:17,
+        alignSelf:'center',
+        marginRight:5
+    },
+    smallProfilePic:{
+        height:19,
+        width:19,
+        alignSelf:'center',
+        backgroundColor:grayE8,
+        borderRadius:50,
+        marginRight:5
+    },
+    text14popMedium:{
+        fontFamily:Fonts.POPPINS_MEDIUM,
+        fontSize:14,
+        color:LightGrayColor,
+        alignSelf:'center',
+        marginRight:5
+    },
+    likeCommentRow:{
+        justifyContent:'space-between'
+
     }
+
     
 })
