@@ -58,6 +58,7 @@ const StationList = () => {
   return (
     <View style={styles.mainContainer}>
       <Header
+        type='blue'
         title={'Section Details'}
         containerStyle={styles.headerStyle}
         subTitle={`${subject} Stations`}

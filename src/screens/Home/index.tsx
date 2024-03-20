@@ -18,10 +18,11 @@ import KnowledgeTab from './KnowledgeTab'
 import Study from './StudyTab'
 import GroupTab from './GroupsTab'
 import ForumTab from './ForumTab'
+import { NavigationProp, useNavigation } from '@react-navigation/native'
 
 const Home = () => {
   const [index, setIndex] = useState(0);
-
+  const navigation = useNavigation() as NavigationProp<any>
   const _renderHeader= ()=>
   {return (
       <>
@@ -55,7 +56,7 @@ const Home = () => {
             <CustomButton
               buttonStyle={styles.buttonStyle}
               textStyle={styles.btnTexStyle}
-              onPress={() => null}
+              onPress={() => navigation.navigate('ContactUsScreen')}
               title="Contact Us"
               validate={false}
             />

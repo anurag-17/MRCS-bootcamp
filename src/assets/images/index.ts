@@ -8,12 +8,14 @@ export {default as London} from './home/London.svg';
 
 export {default as BackIcon} from './back.svg'
 
+export {default as ImageIcon} from './home/imageIcon.svg'
+export {default as FaqBotIcon} from './home/FaqBotIcon.svg'
+export {default as ChatIcon} from './home/ChatIcon.svg'
+export const UpArrowIcon = require('./home/UpArrow.png')
 
-
+//Notes svgs
 export {default as ForwardArrow} from './notes/forwarArrow.svg'
-
 export {default as Search} from './notes/search.svg'
-
 export {default as Heart} from './notes/1 1.svg'
 export {default as Surgical} from './notes/1 2.svg'
 export {default as Critical} from './notes/1 3.svg'
@@ -26,16 +28,12 @@ export {default as Eye} from './notes/eye.svg'
 
 
 //Forum svgs 
-
 export {default as AddPost} from '../images/forum/addPost.svg' 
-
 export {default as Comment} from '../images/forum/comment.svg' 
 export {default as EyeF} from '../images/forum/eye.svg' 
 export {default as Filter} from '../images/forum/filter.svg' 
-
 export {default as Like} from '../images/forum/like.svg'
 export {default as Liked} from '../images/forum/liked.svg' 
-
 export {default as ThreeDots} from '../images/forum/threeDots.svg' 
 
 //Common svgs
@@ -47,6 +45,11 @@ export {default as CommentBlank } from '../images/forum/commentBlank.svg'
 export {default as Cross} from '../images/cross.svg'
  
 export {default as Station} from '../images/study/station.svg'
+
+
+export {default as StepDoneIcon} from '../images/study/stepDone.svg'
+
+export {default as GreenCheckIcon} from '../images/study/greenCheck.svg'
 
 
 

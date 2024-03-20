@@ -12,6 +12,7 @@ const ForumPost = () => {
       <View style={styles.mainContainer}>
         <StatusBar translucent backgroundColor={DarkBlue} />
         <Header
+          type='blue'
           title={'Post'}
           containerStyle={styles.headerStyle}
           subTitle={'MRCS Boot Camp UK'}

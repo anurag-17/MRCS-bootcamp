@@ -9,6 +9,9 @@ import StudyInnerTab from '../screens/Home/StudyTab/StydyInnerTab';
 import ForumPost from '../screens/Home/ForumTab/ForumPost';
 import StationList from '../screens/Home/StudyTab/StationList';
 import StepScreen from '../screens/Home/StudyTab/StepScreen';
+import StepCompletedScreen from '../screens/Home/StudyTab/StepCompletedScreen';
+import AnnouncementsScreen from '../screens/Home/HomeTab/AnnouncemetsScreen';
+import ContactUsScreen from '../screens/Home/HomeTab/ContactUsScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -21,6 +24,9 @@ const AuthStack = ()=>{
             <Stack.Screen name='Password' component={Password}/>
             <Stack.Screen name='CreatePassword' component={CreatePassword}/>
             <Stack.Screen name='Home' component={Home}/>
+            <Stack.Screen name='AnnouncementsScreen' component={AnnouncementsScreen} options={{animation:'slide_from_bottom'}}/>
+            <Stack.Screen name='ContactUsScreen' component={ContactUsScreen} options={{animation:'slide_from_bottom'}}/>
+            
             <Stack.Screen name='NotesContent' component={NotesContent}/>
             <Stack.Screen name='ForumPost' component={ForumPost}/>
         </Stack.Navigator>
@@ -34,6 +40,7 @@ const StudyStack = ()=>{
             <Stack.Screen name='StudyInnerTab' component={StudyInnerTab}/>
             <Stack.Screen name='StationList' component={StationList} />
             <Stack.Screen name='StepScreen' component={StepScreen} options={{animation:'slide_from_bottom'}}/>
+            <Stack.Screen name='StepCompletedScreen' component={StepCompletedScreen} options={{animation:'slide_from_bottom'}}/>
 
         </Stack.Navigator>
     )

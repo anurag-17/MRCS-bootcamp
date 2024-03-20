@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   FlatList,
   SafeAreaView,
@@ -10,11 +10,12 @@ import {
 import {
   DarkBlue,
   black,
+  grayE8,
   secondaryTextColor,
   white,
 } from '../../../../theme/Colors';
 import Fonts from '../../../../assets/Fonts';
-import {Cross, Share} from '../../../../assets/images';
+import {Cross, GreenCheckIcon, Share} from '../../../../assets/images';
 import {
   NavigationProp,
   RouteProp,
@@ -23,27 +24,12 @@ import {
 } from '@react-navigation/native';
 import Svg, {Circle} from 'react-native-svg';
 import CustomButton from '../../../../components/CustomButton';
+import Header from '../../../../components/Header';
 
 const StepScreen = () => {
   const navigation = useNavigation() as NavigationProp<any>;
   const routes = useRoute();
   const {name} = routes?.params as RouteProp<any>;
-  const _stepHeader = () => {
-    return (
-      <View style={styles.stepHeader}>
-        <View style={{flexDirection: 'row'}}>
-          <TouchableOpacity onPress={() => navigation.goBack()}>
-            <Cross height={14} style={styles.backArrow} />
-          </TouchableOpacity>
-          <Text style={styles.title}>{'Step'}</Text>
-        </View>
-        <TouchableOpacity style={{alignSelf: 'center'}}>
-          <Share height={16} width={16} style={{alignSelf: 'center'}} />
-        </TouchableOpacity>
-      </View>
-    );
-  };
-
   interface Step {
     id: number;
     value: string;
@@ -165,9 +151,18 @@ const StepScreen = () => {
       </View>
     );
   };
+
+  const [isMarked, setIsMarked] = useState(false);
+
+  console.log("isMarked : ",isMarked)
   return (
     <SafeAreaView style={styles.mainContainer}>
-      {_stepHeader()}
+      <Header 
+      type="white"
+      title='Step'
+      isShare={true}
+      titleStyle={styles.title}
+      />
       <View style={{flex: 0.93}}>
         <FlatList
           showsVerticalScrollIndicator={false}
@@ -190,16 +185,52 @@ const StepScreen = () => {
           renderItem={_renderSection}
         />
       </View>
-      <View style={{flex: 0.07}}>
-        <View style={styles.stickyFooter}>
-          <CustomButton
-            textStyle={styles.completBtnTxtStyle}
-            buttonStyle={styles.completBtnStyle}
-            title="Mark as Complete"
-            validate={false}
-            onPress={() => null}
-          />
-        </View>
+      <View style={isMarked ? {flex: 0.125} : {flex: 0.07}}>
+        {isMarked === false ? (
+          <View style={styles.stickyFooter}>
+            <CustomButton
+              textStyle={styles.completBtnTxtStyle}
+              buttonStyle={styles.completBtnStyle}
+              title="Mark as Complete"
+              validate={false}
+              onPress={() => {
+                setIsMarked(true);
+                navigation.navigate('StepCompletedScreen');
+              }}
+            />
+          </View>
+        ) : (
+          <View >
+            <View style={{flexDirection: 'row',borderBottomWidth:1,paddingBottom:10,borderBottomColor:grayE8}}>
+              <GreenCheckIcon height={20} style={{alignSelf: 'center'}} />
+              <View>
+                <Text style={styles.stepCompleTxt}>Step Completed</Text>
+                <Text style={styles.dateTxt}>Mar 16, 2024</Text>
+              </View>
+            </View>
+            <View style={{flexDirection:'row',justifyContent:'space-between',paddingHorizontal:20}}>
+            <CustomButton
+              textStyle={styles.undoBtnTexStyle}
+              buttonStyle={styles.undoButtonStyle}
+              title="Undo"
+              validate={false}
+              onPress={() => {
+                setIsMarked(false)
+              }}
+            />
+            <CustomButton
+              textStyle={styles.completBtnTxtStyle}
+              buttonStyle={styles.completBtnStyle}
+              title="Next Step"
+              validate={false}
+              onPress={() => {
+               null
+              }}
+            />
+            </View>
+
+          </View>
+        )}
       </View>
     </SafeAreaView>
   );
@@ -277,7 +308,6 @@ const styles = StyleSheet.create({
   },
   stickyFooter:{
     backgroundColor:'rgba(250,250,250,0.6)',
-    height:100,
   },
   completBtnStyle:{
     alignSelf: 'center',
@@ -289,5 +319,27 @@ const styles = StyleSheet.create({
     color:white,
     fontSize:14,
     fontFamily:Fonts.POPPINS_SEMIBOLD
-  }
+  },
+  stepCompleTxt:{
+    fontFamily: Fonts.POPPINS_SEMIBOLD,
+    fontSize: 14,
+    color: DarkBlue,
+  },
+  dateTxt:{
+    fontFamily: Fonts.POPPINS_LIGHT,
+    fontSize: 12,
+    color: secondaryTextColor,
+  },
+  undoButtonStyle: {
+    backgroundColor: white,
+    marginVertical: 15,
+    borderRadius: 35,
+    borderWidth:1,
+    borderColor:DarkBlue,
+  },
+  undoBtnTexStyle: {
+    fontFamily: Fonts.POPPINS_SEMIBOLD,
+    fontSize: 13,
+    color:DarkBlue
+  },
 });

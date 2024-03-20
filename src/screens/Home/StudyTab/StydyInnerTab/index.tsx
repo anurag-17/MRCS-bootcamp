@@ -84,7 +84,7 @@ const StudyInnerTab = () => {
             <View style={{flexDirection: 'row'}}>
               <TouchableOpacity
                 onPress={() => null}
-                style={styles.circleButton}>
+                style={[styles.circleButton]}>
                 <Image
                   source={require('../../../../assets/images/share.png')}
                   style={styles.shareImage}
@@ -92,7 +92,7 @@ const StudyInnerTab = () => {
               </TouchableOpacity>
               <TouchableOpacity
                 onPress={() => null}
-                style={styles.circleButton}>
+                style={[styles.circleButton,{marginRight:20}]}>
                 <ThreeDots style={styles.shareImage} />
               </TouchableOpacity>
             </View>

@@ -22,13 +22,15 @@ import {styles} from './style';
 import {white} from '../../../theme/Colors';
 import UpComingMock from '../../../components/UpComingMock';
 import ItalicTagContainer from '../../../components/ItalicTagContainer';
+import { NavigationProp, useNavigation } from '@react-navigation/native';
 
 const HomeTab = () => {
+  const navigation = useNavigation() as NavigationProp<any>
   return (
     <View style={{flex: 1, backgroundColor: white}}>
       <FlatList
         ListHeaderComponent={() => (
-          <View style={{flex: 1, backgroundColor: white}}>
+          <Pressable style={{flex: 1, backgroundColor: white}} onPress={()=>navigation.navigate('AnnouncementsScreen')}>
             <Text style={styles.announceText}>Announcements</Text>
             <View style={styles.bootCampContiner}>
               <View style={styles.bootCampLogoContainer}>
@@ -62,7 +64,7 @@ const HomeTab = () => {
               style={styles.clockTowerImage}
             />
             <Text style={styles.upcomingText}>Upcoming Mocks</Text>
-          </View>
+          </Pressable>
         )}
         data={['', '', '']}
         ItemSeparatorComponent={() => <View style={{height: 20}} />}
