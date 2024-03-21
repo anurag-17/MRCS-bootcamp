@@ -4,6 +4,8 @@ export {default as HomeLogo} from './home/homeLogo.svg';
 export {default as BootCampRoundLogo} from './home/bootCampRoundLogo.svg';
 export {default as Scissors} from './home/scissors.svg';
 export {default as Share} from './home/share.svg';
+export {default as ShareWhiteIcon} from './home/shareWhite.svg';
+
 export {default as London} from './home/London.svg';
 
 export {default as BackIcon} from './back.svg'
@@ -12,6 +14,9 @@ export {default as ImageIcon} from './home/imageIcon.svg'
 export {default as FaqBotIcon} from './home/FaqBotIcon.svg'
 export {default as ChatIcon} from './home/ChatIcon.svg'
 export const UpArrowIcon = require('./home/UpArrow.png')
+export {default as GallerySquareCheck} from './home/gallerySquareCheck.svg'
+export {default as GalleryNormal} from './home/galleryNormal.svg'
+
 
 //Notes svgs
 export {default as ForwardArrow} from './notes/forwarArrow.svg'

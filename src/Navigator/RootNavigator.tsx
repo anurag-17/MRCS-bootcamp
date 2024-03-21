@@ -12,6 +12,10 @@ import StepScreen from '../screens/Home/StudyTab/StepScreen';
 import StepCompletedScreen from '../screens/Home/StudyTab/StepCompletedScreen';
 import AnnouncementsScreen from '../screens/Home/HomeTab/AnnouncemetsScreen';
 import ContactUsScreen from '../screens/Home/HomeTab/ContactUsScreen';
+import MembersScreen from '../screens/Home/HomeTab/MembersScreen';
+import MembersSearchScreen from '../screens/Home/HomeTab/MembersSearchScreen';
+import Gallaries from '../screens/Home/HomeTab/GalleriesScreen';
+import GalleryScreen from '../screens/Home/HomeTab/GalleryScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -23,12 +27,20 @@ const AuthStack = ()=>{
             <Stack.Screen name='SignIn' component={SignIn}/>
             <Stack.Screen name='Password' component={Password}/>
             <Stack.Screen name='CreatePassword' component={CreatePassword}/>
+            <Stack.Screen name='NotesContent' component={NotesContent}/>
+
+            
+            <Stack.Screen name='ForumPost' component={ForumPost}/>
+
+            {/* Home Tab Screens */}
             <Stack.Screen name='Home' component={Home}/>
             <Stack.Screen name='AnnouncementsScreen' component={AnnouncementsScreen} options={{animation:'slide_from_bottom'}}/>
             <Stack.Screen name='ContactUsScreen' component={ContactUsScreen} options={{animation:'slide_from_bottom'}}/>
-            
-            <Stack.Screen name='NotesContent' component={NotesContent}/>
-            <Stack.Screen name='ForumPost' component={ForumPost}/>
+            <Stack.Screen name='MembersScreen' component={MembersScreen}/>
+            <Stack.Screen name='MembersSearchScreen' component={MembersSearchScreen} options={{animation:'slide_from_bottom'}}/>
+            <Stack.Screen name='Galleries' component={Gallaries}/>
+            <Stack.Screen name='GalleryScreen' component={GalleryScreen}/>
+
         </Stack.Navigator>
     )
 }

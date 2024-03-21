@@ -80,7 +80,7 @@ const HomeTab = () => {
         )}
         ListFooterComponent={() => (
           <View>
-            <MembersContainer />
+            <MembersContainer onPressMember={()=>navigation.navigate('MembersScreen')} />
           </View>
         )}
       />
@@ -103,17 +103,19 @@ const WelcomContainer = () => {
 };
 
 const PreviousContainer = () => {
+  const navigation = useNavigation() as NavigationProp<any>
+
   return (
     <View style={styles.previousContainer}>
       <View style={styles.whatPreviousRow}>
         <Text style={styles.whatPreviousText}>
           {'What previous candidate said!'}
         </Text>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={()=>navigation.navigate('Galleries')}>
           <Text style={styles.viewAllText}>{'View All'}</Text>
         </TouchableOpacity>
       </View>
-      <Pressable onPress={() => null}>
+      <Pressable onPress={()=>navigation.navigate('GalleryScreen')}>
         <View style={styles.multiImageContainer}>
           <View style={styles.firstImage} />
           <View style={styles.rightImageContainer}>
@@ -132,14 +134,14 @@ const PreviousContainer = () => {
   );
 };
 
-const MembersContainer = () => {
+const MembersContainer = ({onPressMember}:{onPressMember:()=>void}) => {
   return (
     <View style={styles.membersMainContainer}>
       <View style={styles.memberRow}>
         <Text style={[styles.membersNAllText, {color: 'black'}]}>
           {'Members'}
         </Text>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={onPressMember}>
           <Text style={styles.membersNAllText}>{'See All'}</Text>
         </TouchableOpacity>
       </View>
@@ -156,7 +158,7 @@ const MembersContainer = () => {
           /> */}
       <View style={{flexDirection: 'row'}}>
         {[1, 2, 3, 4, 5, 6, 7].map((item, index) => (
-          <TouchableOpacity key={index}>
+          <TouchableOpacity key={index} onPress={onPressMember}>
             <View
               style={[
                 styles.roundProfileImage,

@@ -4,6 +4,7 @@ import { styles } from './styles'
 import { Communication, Critical, Examination, ForwardArrow, Heart, History, Procedure, Search, Surgical } from '../../../assets/images'
 import { Tab } from 'react-native-collapsible-tab-view'
 import { NavigationProp, useNavigation } from '@react-navigation/native'
+import SearchDisable from '../../../components/SearchCustom'
 
 const NotesTab = () => {
 
@@ -41,10 +42,7 @@ const NotesTab = () => {
 
   return (
     <View style={{flex:1,backgroundColor:'white'}}>
-        <TouchableOpacity style={styles.serchContainer}>
-          <Search style={styles.searchIcon} />
-          <Text style={styles.searchText}>{'Search'}</Text>
-        </TouchableOpacity>
+          <SearchDisable onPress={()=>null}/>
         <Text style={styles.bootCampText}>{'Boot Camp Notes'}</Text>
         
         <FlatList

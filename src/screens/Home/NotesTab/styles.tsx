@@ -3,25 +3,7 @@ import { LightPrimaryTextColor, dividerLineColor } from "../../../theme/Colors";
 import Fonts from "../../../assets/Fonts";
 
 export const styles = StyleSheet.create({
-    serchContainer:{
-        height:50,
-        borderBottomWidth:1,
-        borderBottomColor:dividerLineColor,
-        paddingHorizontal:20,
-        flexDirection:'row'
-    },
-    searchIcon:{
-        height:20,
-        width:20,
-        alignSelf:'center',
-        marginRight:10
-    },
-    searchText:{
-        alignSelf:'center',
-        fontFamily:Fonts.WIX_REGULAR,
-        fontSize:15,
-        color:LightPrimaryTextColor
-    },
+  
     bootCampText:{
         fontFamily:Fonts.WIX_SEMI_BOLD,
         fontSize:15,
