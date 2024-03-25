@@ -16,6 +16,8 @@ import MembersScreen from '../screens/Home/HomeTab/MembersScreen';
 import MembersSearchScreen from '../screens/Home/HomeTab/MembersSearchScreen';
 import Gallaries from '../screens/Home/HomeTab/GalleriesScreen';
 import GalleryScreen from '../screens/Home/HomeTab/GalleryScreen';
+import EventDetails from '../screens/Home/HomeTab/EventDetails';
+import ForumCreateNewPost from '../screens/Home/ForumTab/ForumCreatNewPost';
 
 const Stack = createNativeStackNavigator();
 
@@ -29,8 +31,9 @@ const AuthStack = ()=>{
             <Stack.Screen name='CreatePassword' component={CreatePassword}/>
             <Stack.Screen name='NotesContent' component={NotesContent}/>
 
-            
+            {/* Forum Tabs Screen */}
             <Stack.Screen name='ForumPost' component={ForumPost}/>
+            <Stack.Screen name='ForumCreateNewPost' component={ForumCreateNewPost}/>
 
             {/* Home Tab Screens */}
             <Stack.Screen name='Home' component={Home}/>
@@ -40,6 +43,7 @@ const AuthStack = ()=>{
             <Stack.Screen name='MembersSearchScreen' component={MembersSearchScreen} options={{animation:'slide_from_bottom'}}/>
             <Stack.Screen name='Galleries' component={Gallaries}/>
             <Stack.Screen name='GalleryScreen' component={GalleryScreen}/>
+            <Stack.Screen name='EventDetails' component={EventDetails}/>
 
         </Stack.Navigator>
     )

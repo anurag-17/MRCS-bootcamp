@@ -25,7 +25,9 @@ const ForumTab = () => {
       <View style={styles.createPostContainer}>
         <View style={{flexDirection: 'row'}}>
           <AddPost style={styles.addPostIcon} />
+          <TouchableOpacity onPress={()=>navigation.navigate('ForumCreateNewPost')}>
           <Text style={[styles.examNViewAllText]}>{'Create New Post'}</Text>
+          </TouchableOpacity>
         </View>
         <View style={styles.searchContainer}>
           <Search style={styles.searchIcon} />

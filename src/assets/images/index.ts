@@ -14,8 +14,17 @@ export {default as ImageIcon} from './home/imageIcon.svg'
 export {default as FaqBotIcon} from './home/FaqBotIcon.svg'
 export {default as ChatIcon} from './home/ChatIcon.svg'
 export const UpArrowIcon = require('./home/UpArrow.png')
+export const clockIcon = require('./home/clock.png')
+export const locationIcon = require('./home/location.png')
+export {default as PhotoIcon} from './home/camera.svg'
+export {default as VideoIcon} from './home/video.svg'
+export {default as PollIcon} from './home/poll.svg'
+
 export {default as GallerySquareCheck} from './home/gallerySquareCheck.svg'
 export {default as GalleryNormal} from './home/galleryNormal.svg'
+export {default as ReactLike} from './reactLike.svg'
+export {default as ReactSmiley} from './reactSmiley.svg'
+
 
 
 //Notes svgs

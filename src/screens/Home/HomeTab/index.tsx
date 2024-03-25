@@ -76,6 +76,7 @@ const HomeTab = () => {
             dateTime={'Mar 8, 2024 | 16:00'}
             status={'Online'}
             isEnded={false}
+            onPressDetails={()=>navigation.navigate('EventDetails')}
           />
         )}
         ListFooterComponent={() => (

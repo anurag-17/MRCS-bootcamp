@@ -8,7 +8,7 @@ import {
   View,
   ViewStyle,
 } from 'react-native';
-import {DarkBlue, black, white} from '../../theme/Colors';
+import {DarkBlue, black, grayD9, white} from '../../theme/Colors';
 import {
   BootCampRoundLogo,
   Cross,
@@ -32,6 +32,8 @@ interface HeaderProps {
   isShare?: boolean;
   onPressShare?:()=>void;
   onPressDots?:()=>void;
+  onPost?:()=>void;
+  isPost?:boolean;
 }
 
 const Header: React.FC<HeaderProps> = ({
@@ -45,7 +47,9 @@ const Header: React.FC<HeaderProps> = ({
   titleStyle,
   isShare,
   onPressDots,
-  onPressShare
+  onPressShare,
+  isPost,
+  onPost
 }) => {
   const navigation = useNavigation();
 
@@ -108,6 +112,12 @@ const Header: React.FC<HeaderProps> = ({
             <ThreeDots height={16} width={16} style={{alignSelf: 'center'}} />
           </TouchableOpacity>
         )}
+        {
+          onPost &&
+          <TouchableOpacity disabled={!isPost} style={{alignSelf: 'center'}} onPress={onPressDots}>
+            <Text style={isPost?{ color:DarkBlue}: { color:grayD9}}>Post</Text>
+          </TouchableOpacity>
+        }
       </View>
     );
   }

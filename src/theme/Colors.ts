@@ -30,10 +30,15 @@ export const grayOuterLine = '#D8D8D8'
 export const grayLightBlue = '#DCE0DF'
 
 export const grayE8 = '#E8E8E8'
+export const grayE8EB = '#E8EBF0'
 
 export const grayEC = '#E7ECF0'
 
 export const yellow = '#FFC107'
+
+export const grayF1 = '#F1F2F6'
+
+export const DDDDDD = '#DDDDDD'
 
 
 

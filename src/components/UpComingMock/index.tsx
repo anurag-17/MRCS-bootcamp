@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View,TouchableOpacity} from 'react-native';
+import { Text, View,TouchableOpacity, Pressable} from 'react-native';
 import { styles } from './style';
 import { Share } from '../../assets/images';
 
@@ -9,6 +9,7 @@ interface UpComingMockProps {
   dateTime: string;
   status:string;
   isEnded: boolean;
+  onPressDetails?:()=>void
 }
 
 const UpComingMock: React.FC<UpComingMockProps> = ({
@@ -17,9 +18,10 @@ const UpComingMock: React.FC<UpComingMockProps> = ({
   dateTime,
   status,
   isEnded,
+  onPressDetails
 }) => {
   return (
-    <View style={styles.container}>
+    <Pressable style={styles.container} onPress={onPressDetails}>
       <View style={styles.upperContainer}>
         <View style={styles.upperLeftSide}>
           <Text style={styles.dayText}>{day}</Text>
@@ -40,13 +42,13 @@ const UpComingMock: React.FC<UpComingMockProps> = ({
               <Text style={styles.shareText}>{'Share'}</Text>
             </TouchableOpacity>
             <View style={styles.verticalLine}/>
-            <TouchableOpacity style={styles.detailContainer}>
+            <TouchableOpacity style={styles.detailContainer} onPress={onPressDetails}>
             <Text style={styles.detailsText}>{'Details'}</Text>
             </TouchableOpacity>
           </>
         )}
       </View>
-    </View>
+    </Pressable>
   );
 }
 
