@@ -65,7 +65,9 @@ export {default as StepDoneIcon} from '../images/study/stepDone.svg'
 
 export {default as GreenCheckIcon} from '../images/study/greenCheck.svg'
 
+export {default as ThreeDotsWhite} from '../images/threeDotsWhite.svg' 
 
+export {default as BlueTick} from './blueTick.svg'
 
 
 

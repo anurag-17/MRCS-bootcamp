@@ -36,6 +36,7 @@ interface PostContentProps {
   zoomUrl?: string;
   onPressShare?: () => void;
   isPostScreen?:boolean
+  onProfilePress?:()=>void;
 }
 
 const PostContent: React.FC<PostContentProps> = ({
@@ -53,13 +54,15 @@ const PostContent: React.FC<PostContentProps> = ({
   passCode,
   zoomUrl,
   onPressShare,
-  isPostScreen
+  isPostScreen,
+  onProfilePress
 }) => {
   return (
     <View style={styles.postContainer}>
       <Pressable onPress={onPostPress}>
         <View style={[styles.rowSpaceBetween, {marginVertical: 15}]}>
-          <View style={styles.profileContainer}>
+          <Pressable style={styles.profileContainer} onPress={onProfilePress}>
+            
             <Image style={styles.profiPicBig} source={{uri: 'dfd'}} />
             <View>
               {/* NameText */}
@@ -67,7 +70,7 @@ const PostContent: React.FC<PostContentProps> = ({
               {/* DayMonthText */}
               <Text style={[styles.text13medium]}>{subscription}</Text>
             </View>
-          </View>
+          </Pressable>
           <TouchableOpacity>
             <ThreeDots style={styles.threeDots} />
           </TouchableOpacity>

@@ -29,9 +29,9 @@ const ForumTab = () => {
           <Text style={[styles.examNViewAllText]}>{'Create New Post'}</Text>
           </TouchableOpacity>
         </View>
-        <View style={styles.searchContainer}>
+        <TouchableOpacity style={styles.searchContainer} onPress={()=>navigation.navigate('ForumSearchPost')}>
           <Search style={styles.searchIcon} />
-        </View>
+        </TouchableOpacity>
       </View>
       <View style={styles.fatDivider}/>
       <View style={[styles.rowSpaceBetween,{marginHorizontal:20}]}>
@@ -56,6 +56,7 @@ const ForumTab = () => {
           onPostPress={()=>navigation.navigate('ForumPost')}
           isShare={false}
           isPostScreen={false}
+          onProfilePress={()=>navigation.navigate('MemberProfile')}
         />
         <PostContent
           name="Myat"
@@ -67,6 +68,7 @@ const ForumTab = () => {
           likes={0} // Number of likes
           comments={0} // Number of comments
           onPostPress={()=>navigation.navigate('ForumPost')}
+          onProfilePress={()=>navigation.navigate('MemberProfile')}
         />
     </>}
       />

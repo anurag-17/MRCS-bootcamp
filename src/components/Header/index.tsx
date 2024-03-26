@@ -15,6 +15,7 @@ import {
   Share,
   ShareWhiteIcon,
   ThreeDots,
+  ThreeDotsWhite,
   WhiteBackArrow,
 } from '../../assets/images';
 import {useNavigation} from '@react-navigation/native';
@@ -74,8 +75,7 @@ const Header: React.FC<HeaderProps> = ({
         )}
         {isThreeDots && (
           <TouchableOpacity style={{alignSelf: 'center'}} onPress={onPressDots}>
-            <ThreeDots
-              color={'red'}
+            <ThreeDotsWhite
               fill={'white'}
               height={16}
               width={16}
@@ -109,7 +109,7 @@ const Header: React.FC<HeaderProps> = ({
         )}
         {isThreeDots && (
           <TouchableOpacity style={{alignSelf: 'center'}} onPress={onPressDots}>
-            <ThreeDots height={16} width={16} style={{alignSelf: 'center'}} />
+            <ThreeDotsWhite height={16} width={16} style={{alignSelf: 'center'}} />
           </TouchableOpacity>
         )}
         {

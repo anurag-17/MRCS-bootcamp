@@ -7,7 +7,7 @@ export const DarkBlueButton = '#479ffe'
 export const tertiaryTextColor = '#20303D'
 export const quarternaryTextColor = '#22303B'
 export const blueTypeTextColor = '#00214B'
-
+export const blue13 = '#134C8C'
 
 export const white = '#FFFFFF'
 export const black ='#000000'
@@ -39,6 +39,9 @@ export const yellow = '#FFC107'
 export const grayF1 = '#F1F2F6'
 
 export const DDDDDD = '#DDDDDD'
+
+export const graye8E =  "#8E9295"
+
 
 
 

@@ -47,24 +47,24 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = mrcsbootcamp/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = mrcsbootcamp/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = mrcsbootcamp/main.m; sourceTree = "<group>"; };
-		16ECBDA23B41477EA837EF85 /* Poppins-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Light.ttf"; path = "../src/assets/fonts/Poppins-Light.ttf"; sourceTree = "<group>"; };
+		16ECBDA23B41477EA837EF85 /* Poppins-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Light.ttf"; path = "../src/assets/fonts/Poppins-Light.ttf"; sourceTree = "<group>"; };
 		19F6CBCC0A4E27FBF8BF4A61 /* libPods-mrcsbootcamp-mrcsbootcampTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-mrcsbootcamp-mrcsbootcampTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3102B14E00144FD885C381B7 /* WixMadeforText-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "WixMadeforText-Bold.ttf"; path = "../src/assets/fonts/WixMadeforText-Bold.ttf"; sourceTree = "<group>"; };
-		38BFA9093198417C8F1383A3 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-SemiBold.ttf"; path = "../src/assets/fonts/Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
+		3102B14E00144FD885C381B7 /* WixMadeforText-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "WixMadeforText-Bold.ttf"; path = "../src/assets/fonts/WixMadeforText-Bold.ttf"; sourceTree = "<group>"; };
+		38BFA9093198417C8F1383A3 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-SemiBold.ttf"; path = "../src/assets/fonts/Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-mrcsbootcamp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mrcsbootcamp.debug.xcconfig"; path = "Target Support Files/Pods-mrcsbootcamp/Pods-mrcsbootcamp.debug.xcconfig"; sourceTree = "<group>"; };
-		4FC1093AF496447F8652D831 /* WixMadeforText-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "WixMadeforText-Regular.ttf"; path = "../src/assets/fonts/WixMadeforText-Regular.ttf"; sourceTree = "<group>"; };
+		4FC1093AF496447F8652D831 /* WixMadeforText-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "WixMadeforText-Regular.ttf"; path = "../src/assets/fonts/WixMadeforText-Regular.ttf"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-mrcsbootcamp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mrcsbootcamp.release.xcconfig"; path = "Target Support Files/Pods-mrcsbootcamp/Pods-mrcsbootcamp.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-mrcsbootcamp-mrcsbootcampTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mrcsbootcamp-mrcsbootcampTests.debug.xcconfig"; path = "Target Support Files/Pods-mrcsbootcamp-mrcsbootcampTests/Pods-mrcsbootcamp-mrcsbootcampTests.debug.xcconfig"; sourceTree = "<group>"; };
-		5B96376D39284A4FBBBC60FE /* Poppins-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Medium.ttf"; path = "../src/assets/fonts/Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		5B96376D39284A4FBBBC60FE /* Poppins-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Medium.ttf"; path = "../src/assets/fonts/Poppins-Medium.ttf"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-mrcsbootcamp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-mrcsbootcamp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7EB553E29EF648258A8FCB40 /* WixMadeforText-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "WixMadeforText-Medium.ttf"; path = "../src/assets/fonts/WixMadeforText-Medium.ttf"; sourceTree = "<group>"; };
+		7EB553E29EF648258A8FCB40 /* WixMadeforText-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "WixMadeforText-Medium.ttf"; path = "../src/assets/fonts/WixMadeforText-Medium.ttf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = mrcsbootcamp/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-mrcsbootcamp-mrcsbootcampTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mrcsbootcamp-mrcsbootcampTests.release.xcconfig"; path = "Target Support Files/Pods-mrcsbootcamp-mrcsbootcampTests/Pods-mrcsbootcamp-mrcsbootcampTests.release.xcconfig"; sourceTree = "<group>"; };
-		A6E961067C7B4D768A391D1F /* WixMadeforText-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "WixMadeforText-SemiBold.ttf"; path = "../src/assets/fonts/WixMadeforText-SemiBold.ttf"; sourceTree = "<group>"; };
-		ABBB866FDB5C47149743FA01 /* EBGaramond-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "EBGaramond-Regular.ttf"; path = "../src/assets/fonts/EBGaramond-Regular.ttf"; sourceTree = "<group>"; };
-		C9CA7AB1C7D148AD90AF94FA /* Poppins-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Bold.ttf"; path = "../src/assets/fonts/Poppins-Bold.ttf"; sourceTree = "<group>"; };
-		C9DA2E3C36B14BE09FCD8BAC /* EBGaramond-MediumItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "EBGaramond-MediumItalic.ttf"; path = "../src/assets/fonts/EBGaramond-MediumItalic.ttf"; sourceTree = "<group>"; };
-		DEAE38BA97AF4155BB131567 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Regular.ttf"; path = "../src/assets/fonts/Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		A6E961067C7B4D768A391D1F /* WixMadeforText-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "WixMadeforText-SemiBold.ttf"; path = "../src/assets/fonts/WixMadeforText-SemiBold.ttf"; sourceTree = "<group>"; };
+		ABBB866FDB5C47149743FA01 /* EBGaramond-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "EBGaramond-Regular.ttf"; path = "../src/assets/fonts/EBGaramond-Regular.ttf"; sourceTree = "<group>"; };
+		C9CA7AB1C7D148AD90AF94FA /* Poppins-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Bold.ttf"; path = "../src/assets/fonts/Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		C9DA2E3C36B14BE09FCD8BAC /* EBGaramond-MediumItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "EBGaramond-MediumItalic.ttf"; path = "../src/assets/fonts/EBGaramond-MediumItalic.ttf"; sourceTree = "<group>"; };
+		DEAE38BA97AF4155BB131567 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Regular.ttf"; path = "../src/assets/fonts/Poppins-Regular.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -176,7 +176,6 @@
 				ABBB866FDB5C47149743FA01 /* EBGaramond-Regular.ttf */,
 			);
 			name = Resources;
-			path = "";
 			sourceTree = "<group>";
 		};
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
@@ -519,6 +518,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RQ72S52S54;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = mrcsbootcamp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -546,6 +546,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RQ72S52S54;
 				INFOPLIST_FILE = mrcsbootcamp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
