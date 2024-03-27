@@ -42,7 +42,7 @@ const NotesTab = () => {
 
   return (
     <View style={{flex:1,backgroundColor:'white'}}>
-          <SearchDisable onPress={()=>null}/>
+          <SearchDisable onPress={()=>navigation.navigate('NotesSearch')}/>
         <Text style={styles.bootCampText}>{'Boot Camp Notes'}</Text>
         
         <FlatList

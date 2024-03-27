@@ -2,6 +2,8 @@ export const loginBackground = '#F3EDE0'
 
 export const DarkBlue = '#002147'
 export const green00A = '#00A87D'
+export const skillGreen = 'rgb(5 153 154)'
+export const knowledgeBlue = 'rgb(36 105 136)'
 export const LightBlue = '#266fe4'
 export const DarkBlueButton = '#479ffe'
 export const tertiaryTextColor = '#20303D'

@@ -19,35 +19,13 @@ import {
   useRoute,
 } from '@react-navigation/native';
 import CustomButton from '../../../../components/CustomButton';
+import NotesTopicItem from '../../../../components/NotesTopicItem';
 
 const NotesContent = () => {
   const navigation = useNavigation() as NavigationProp<any>;
   const routes = useRoute();
   const {name} = routes?.params as RouteProp<any>
 
- const  _renderTopicContainer = ()=>{
-  return (<View style={styles.topicContainer}>
-  <Text style={styles.screenNameText}>{name ?? ''}</Text>
-  <Text style={styles.topicText}>{'Actinomycosis'}</Text>
-  <CustomButton
-    buttonStyle={styles.exclusiveButton}
-    textStyle={styles.exclusiveText}
-    onPress={() => null}
-    title="Exclusive"
-    validate={false}
-  />
-  <View style={styles.bottomView}>
-    <TouchableOpacity style={styles.eyeIconRow}>
-      <Eye style={styles.icon} />
-      <Text style={styles.countText}>{'233'}</Text>
-    </TouchableOpacity>
-    <TouchableOpacity style={styles.chatIconRow}>
-      <Chat style={styles.icon} />
-      <Text style={styles.countText}>{'0'}</Text>
-    </TouchableOpacity>
-  </View>
-</View>)
-  }
   return (
     <View style={styles.mainContainer}>
       <LinearGradient
@@ -75,7 +53,7 @@ const NotesContent = () => {
       </LinearGradient>
       <FlatList
         data={[1,2,3,4,5,6,7]}
-        renderItem={_renderTopicContainer}
+        renderItem={()=><NotesTopicItem topicName={'Actinomycosis'} screenName={name ?? ''} viewCount={223} chatCount={0} />}
 
       />
 

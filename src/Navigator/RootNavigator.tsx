@@ -22,6 +22,10 @@ import ForumSearchPost from '../screens/Home/ForumTab/ForumSearchPost';
 import MemberProfile from '../screens/Home/ForumTab/MemberProfile';
 import MemberChat from '../screens/Home/ForumTab/MemberChat';
 import BadgesScreen from '../screens/Home/ForumTab/BadgesScreen';
+import BadgesTypeScreen from '../screens/Home/ForumTab/BadgesScreen/BadeTypeScreen';
+import NotesSearch from '../screens/Home/NotesTab/NotesSearch';
+import NotesTagScreen from '../screens/Home/NotesTab/NotesTagScreen';
+import NotesPostScreen from '../screens/Home/NotesTab/NotesPostScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -33,7 +37,6 @@ const AuthStack = ()=>{
             <Stack.Screen name='SignIn' component={SignIn}/>
             <Stack.Screen name='Password' component={Password}/>
             <Stack.Screen name='CreatePassword' component={CreatePassword}/>
-            <Stack.Screen name='NotesContent' component={NotesContent}/>
 
             {/* Forum Tabs Screen */}
             <Stack.Screen name='ForumPost' component={ForumPost}/>
@@ -42,7 +45,7 @@ const AuthStack = ()=>{
             <Stack.Screen name='MemberProfile' component={MemberProfile}/>
             <Stack.Screen name='MemberChat' component={MemberChat}/>
             <Stack.Screen name='BadgesScreen' component={BadgesScreen}/>
-
+            <Stack.Screen name='BadgesTypeScreen' component={BadgesTypeScreen}/>
 
             {/* Home Tab Screens */}
             <Stack.Screen name='Home' component={Home}/>
@@ -53,6 +56,12 @@ const AuthStack = ()=>{
             <Stack.Screen name='Galleries' component={Gallaries}/>
             <Stack.Screen name='GalleryScreen' component={GalleryScreen}/>
             <Stack.Screen name='EventDetails' component={EventDetails}/>
+
+            {/* Notes Tab Screen */}
+            <Stack.Screen name='NotesContent' component={NotesContent}/>
+            <Stack.Screen name='NotesSearch' component={NotesSearch}/>
+            <Stack.Screen name='NotesTagScreen' component={NotesTagScreen}/>
+            <Stack.Screen name='NotesPostScreen' component={NotesPostScreen}/>
 
         </Stack.Navigator>
     )

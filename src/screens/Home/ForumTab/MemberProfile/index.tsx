@@ -44,7 +44,7 @@ const MeberProfile = () => {
               followersCount="6"
               followingCount="2"
               timeText="Last seen May 30, 2023"
-              onPressSubscription={() => null}
+              onPressSubscription={() => navigation.navigate('BadgesScreen',{isAll:false,profileName:'Myaat'})}
             />
             {/* Msg Follow Btn Row */}
             <View style={styles.buttonRow}>
@@ -68,7 +68,7 @@ const MeberProfile = () => {
             <AchievedBadges
               onPressSubscription={() => null}
               onPressTester={() => null}
-              onPessAll={() => navigation.navigate('BadgesScreen',{isAll:true})}
+              onPessAll={() => navigation.navigate('BadgesScreen',{isAll:true,profileName:'Myaat'})}
             />
             {/* Fourm Post */}
             <LeftRightText

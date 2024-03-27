@@ -1,10 +1,9 @@
 import React, {FC} from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, Text, View,TouchableOpacity} from 'react-native';
 import Fonts from '../../assets/Fonts';
 import {DarkBlue, LightGrayColor, green00A} from '../../theme/Colors';
 import {PlaceholderProfile} from '../../assets/images';
 import IconButton from '../IconButton';
-import {TouchableOpacity} from 'react-native-gesture-handler';
 
 interface ProfileHeaderProps {
   name: string;
@@ -43,7 +42,7 @@ const ProfileHeader: FC<ProfileHeaderProps> = ({
         </View>
       </View>
       {/* Buttons rows */}
-      <TouchableOpacity activeOpacity={0.7} style={[styles.flexRow,]}>
+      <TouchableOpacity  style={[styles.flexRow,]} onPress={onPressSubscription}>
         <IconButton
           isIcon
           title={'Part B Subscription'}

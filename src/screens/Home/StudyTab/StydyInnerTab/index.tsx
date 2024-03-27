@@ -106,7 +106,7 @@ const StudyInnerTab = () => {
         </ImageBackground>
       </LinearGradient>
 
-      <Tab.Container allowHeaderOverscroll={false} renderTabBar={tabBar} >
+      <Tab.Container allowHeaderOverscroll={false} renderTabBar={tabBar} pagerProps={{scrollEnabled:true}} >
         <Tab.Tab name="Overview" label="Overview">
           <Tab.FlatList
             showsHorizontalScrollIndicator={false}
