@@ -1,5 +1,5 @@
 import React from 'react'
-import { Image, SafeAreaView, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { Image, Platform, SafeAreaView, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import { DarkBlue, LightGrayColor, grayOuterLine, secondaryTextColor, white } from '../../../../theme/Colors'
 import { BootCampRoundLogo, Cross, StepDoneIcon } from '../../../../assets/images';
 import { useNavigation } from '@react-navigation/native';
@@ -20,6 +20,7 @@ import LinearGradient from 'react-native-linear-gradient';
         type="white"
         titleStyle={styles.headerTitle}
         title="Announcements"
+        containerStyle={ Platform.OS=='android'? {marginTop:35}:{}}
       />
         <View style={styles.bootCampContiner}>
           <View style={styles.bootCampLogoContainer}>
@@ -74,7 +75,8 @@ const styles = StyleSheet.create({
       fontFamily: Fonts.POPPINS_SEMIBOLD,
       fontSize: 16,
       color: DarkBlue,
-      marginTop: -3,
+      alignSelf:'center',
+      marginTop:Platform.OS=='android'?3:0,
       marginLeft: 30,
     },
     bootCampContiner:{

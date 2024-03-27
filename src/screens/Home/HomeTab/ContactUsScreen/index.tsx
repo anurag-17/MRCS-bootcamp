@@ -7,6 +7,9 @@ import {
   TouchableOpacity,
   View,
   TextInput,
+  StatusBar,
+  Platform,
+  KeyboardAvoidingView,
 } from 'react-native';
 import {
   DarkBlue,
@@ -71,12 +74,14 @@ const ContactUsScreen = () => {
   };
   return (
     <SafeAreaView style={styles.mainContainer}>
+      <StatusBar barStyle={'dark-content'}/> 
       <Header
         type="white"
         titleStyle={styles.headerTitle}
         title="MRCS Boot Camp UK"
         isLogo={true}
         isThreeDots={true}
+        containerStyle={ Platform.OS=='android'? {marginTop:35}:{}}
       />
       {/* <View style={styles.faqBotContainer}>
           <BootCampRoundLogo style={{alignSelf: 'center', marginLeft: 20}} />
@@ -94,6 +99,7 @@ const ContactUsScreen = () => {
 
           </View>}
         /> */}
+    <KeyboardAvoidingView behavior={Platform.OS=='ios'?'padding':'height'}>
       <View style={styles.inputContainer}>
         <View
           style={{
@@ -137,6 +143,8 @@ const ContactUsScreen = () => {
 
         </View>
       </View>
+      </KeyboardAvoidingView>
+
     </SafeAreaView>
   );
 };
@@ -155,6 +163,7 @@ const styles = StyleSheet.create({
     color: DarkBlue,
     marginLeft: 10,
     alignSelf: 'center',
+
   },
   faqBotContainer: {
     flexDirection: 'row',

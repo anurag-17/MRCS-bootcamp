@@ -60,7 +60,6 @@ export {default as Cross} from '../images/cross.svg'
  
 export {default as Station} from '../images/study/station.svg'
 
-
 export {default as StepDoneIcon} from '../images/study/stepDone.svg'
 
 export {default as GreenCheckIcon} from '../images/study/greenCheck.svg'
@@ -68,7 +67,10 @@ export {default as GreenCheckIcon} from '../images/study/greenCheck.svg'
 export {default as ThreeDotsWhite} from '../images/threeDotsWhite.svg' 
 
 export {default as BlueTick} from './blueTick.svg'
+export {default as PlaceholderProfile} from './placeHolderProfile.svg'
 
+export {default as ElectricBolt} from './electricBolt.svg'
+export {default as YellowStar} from './yellowStar.svg'
 
 
 

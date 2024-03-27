@@ -1,6 +1,7 @@
 import React from 'react';
 import {
   Platform,
+  StyleProp,
   StyleSheet,
   Text,
   TextStyle,
@@ -18,7 +19,7 @@ import {
   ThreeDotsWhite,
   WhiteBackArrow,
 } from '../../assets/images';
-import {useNavigation} from '@react-navigation/native';
+import {useNavigation, useRoute} from '@react-navigation/native';
 import Fonts from '../../assets/Fonts';
 
 interface HeaderProps {
@@ -27,7 +28,7 @@ interface HeaderProps {
   isThreeDots?: boolean;
   isLogo?: boolean;
   isEdit?: boolean;
-  containerStyle?: ViewStyle;
+  containerStyle?: StyleProp<ViewStyle>;
   titleStyle?: TextStyle;
   type: 'blue' | 'white';
   isShare?: boolean;
@@ -35,6 +36,8 @@ interface HeaderProps {
   onPressDots?:()=>void;
   onPost?:()=>void;
   isPost?:boolean;
+  profileImageUri?:string;
+  isProfileImage?:boolean
 }
 
 const Header: React.FC<HeaderProps> = ({
@@ -50,10 +53,12 @@ const Header: React.FC<HeaderProps> = ({
   onPressDots,
   onPressShare,
   isPost,
-  onPost
+  onPost,
+  isProfileImage = false
 }) => {
   const navigation = useNavigation();
-
+  const route = useRoute()
+  
   if (type == 'blue')
     return (
       <View style={[styles.mainContainer, containerStyle]}>
@@ -63,14 +68,31 @@ const Header: React.FC<HeaderProps> = ({
             style={{alignSelf: 'center'}}>
             <WhiteBackArrow style={styles.backArrow} />
           </TouchableOpacity>
-          <View style={{marginLeft: 30, alignSelf: 'center'}}>
-            <Text style={[styles.title, titleStyle]}>{title}</Text>
-            <Text style={styles.mrcsText}>{subTitle}</Text>
-          </View>
+
+          {isProfileImage ? (
+            <View style={{marginLeft: 30, alignSelf: 'center',flexDirection:'row'}}>
+              <View style={styles.profileImage}/>
+              <View style={{alignSelf:'center',}}>
+                <Text style={[styles.title, titleStyle]}>{title}</Text>
+                <Text style={styles.mrcsText}>{subTitle}</Text>
+              </View>
+            </View>
+          ) : (
+            <View style={{marginLeft: 30, alignSelf: 'center'}}>
+              <Text style={[styles.title, titleStyle]}>{title}</Text>
+              <Text style={styles.mrcsText}>{subTitle}</Text>
+            </View>
+          )}
         </View>
         {isShare && (
-          <TouchableOpacity style={{alignSelf: 'center'}} onPress={onPressShare}>
-            <ShareWhiteIcon height={16} width={16} style={{alignSelf: 'center'}} />
+          <TouchableOpacity
+            style={{alignSelf: 'center'}}
+            onPress={onPressShare}>
+            <ShareWhiteIcon
+              height={16}
+              width={16}
+              style={{alignSelf: 'center'}}
+            />
           </TouchableOpacity>
         )}
         {isThreeDots && (
@@ -152,6 +174,14 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: white,
   },
+  profileImage:{
+    marginRight:10,
+    backgroundColor:grayD9,
+    borderRadius:50,
+    justifyContent:'center',
+    height:44,
+    width:44
+  }
 });
 
 export default Header;

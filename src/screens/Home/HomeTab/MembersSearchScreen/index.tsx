@@ -70,6 +70,7 @@ const renderListItem = ({ item }) => (
         title="Search Members"
         isLogo={false}
         isThreeDots={true}
+        containerStyle={ Platform.OS=='android'? {marginTop:35}:{}}
       />
       <View style={{height:10}}/>
       <SearchCustom

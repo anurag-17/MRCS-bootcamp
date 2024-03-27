@@ -1,7 +1,7 @@
 export const loginBackground = '#F3EDE0'
 
 export const DarkBlue = '#002147'
-
+export const green00A = '#00A87D'
 export const LightBlue = '#266fe4'
 export const DarkBlueButton = '#479ffe'
 export const tertiaryTextColor = '#20303D'
@@ -41,6 +41,8 @@ export const grayF1 = '#F1F2F6'
 export const DDDDDD = '#DDDDDD'
 
 export const graye8E =  "#8E9295"
+export const redC8 = '#C81B53'
+export const purple7A = '#7A6EFF'
 
 
 

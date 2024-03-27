@@ -1,7 +1,10 @@
 import React, {useCallback, useMemo, useRef, useState} from 'react';
 import {
   FlatList,
+  NativeModules,
+  Platform,
   SafeAreaView,
+  StatusBar,
   StyleSheet,
   Text,
   TouchableHighlight,
@@ -25,6 +28,7 @@ import Fonts from '../../../../assets/Fonts';
 import Modal from 'react-native-modal';
 
 import {BlueTick, Filter} from '../../../../assets/images';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 const filterArray = [
   'Best match',
@@ -37,6 +41,7 @@ const filterArray = [
 const ForumSearchPost = () => {
   // variables
   const snapPoints = useMemo(() => ['25%', '50%'], []);
+  const insets = useSafeAreaInsets()
 
   const navigation = useNavigation();
   const [searchText, setSearchText] = useState('');
@@ -62,14 +67,16 @@ const ForumSearchPost = () => {
 
   return (
     <SafeAreaView style={styles.mainContainer}>
+      <StatusBar barStyle={'dark-content'} />
       <SearchCustom
         titleText="Search"
-        containerStyle={{height: 40}}
         isSearch={true}
         onPress={() => console.log('dd')}
         onChangeText={text => {
           setSearchText(text);
         }}
+        containerStyle={{marginTop:Platform.OS=='android'?insets.top+5:0
+      }}
         onCancel={() => navigation.goBack()}
       />
       <View style={styles.btnRow}>
