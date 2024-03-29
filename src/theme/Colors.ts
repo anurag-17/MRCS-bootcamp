@@ -49,6 +49,7 @@ export const redFC3D30 = '#FC3D30'
 export const purple7A = '#7A6EFF'
 
 export const B9B9B9 = '#B9B9B9'
+export const F8F9FB = '#F8F9FB'
 
 
 

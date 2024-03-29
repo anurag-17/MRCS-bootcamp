@@ -30,6 +30,8 @@ import NotificationScreen from '../screens/Home/HomeTab/NotificationScreen';
 import LatestAnnouncementsScreen from '../screens/Home/HomeTab/LatestAnnouncement';
 import Inbox from '../screens/Home/HomeTab/Inbox';
 import NewMessage from '../screens/Home/HomeTab/NewMessage';
+import Profile from '../screens/Profile/Profile';
+import OrdersScreen from '../screens/Profile/Orders/OrdersScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -64,6 +66,8 @@ const AuthStack = ()=>{
             <Stack.Screen name='EventDetails' component={EventDetails}/>
             <Stack.Screen name='Inbox' component={Inbox}/>
             <Stack.Screen name='NewMessage' component={NewMessage} options={{animation:'slide_from_bottom'}}/>
+            <Stack.Screen name='Profile' component={Profile} />
+            <Stack.Screen name='OrdersScreen' component={OrdersScreen} />
 
 
             {/* Notes Tab Screen */}

@@ -5,6 +5,7 @@ import {DarkBlue, LightGrayColor, grayD9, grayE8, grayEC, grayOuterLine, seconda
 import SearchCustom from '../../../../components/SearchCustom';
 import Fonts from '../../../../assets/Fonts';
 import { useNavigation } from '@react-navigation/native';
+import IconButton from '../../../../components/IconButton';
 
 const DATA = [
     {
@@ -57,6 +58,7 @@ const renderListItem = ({ item }) => (
     <MembersItem
         name={item.name}
         imageUri={item.imageUri}
+        isFollow={true}
         onPress={() => console.log('done..')}
         onPressFollow={() => console.log('foll')}
     />
@@ -116,11 +118,13 @@ interface MembersItemProps {
   name: string;
   imageUri?: boolean;
   onPress:()=>void;
+  isFollow?:boolean;
   onPressFollow:()=>void;
+  isSubscription?:boolean
 
 }
 
-const MembersItem: React.FC<MembersItemProps> = ({name, imageUri,onPress,onPressFollow}) => {
+const MembersItem: React.FC<MembersItemProps> = ({name, imageUri,onPress,onPressFollow,isFollow,isSubscription}) => {
   return (
     <TouchableOpacity style={styles.membersItemContainer} onPress={onPress}>
       <View style={styles.flexRow}>
@@ -138,18 +142,31 @@ const MembersItem: React.FC<MembersItemProps> = ({name, imageUri,onPress,onPress
             </Text>
           </View>
         )}
-        <View style={{alignSelf:'center'}}>
-            <Text style={styles.nameText}>{name}</Text>
-            <View style={[styles.flexRow]}>
-            <Text style={styles.memberText}>{"Private member"}
-            </Text>
-            <Text style={styles.lastSeenText} ellipsizeMode='tail' numberOfLines={1}>. Last seen Jan 4, 2023 </Text>
-            </View>
+        <View style={{alignSelf: 'center'}}>
+          <Text style={styles.nameText}>{name}</Text>
+          <View style={[styles.flexRow]}>
+            <Text style={styles.memberText}>{'Private member'}</Text>
+            {!isSubscription &&<Text
+              style={styles.lastSeenText}
+              ellipsizeMode="tail"
+              numberOfLines={1}>
+              . Last seen Jan 4, 2023{' '}
+            </Text>}
+          </View>
+          {isSubscription && (
+            <IconButton
+              isIcon
+              title={'Part B Subscription'}
+              isStar={true}
+            />
+          )}
         </View>
       </View>
-      <TouchableOpacity style={styles.followBtn} onPress={onPressFollow}>
-      <Text style={[styles.nameText,{alignSelf:'center'}]}>Follow</Text>
-      </TouchableOpacity>
+      {isFollow == true && (
+        <TouchableOpacity style={styles.followBtn} onPress={onPressFollow}>
+          <Text style={[styles.nameText, {alignSelf: 'center'}]}>Follow</Text>
+        </TouchableOpacity>
+      )}
     </TouchableOpacity>
   );
 };

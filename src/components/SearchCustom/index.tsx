@@ -24,7 +24,7 @@ const SearchCustom: React.FC<SearchCustomProps> = ({
   return (
     <TouchableOpacity
       style={[styles.searchContainer,containerStyle]}
-      disabled={titleText ? true : false}
+      disabled={isSearch ? true : false}
       onPress={onPress}>
       <Search style={styles.searchIcon} />
       {isSearch ? (

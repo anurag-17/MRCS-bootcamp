@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import { StyleSheet, Text, TouchableOpacity, View, ViewStyle } from 'react-native'
+import { StyleSheet, Text, TextStyle, TouchableOpacity, View, ViewStyle } from 'react-native'
 import { DarkBlue, grayE8EB } from '../../theme/Colors'
 import Fonts from '../../assets/Fonts'
 
@@ -8,14 +8,17 @@ interface LeftRightTextProps{
   rightText:string,
   onPressAll:()=>void,
   containerStyle?:ViewStyle
+  rightTextStyle?:TextStyle
+  letfTextStyle?:TextStyle
+
 }
 
-const LeftRightText:FC<LeftRightTextProps> = ({leftText,rightText, onPressAll,containerStyle}) => {
+const LeftRightText:FC<LeftRightTextProps> = ({leftText,rightText, onPressAll,containerStyle,letfTextStyle,rightTextStyle}) => {
   return (
     <View style={[styles.rowBtwn,containerStyle]}>
-        <Text style={styles.leftTxt}>{leftText}</Text>
+        <Text style={[styles.leftTxt,letfTextStyle]}>{leftText}</Text>
         <TouchableOpacity onPress={onPressAll}>
-          <Text style={[styles.rightTxt]}>{rightText}</Text>
+          <Text style={[styles.rightTxt,rightTextStyle]}>{rightText}</Text>
         </TouchableOpacity>
       </View>
   )

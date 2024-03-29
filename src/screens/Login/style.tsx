@@ -44,5 +44,6 @@ export const styles = StyleSheet.create({
         color:LightPrimaryTextColor,
         marginHorizontal:10,
         marginBottom:10,
+        width:'72%'
       }
 })

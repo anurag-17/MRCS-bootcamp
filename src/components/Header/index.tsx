@@ -15,6 +15,7 @@ import {
   BootCampRoundLogo,
   Cross,
   EditBoard,
+  SettingsWhite,
   Share,
   ShareWhiteIcon,
   ThreeDots,
@@ -41,6 +42,7 @@ interface HeaderProps {
   profileImageUri?:string;
   isProfileImage?:boolean
   onPressEditBoard?:()=>void
+  onPressSettings?:()=>void
 }
 
 const Header: React.FC<HeaderProps> = ({
@@ -58,7 +60,8 @@ const Header: React.FC<HeaderProps> = ({
   isPost,
   onPost,
   isProfileImage = false,
-  onPressEditBoard
+  onPressEditBoard,
+  onPressSettings
 }) => {
   const navigation = useNavigation();
   const route = useRoute()
@@ -108,6 +111,16 @@ const Header: React.FC<HeaderProps> = ({
         {isThreeDots && (
           <TouchableOpacity style={{alignSelf: 'center'}} onPress={onPressDots}>
             <ThreeDotsWhite
+              fill={'white'}
+              height={16}
+              width={16}
+              style={{alignSelf: 'center'}}
+            />
+          </TouchableOpacity>
+        )}
+        {onPressSettings && (
+          <TouchableOpacity style={{alignSelf: 'center'}} onPress={onPressDots}>
+            <SettingsWhite
               fill={'white'}
               height={16}
               width={16}

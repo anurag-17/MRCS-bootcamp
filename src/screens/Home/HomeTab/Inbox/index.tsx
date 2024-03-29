@@ -21,6 +21,8 @@ const Inbox = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
   const navigation = useNavigation() as NavigationProp<any>
 
+  const _goToNewMessageScreen = () => navigation.navigate('NewMessage')
+  
   return (
     <View style={styles.mainContainer}>
       <Header
@@ -30,9 +32,7 @@ const Inbox = () => {
         subTitle={'MRCS Boot Camp UK'}
         isThreeDots={true}
         onPressDots={() => console.log('workign ...')}
-        onPressEditBoard={() => {
-          // navigation.navigate('NewMessage')
-        }}
+        onPressEditBoard={_goToNewMessageScreen}
       />
       <View style={{flex: 1, justifyContent: 'center'}}>
         <Text style={styles.startTxt}>Start Chatting</Text>
@@ -43,7 +43,7 @@ const Inbox = () => {
         <CustomButton
           buttonStyle={styles.newMsgButton}
           textStyle={styles.newMsgText}
-          onPress={() => null}
+          onPress={_goToNewMessageScreen}
           title="New Message"
           validate={false}
         />

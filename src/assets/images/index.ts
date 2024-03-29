@@ -72,8 +72,21 @@ export {default as PlaceholderProfile} from './placeHolderProfile.svg'
 export {default as ElectricBolt} from './electricBolt.svg'
 export {default as YellowStar} from './yellowStar.svg'
 export {default as Thoughts} from './thoughts.svg'
+export {default as GroupChat} from './groupChat.svg'
+export {default as SettingsWhite} from './settingsWhite.svg'
 
 export const EditBoard = require('./editBoard.png')
+
+//Activites Icon
+
+export {default as BookingIcon} from './activities/booking.svg'
+export {default as OrdersIcon} from './activities/orders.svg'
+export {default as MyprogramIcon} from './activities/myprogram.svg'
+export {default as GroupsIcon} from './activities/groups.svg'
+export {default as SubscriptionIcon} from './activities/subscription.svg'
+export {default as EventsIcon} from './activities/events.svg'
+
+
 
 
 

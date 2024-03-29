@@ -35,7 +35,7 @@ const Home = () => {
             style={styles.bannerImage}
             resizeMode="cover">
             <View style={styles.iconContainer}>
-              <TouchableOpacity style={styles.leftGrayCircleContainer}>
+              <TouchableOpacity style={styles.leftGrayCircleContainer} onPress={()=>navigation.navigate('Profile')}>
                 <Text>A</Text>
               </TouchableOpacity>
               <View style={styles.iconRightSubContainer} >

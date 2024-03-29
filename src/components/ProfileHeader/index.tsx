@@ -31,7 +31,7 @@ const ProfileHeader: FC<ProfileHeaderProps> = ({
         <View>
           <Text style={styles.nameText}>{name}</Text>
           <Text style={styles.memberText}>
-            {isAdmin ? 'Admin |' : 'Member . '}
+            {isAdmin ? 'Admin ' : 'Member . '}
             <Text style={styles.timeText}>{timeText}</Text>
           </Text>
         </View>
