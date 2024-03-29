@@ -26,6 +26,10 @@ import BadgesTypeScreen from '../screens/Home/ForumTab/BadgesScreen/BadeTypeScre
 import NotesSearch from '../screens/Home/NotesTab/NotesSearch';
 import NotesTagScreen from '../screens/Home/NotesTab/NotesTagScreen';
 import NotesPostScreen from '../screens/Home/NotesTab/NotesPostScreen';
+import NotificationScreen from '../screens/Home/HomeTab/NotificationScreen';
+import LatestAnnouncementsScreen from '../screens/Home/HomeTab/LatestAnnouncement';
+import Inbox from '../screens/Home/HomeTab/Inbox';
+import NewMessage from '../screens/Home/HomeTab/NewMessage';
 
 const Stack = createNativeStackNavigator();
 
@@ -50,12 +54,17 @@ const AuthStack = ()=>{
             {/* Home Tab Screens */}
             <Stack.Screen name='Home' component={Home}/>
             <Stack.Screen name='AnnouncementsScreen' component={AnnouncementsScreen} options={{animation:'slide_from_bottom'}}/>
+            <Stack.Screen name='LatestAnnouncementsScreen' component={LatestAnnouncementsScreen}/>
             <Stack.Screen name='ContactUsScreen' component={ContactUsScreen} options={{animation:'slide_from_bottom'}}/>
             <Stack.Screen name='MembersScreen' component={MembersScreen}/>
             <Stack.Screen name='MembersSearchScreen' component={MembersSearchScreen} options={{animation:'slide_from_bottom'}}/>
             <Stack.Screen name='Galleries' component={Gallaries}/>
             <Stack.Screen name='GalleryScreen' component={GalleryScreen}/>
+            <Stack.Screen name='NotificationScreen' component={NotificationScreen}/>
             <Stack.Screen name='EventDetails' component={EventDetails}/>
+            <Stack.Screen name='Inbox' component={Inbox}/>
+            <Stack.Screen name='NewMessage' component={NewMessage} options={{animation:'slide_from_bottom'}}/>
+
 
             {/* Notes Tab Screen */}
             <Stack.Screen name='NotesContent' component={NotesContent}/>

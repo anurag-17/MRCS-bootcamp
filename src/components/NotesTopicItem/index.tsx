@@ -85,7 +85,6 @@ const styles = StyleSheet.create({
       fontFamily: Fonts.POPPINS_SEMIBOLD,
       color: white,
       fontSize: 12,
-      borderWidth: 1,
     },
     bottomView: {
       flexDirection: 'row',

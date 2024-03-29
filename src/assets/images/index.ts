@@ -71,9 +71,9 @@ export {default as PlaceholderProfile} from './placeHolderProfile.svg'
 
 export {default as ElectricBolt} from './electricBolt.svg'
 export {default as YellowStar} from './yellowStar.svg'
+export {default as Thoughts} from './thoughts.svg'
 
-
-
+export const EditBoard = require('./editBoard.png')
 
 
 

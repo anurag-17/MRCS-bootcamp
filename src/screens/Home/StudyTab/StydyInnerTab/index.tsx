@@ -122,7 +122,7 @@ const StudyInnerTab = () => {
             showsVerticalScrollIndicator={false}
             contentContainerStyle={{backgroundColor: white}}
             data={['']}
-            renderItem={() => <Content name={subject}             onPress={() => navigation.navigate('StationList',{subject:subject})}
+            renderItem={() => <Content name={subject}   onPress={() => navigation.navigate('StationList',{subject:subject})}
             />}
           />
         </Tab.Tab>

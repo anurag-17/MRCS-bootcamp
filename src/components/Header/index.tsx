@@ -1,5 +1,6 @@
 import React from 'react';
 import {
+  Image,
   Platform,
   StyleProp,
   StyleSheet,
@@ -13,6 +14,7 @@ import {DarkBlue, black, grayD9, white} from '../../theme/Colors';
 import {
   BootCampRoundLogo,
   Cross,
+  EditBoard,
   Share,
   ShareWhiteIcon,
   ThreeDots,
@@ -38,6 +40,7 @@ interface HeaderProps {
   isPost?:boolean;
   profileImageUri?:string;
   isProfileImage?:boolean
+  onPressEditBoard?:()=>void
 }
 
 const Header: React.FC<HeaderProps> = ({
@@ -54,7 +57,8 @@ const Header: React.FC<HeaderProps> = ({
   onPressShare,
   isPost,
   onPost,
-  isProfileImage = false
+  isProfileImage = false,
+  onPressEditBoard
 }) => {
   const navigation = useNavigation();
   const route = useRoute()
@@ -95,6 +99,12 @@ const Header: React.FC<HeaderProps> = ({
             />
           </TouchableOpacity>
         )}
+        <View style={{alignSelf:'center',flexDirection:'row'}}>
+        {onPressEditBoard && (
+          <TouchableOpacity style={{alignSelf: 'center'}} onPress={onPressEditBoard}>
+            <Image source={EditBoard} style={{alignSelf:'center',height:20,width:20,marginRight:30}} />
+          </TouchableOpacity>
+        )}
         {isThreeDots && (
           <TouchableOpacity style={{alignSelf: 'center'}} onPress={onPressDots}>
             <ThreeDotsWhite
@@ -105,6 +115,7 @@ const Header: React.FC<HeaderProps> = ({
             />
           </TouchableOpacity>
         )}
+        </View>
       </View>
     );
   else {

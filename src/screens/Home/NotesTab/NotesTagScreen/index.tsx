@@ -24,7 +24,7 @@ const NotesTagScreen = () => {
       <FlatList
         data={[1,2,3,4,5,6,7]}
         renderItem={()=><NotesTopicItem topicName={'Actinomycosis'} screenName={"Surgical Pathology" ?? ''} viewCount={223} chatCount={0} 
-        // onPress={()=>navigation.navigate('NotesPostScreen')} 
+        onPress={()=>navigation.navigate('NotesPostScreen')} 
         />
         }
       />

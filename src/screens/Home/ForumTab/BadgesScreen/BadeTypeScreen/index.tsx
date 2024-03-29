@@ -136,7 +136,7 @@ const BadgesTypeScreen = () => {
 
 interface MemberItemProps{
   name:string,
-  membertype:'Admin'| 'Member',
+  membertype:'Admin'| 'Member'|'Private Member',
   lastSeen?:string,
   isActiveNow?:boolean
 }

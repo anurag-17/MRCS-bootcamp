@@ -38,11 +38,11 @@ const Home = () => {
               <TouchableOpacity style={styles.leftGrayCircleContainer}>
                 <Text>A</Text>
               </TouchableOpacity>
-              <View style={styles.iconRightSubContainer}>
-                <TouchableOpacity style={styles.rightGrayCircleContainer}>
+              <View style={styles.iconRightSubContainer} >
+                <TouchableOpacity style={styles.rightGrayCircleContainer} onPress={()=>navigation.navigate('Inbox')}>
                   <HeaderChat style={styles.rightIcon} />
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.rightGrayCircleContainer}>
+                <TouchableOpacity style={styles.rightGrayCircleContainer} onPress={()=>navigation.navigate('NotificationScreen')}>
                   <HeaderBell style={styles.rightIcon} />
                 </TouchableOpacity>
               </View>

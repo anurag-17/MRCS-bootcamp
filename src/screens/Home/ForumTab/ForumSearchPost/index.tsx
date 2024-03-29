@@ -19,7 +19,7 @@ import {
   LightGrayColor,
   grayD9,
   grayE8EB,
-  graye8E,
+  gray8E,
   secondaryTextColor,
   white,
 } from '../../../../theme/Colors';
@@ -248,7 +248,7 @@ const styles = StyleSheet.create({
     marginTop: 10,
     fontSize: 14,
     fontFamily: Fonts.POPPINS_REGULAR,
-    color: graye8E,
+    color: gray8E,
     marginHorizontal: 20,
   },
   br: {
