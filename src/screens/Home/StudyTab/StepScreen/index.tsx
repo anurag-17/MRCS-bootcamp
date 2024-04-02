@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import {
   FlatList,
+  Platform,
   SafeAreaView,
+  StatusBar,
   StyleSheet,
   Text,
   TouchableOpacity,
@@ -157,10 +159,12 @@ const StepScreen = () => {
   console.log("isMarked : ",isMarked)
   return (
     <SafeAreaView style={styles.mainContainer}>
+      <StatusBar barStyle={'dark-content'}/>
       <Header 
       type="white"
       title='Step'
       isShare={true}
+      containerStyle={ Platform.OS=='android'? {marginTop:35}:{}}
       titleStyle={styles.title}
       />
       <View style={{flex: 0.93}}>
@@ -185,7 +189,7 @@ const StepScreen = () => {
           renderItem={_renderSection}
         />
       </View>
-      <View style={isMarked ? {flex: 0.125} : {flex: 0.07}}>
+      <View style={[isMarked ? {flex: 0.125} : {flex: 0.07},Platform.OS=="android"?{marginBottom:35}:{}]}>
         {isMarked === false ? (
           <View style={styles.stickyFooter}>
             <CustomButton
@@ -272,7 +276,6 @@ const styles = StyleSheet.create({
     borderLeftColor: DarkBlue,
     borderLeftWidth: 4,
     paddingLeft: 15,
-    height: 85,
     justifyContent: 'center',
     marginHorizontal: 30,
     marginBottom:25
@@ -313,7 +316,7 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     marginVertical: 15,
     backgroundColor:DarkBlue,
-    marginHorizontal:0
+    marginHorizontal:0,
   },
   completBtnTxtStyle:{
     color:white,

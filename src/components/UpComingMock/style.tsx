@@ -16,13 +16,14 @@ export const styles = StyleSheet.create({
     marginTop:15,
   },
   upperLeftSide:{
-    marginRight:10,
-    marginLeft:15,
+    marginLeft:20,
   },
   dayText:{
     fontSize:24,
     color:secondaryTextColor,
-    fontFamily:Fonts.WIX_REGULAR
+    fontFamily:Fonts.WIX_REGULAR,
+    alignSelf:'center'
+
   },
   monthText:{
     fontSize:14,

@@ -49,6 +49,7 @@ const Study = () => {
         data={studyPrograms}
         showsVerticalScrollIndicator={false}
         ItemSeparatorComponent={()=><View style={{height:15}} />}
+        ListFooterComponent={()=><View style={{height:100}}/>}
         renderItem={({item}) => (
           <ExamStudyCard
             isJoined={item.isJoined}

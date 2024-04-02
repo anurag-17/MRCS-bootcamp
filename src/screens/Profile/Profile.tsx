@@ -29,6 +29,8 @@ import LeftRightText from '../../components/LeftRightText';
 import { NavigationProp, useNavigation } from '@react-navigation/native';
 
 const Profile = () => {
+  const navigation = useNavigation() as NavigationProp <any>
+
   const tabBar = (props: any) => (
     <MaterialTabBar
       {...props}
@@ -39,6 +41,7 @@ const Profile = () => {
   );
 
   return (
+
     <View style={styles.mainContainer}>
       <Header
         type="blue"
@@ -53,13 +56,7 @@ const Profile = () => {
         followersCount="6"
         followingCount="2"
         timeText=". Active Now"
-        onPressSubscription={
-          () => null
-          //   navigation.navigate('BadgesScreen', {
-          //     isAll: false,
-          //     profileName: 'Myaat',
-          //   })
-        }
+        onPressSubscription={() => navigation.navigate('BadgesScreen',{isAll:false,profileName:'Myaat'})}
       />
       <CustomButton
         buttonStyle={styles.editButton}
@@ -96,11 +93,16 @@ const Profile = () => {
 const MyActivities = () => {
   const navigation = useNavigation() as NavigationProp<any>
 
+  const _goTo = (screenName:string)=> navigation.navigate(screenName)
+
   const ACTIVITIES = [
     {
       name: 'Groups',
       icon: <GroupsIcon height={20} width={22} style={{alignSelf: 'center'}} />,
-      onPress:()=>null
+      onPress:()=>{
+        null
+        _goTo('GroupsScreen')
+      }
     },
     {
       name: 'Subscriptions',
@@ -108,19 +110,19 @@ const MyActivities = () => {
         <SubscriptionIcon height={20} width={20} style={{alignSelf: 'center'}} />
         
       ),
-      onPress:()=>null
+      onPress:()=>_goTo('Subscriptions')
   
     },
     {
       name: 'Events',
       icon: <EventsIcon height={20} width={20} style={{alignSelf: 'center'}} />,
-      onPress:()=>null
+      onPress:()=>_goTo('Events')
   
     },
     {
       name: 'Bookings',
       icon: <BookingIcon height={20} width={20} style={{alignSelf: 'center'}} />,
-      onPress:()=>null
+      onPress:()=>_goTo('Bookings')
   
     },
     {
@@ -128,15 +130,13 @@ const MyActivities = () => {
       icon: (
         <MyprogramIcon height={20} width={20} style={{alignSelf: 'center'}} />
       ),
-      onPress:()=>null
+      onPress:()=>_goTo('MyPrograms')
   
     },
     {
       name: 'Orders',
       icon: <OrdersIcon height={20} width={20} style={{alignSelf: 'center'}} />,
-      onPress:()=>navigation.navigate('OrdersScreen')
-
-  
+      onPress:()=>_goTo('OrdersScreen')
     },
   ];
   return (
@@ -172,6 +172,7 @@ const MyActivities = () => {
 };
 
 const ProifleSc = () => {
+  const navigation = useNavigation() as NavigationProp<any>
   return (
     <View style={styles.tabScreenContanier}>
       <Tabs.FlatList
@@ -201,9 +202,10 @@ const ProifleSc = () => {
 
             </View>
             <AchievedBadges
-              onPressSubscription={() => null}
-              onPressTester={() => null}
-              //  onPessAll={() => navigation.navigate('BadgesScreen',{isAll:true,profileName:'Myaat'})}
+              onPressSubscription={()=> navigation.navigate('BadgesTypeScreen',{Badgetype:'Part B Subscription',numberOfMember:77})}
+              onPressTester={() => navigation.navigate('BadgesTypeScreen',{Badgetype:'Tester',numberOfMember:3})}
+              
+               onPessAll={() => navigation.navigate('BadgesScreen',{isAll:true,profileName:'Myaat'})}
             />
           </>
         )}

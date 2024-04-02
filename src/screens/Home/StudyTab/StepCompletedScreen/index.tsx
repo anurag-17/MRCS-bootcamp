@@ -1,5 +1,5 @@
 import React from 'react'
-import { SafeAreaView, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { Platform, SafeAreaView, StatusBar, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import { DarkBlue, white } from '../../../../theme/Colors'
 import { Cross, StepDoneIcon } from '../../../../assets/images';
 import { useNavigation } from '@react-navigation/native';
@@ -23,7 +23,12 @@ import Header from '../../../../components/Header';
   return (
     <SafeAreaView style={styles.mainContainer}>
       {/* {_stepHeader()} */}
-      <Header type="white" />
+      <StatusBar barStyle={'dark-content'}/>
+      <Header
+        type="white"
+        containerStyle={Platform.OS == 'android' ? {marginTop: 35} : {}}
+      />
+      
       <View style={[styles.mainContainer, {justifyContent: 'center'}]}>
         <StepDoneIcon
           height={100}

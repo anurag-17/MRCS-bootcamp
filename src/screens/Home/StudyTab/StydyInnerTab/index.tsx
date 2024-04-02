@@ -100,7 +100,7 @@ const StudyInnerTab = () => {
           <View>
             <Text style={styles.headingText}>{subject ?? 'Examination'}</Text>
             <Text style={styles.subHeadingText}>
-              {'Publiic No Time Limit 69 Participants'}
+              {'Public No Time Limit 69 Participants'}
             </Text>
           </View>
         </ImageBackground>

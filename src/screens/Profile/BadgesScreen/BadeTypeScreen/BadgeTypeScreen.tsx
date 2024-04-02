@@ -8,15 +8,15 @@ import {
   knowledgeBlue,
   skillGreen,
   white,
-} from '../../../../../theme/Colors';
+} from '../../../../theme/Colors';
 import {
   useNavigation,
   NavigationProp,
   useRoute,
 } from '@react-navigation/native';
-import Header from '../../../../../components/Header';
-import IconButton from '../../../../../components/IconButton';
-import Fonts from '../../../../../assets/Fonts';
+import Header from '../../../../components/Header';
+import IconButton from '../../../../components/IconButton';
+import Fonts from '../../../../assets/Fonts';
 
 interface MemberItemProps{
   name:string,

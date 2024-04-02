@@ -60,7 +60,7 @@ export {default as Cross} from '../images/cross.svg'
  
 export {default as Station} from '../images/study/station.svg'
 
-export {default as StepDoneIcon} from '../images/study/stepDone.svg'
+export {default as StepDoneIcon} from '../images/study/stepDoneIcon.svg'
 
 export {default as GreenCheckIcon} from '../images/study/greenCheck.svg'
 
@@ -87,6 +87,10 @@ export {default as SubscriptionIcon} from './activities/subscription.svg'
 export {default as EventsIcon} from './activities/events.svg'
 
 
+
+export const BlackTick = require('./blackTick.png')
+
+export {default as GroupsScreenIcon} from './GroupsScreenIcon.svg'
 
 
 

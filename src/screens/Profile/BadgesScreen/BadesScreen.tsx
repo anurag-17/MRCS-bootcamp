@@ -17,16 +17,16 @@ import {
   knowledgeBlue,
   skillGreen,
   white,
-} from '../../../../theme/Colors';
-import Header from '../../../../components/Header';
+} from '../../../theme/Colors';
+import Header from '../../../components/Header';
 import {
   NavigationProp,
   RouteProp,
   useNavigation,
   useRoute,
 } from '@react-navigation/native';
-import IconButton from '../../../../components/IconButton';
-import Fonts from '../../../../assets/Fonts';
+import IconButton from '../../../components/IconButton';
+import Fonts from '../../../assets/Fonts';
 
 const BadgesScreen = () => {
   const navigation = useNavigation() as NavigationProp<any>;

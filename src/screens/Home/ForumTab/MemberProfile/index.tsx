@@ -20,10 +20,10 @@ import Fonts from '../../../../assets/Fonts';
 import AchievedBadges from '../../../../components/AchievedBadges';
 import LeftRightText from '../../../../components/LeftRightText';
 import { TouchableOpacity } from 'react-native-gesture-handler';
-import { useNavigation } from '@react-navigation/native';
+import { NavigationProp, useNavigation } from '@react-navigation/native';
 
 const MeberProfile = () => {
-  const navigation = useNavigation()
+  const navigation = useNavigation() as NavigationProp<any>
   return (
     <View style={styles.mainContainer}>
       <StatusBar translucent backgroundColor={DarkBlue} />
@@ -66,8 +66,8 @@ const MeberProfile = () => {
               />
             </View>
             <AchievedBadges
-              onPressSubscription={() => null}
-              onPressTester={() => null}
+            onPressSubscription={()=> navigation.navigate('BadgesTypeScreen',{Badgetype:'Part B Subscription',numberOfMember:77})}
+            onPressTester={() => navigation.navigate('BadgesTypeScreen',{Badgetype:'Tester',numberOfMember:3})}
               onPessAll={() => navigation.navigate('BadgesScreen',{isAll:true,profileName:'Myaat'})}
             />
             {/* Fourm Post */}

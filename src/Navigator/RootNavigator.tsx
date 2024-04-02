@@ -21,8 +21,6 @@ import ForumCreateNewPost from '../screens/Home/ForumTab/ForumCreatNewPost';
 import ForumSearchPost from '../screens/Home/ForumTab/ForumSearchPost';
 import MemberProfile from '../screens/Home/ForumTab/MemberProfile';
 import MemberChat from '../screens/Home/ForumTab/MemberChat';
-import BadgesScreen from '../screens/Home/ForumTab/BadgesScreen';
-import BadgesTypeScreen from '../screens/Home/ForumTab/BadgesScreen/BadeTypeScreen';
 import NotesSearch from '../screens/Home/NotesTab/NotesSearch';
 import NotesTagScreen from '../screens/Home/NotesTab/NotesTagScreen';
 import NotesPostScreen from '../screens/Home/NotesTab/NotesPostScreen';
@@ -32,6 +30,14 @@ import Inbox from '../screens/Home/HomeTab/Inbox';
 import NewMessage from '../screens/Home/HomeTab/NewMessage';
 import Profile from '../screens/Profile/Profile';
 import OrdersScreen from '../screens/Profile/Orders/OrdersScreen';
+import Subscriptions from '../screens/Profile/Subscriptions/Subscriptions';
+import OverView from '../screens/Profile/Subscriptions/OverView/OverView';
+import Bookings from '../screens/Profile/Bookings/Bookings';
+import Events from '../screens/Profile/Events/Events';
+import MyPrograms from '../screens/Profile/MyPrograms/MyPrograms';
+import BadgesScreen from '../screens/Profile/BadgesScreen/BadesScreen';
+import BadgesTypeScreen from '../screens/Profile/BadgesScreen/BadeTypeScreen/BadgeTypeScreen';
+import GroupsScreen from '../screens/Profile/GroupsScreen/GroupsScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -66,9 +72,16 @@ const AuthStack = ()=>{
             <Stack.Screen name='EventDetails' component={EventDetails}/>
             <Stack.Screen name='Inbox' component={Inbox}/>
             <Stack.Screen name='NewMessage' component={NewMessage} options={{animation:'slide_from_bottom'}}/>
+
+            {/* Profile Screens */}
             <Stack.Screen name='Profile' component={Profile} />
             <Stack.Screen name='OrdersScreen' component={OrdersScreen} />
-
+            <Stack.Screen name='Subscriptions' component={Subscriptions} />
+            <Stack.Screen name='OverView' component={OverView} options={{animation:'slide_from_bottom'}}/>
+            <Stack.Screen name='Bookings' component={Bookings}/>
+            <Stack.Screen name='Events' component={Events}/>
+            <Stack.Screen name='MyPrograms' component={MyPrograms}/>
+            <Stack.Screen name='GroupsScreen' component={GroupsScreen}/>
 
             {/* Notes Tab Screen */}
             <Stack.Screen name='NotesContent' component={NotesContent}/>

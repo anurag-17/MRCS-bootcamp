@@ -1,7 +1,8 @@
-import { Image, ImageSourcePropType, StyleProp, Text, TextStyle, TouchableOpacity, View, ViewStyle } from "react-native";
-import { LightPrimaryTextColor, grayD9 } from "../../theme/Colors";
+import { Image, ImageBackground, ImageSourcePropType, StyleProp, Text, TextStyle, TouchableOpacity, View, ViewStyle } from "react-native";
+import { LightBlueADD, LightPrimaryTextColor, grayD9 } from "../../theme/Colors";
 import { styles } from "./styles";
 import * as Progress from 'react-native-progress';
+import { BlackTick } from "../../assets/images";
 
 interface ExamStudyCardProps {
     isJoined?: boolean;
@@ -38,11 +39,18 @@ const ExamStudyCard: React.FC<ExamStudyCardProps> = ({
 
     return (
         <View style={[styles.studyProgramContainer,containerStyle]}>
-          {image && type !=='SuggestedGroup' &&<Image
+          {image && type !=='SuggestedGroup' && <><ImageBackground
             style={styles.programImage}
             source={image}
             resizeMode='cover'
-          />}
+          >{isJoined &&
+            <View style={styles.participantView}>
+                <Image source={BlackTick} style={styles.blackTick} resizeMode="contain" />
+                <Text style={[styles.youJoined]}>{`You're a participant`}</Text>
+
+            </View>}
+          </ImageBackground>
+          </>}
 
           {type !=='SuggestedGroup'&&<View style={styles.middleContainr}>
             <Text style={[styles.subjectText,subjectStyle]}>{subject}</Text>
@@ -53,7 +61,7 @@ const ExamStudyCard: React.FC<ExamStudyCardProps> = ({
                 </Text>
                 <View style={styles.prgrsBarContainer}>
                   <Progress.Bar
-                    progress={stepsPercentage??0 / 100}
+                    progress={stepsPercentage? stepsPercentage / 100:0}
                     width={278}
                     color={LightPrimaryTextColor}
                     borderColor={grayD9}

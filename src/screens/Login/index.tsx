@@ -31,7 +31,7 @@ const Login = () => {
       </TouchableOpacity>
 
       <Text style={styles.policyText}>
-        By signing up you agree to our{' '}
+        By signing up you agree to the{' '}
         <Text
           style={{textDecorationLine: 'underline'}}
           onPress={handleTermsPress}
