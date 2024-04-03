@@ -39,6 +39,7 @@ interface HeaderProps {
   onPressDots?:()=>void;
   onPost?:()=>void;
   isPost?:boolean;
+  isPublish?:boolean,
   profileImageUri?:string;
   isProfileImage?:boolean
   onPressEditBoard?:()=>void
@@ -58,6 +59,7 @@ const Header: React.FC<HeaderProps> = ({
   onPressDots,
   onPressShare,
   isPost,
+  isPublish,
   onPost,
   isProfileImage = false,
   onPressEditBoard,
@@ -69,7 +71,7 @@ const Header: React.FC<HeaderProps> = ({
   if (type == 'blue')
     return (
       <View style={[styles.mainContainer, containerStyle]}>
-        <View style={{flexDirection: 'row'}}>
+        <View style={{flexDirection: 'row',flex:1}}>
           <TouchableOpacity
             onPress={() => navigation.goBack()}
             style={{alignSelf: 'center'}}>
@@ -119,7 +121,7 @@ const Header: React.FC<HeaderProps> = ({
           </TouchableOpacity>
         )}
         {onPressSettings && (
-          <TouchableOpacity style={{alignSelf: 'center'}} onPress={onPressDots}>
+          <TouchableOpacity style={{alignSelf: 'center'}} onPress={onPressSettings}>
             <SettingsWhite
               fill={'white'}
               height={16}
@@ -134,7 +136,7 @@ const Header: React.FC<HeaderProps> = ({
   else {
     return (
       <View style={[styles.whiteMainContainer, containerStyle]}>
-        <View style={{flexDirection: 'row'}}>
+        <View style={{flexDirection: 'row',}}>
           <TouchableOpacity
             style={{alignSelf: 'center'}}
             onPress={() => navigation.goBack()}>
@@ -161,7 +163,7 @@ const Header: React.FC<HeaderProps> = ({
         {
           onPost &&
           <TouchableOpacity disabled={!isPost} style={{alignSelf: 'center'}} onPress={onPressDots}>
-            <Text style={isPost?{ color:DarkBlue}: { color:grayD9}}>Post</Text>
+            <Text style={isPost?{ color:DarkBlue}: { color:grayD9}}>{isPublish?'Publish': 'Post'}</Text>
           </TouchableOpacity>
         }
       </View>

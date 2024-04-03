@@ -38,6 +38,9 @@ import MyPrograms from '../screens/Profile/MyPrograms/MyPrograms';
 import BadgesScreen from '../screens/Profile/BadgesScreen/BadesScreen';
 import BadgesTypeScreen from '../screens/Profile/BadgesScreen/BadeTypeScreen/BadgeTypeScreen';
 import GroupsScreen from '../screens/Profile/GroupsScreen/GroupsScreen';
+import AppSettings from '../screens/AppSettings/AppSettings';
+import EditContent from '../screens/Profile/EditContent/EditContent';
+import Followers from '../screens/Profile/Followers/Followers';
 
 const Stack = createNativeStackNavigator();
 
@@ -82,6 +85,11 @@ const AuthStack = ()=>{
             <Stack.Screen name='Events' component={Events}/>
             <Stack.Screen name='MyPrograms' component={MyPrograms}/>
             <Stack.Screen name='GroupsScreen' component={GroupsScreen}/>
+            
+             {/* App Settings Screens */}
+             <Stack.Screen name='AppSettings' component={AppSettings} />
+             <Stack.Screen name='EditContent' component={EditContent} options={{animation:'slide_from_bottom'}}/>
+             <Stack.Screen name='Followers' component={Followers} />
 
             {/* Notes Tab Screen */}
             <Stack.Screen name='NotesContent' component={NotesContent}/>

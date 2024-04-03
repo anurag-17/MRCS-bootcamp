@@ -48,7 +48,7 @@ const Profile = () => {
         title={'Profile'}
         containerStyle={[styles.headerStyle]}
         subTitle={'MRCS Boot Camp UK'}
-        onPressSettings={() => console.log('ddd')}
+        onPressSettings={() => navigation.navigate('AppSettings')}
       />
       <ProfileHeader
         name="User Name"
@@ -57,6 +57,7 @@ const Profile = () => {
         followingCount="2"
         timeText=". Active Now"
         onPressSubscription={() => navigation.navigate('BadgesScreen',{isAll:false,profileName:'Myaat'})}
+        onPressFollowers={()=>navigation.navigate('Followers')}
       />
       <CustomButton
         buttonStyle={styles.editButton}
@@ -191,7 +192,7 @@ const ProifleSc = () => {
             </Text>
             <LeftRightText
               leftText="About Me"
-              onPressAll={()=>null}
+              onPressAll={()=>navigation.navigate('EditContent')}
               rightText="Edit"
               rightTextStyle={{fontFamily:Fonts.POPPINS_SEMIBOLD}}
               containerStyle={{marginTop: 25,marginHorizontal:20}}

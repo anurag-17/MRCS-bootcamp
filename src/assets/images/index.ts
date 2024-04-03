@@ -92,6 +92,8 @@ export const BlackTick = require('./blackTick.png')
 
 export {default as GroupsScreenIcon} from './GroupsScreenIcon.svg'
 
+export {default as LogoutIcon} from './logout.svg'
+
 
 
 

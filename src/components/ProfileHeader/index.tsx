@@ -13,6 +13,7 @@ interface ProfileHeaderProps {
   followersCount: string;
   followingCount: string;
   onPressSubscription?:()=>void;
+  onPressFollowers:()=>void;
 }
 
 const ProfileHeader: FC<ProfileHeaderProps> = ({
@@ -22,7 +23,8 @@ const ProfileHeader: FC<ProfileHeaderProps> = ({
   timeText,
   followersCount,
   followingCount,
-  onPressSubscription
+  onPressSubscription,
+  onPressFollowers
 }) => {
   return (
     <View style={styles.container}>
@@ -52,7 +54,7 @@ const ProfileHeader: FC<ProfileHeaderProps> = ({
         <IconButton isIcon title={'Tester'} isStar={false} />
       </TouchableOpacity>
       {/* Follower Following Row */}
-      <View style={[styles.flexRow,{marginTop:10}]}>
+      <TouchableOpacity style={[styles.flexRow,{marginTop:10}]} onPress={onPressFollowers}>
         <Text style={[styles.text13Semi, {marginRight: 15}]}>
           {followersCount}
           <Text style={styles.text13Regular}> Followers</Text>
@@ -61,7 +63,7 @@ const ProfileHeader: FC<ProfileHeaderProps> = ({
           {followingCount}
           <Text style={styles.text13Regular}> Followings</Text>
         </Text>
-      </View>
+      </TouchableOpacity>
     </View>
   );
 };
