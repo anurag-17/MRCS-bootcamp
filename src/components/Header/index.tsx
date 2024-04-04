@@ -139,7 +139,7 @@ const Header: React.FC<HeaderProps> = ({
             disabled={!isPost}
             style={{alignSelf: 'center'}}
             onPress={onPost}>
-            <Text style={{color:'white'}}>
+            <Text style={{color:'white',fontFamily:Fonts.POPPINS_BOLD}}>
               {postText}
             </Text>
           </TouchableOpacity>
@@ -197,7 +197,7 @@ const Header: React.FC<HeaderProps> = ({
             disabled={!isPost}
             style={{alignSelf: 'center'}}
             onPress={onPost}>
-            <Text style={isPost ? {color: DarkBlue} : {color: grayD9}}>
+            <Text style={[isPost ? {color: DarkBlue} : {color: grayD9},{fontFamily:Fonts.POPPINS_BOLD}]}>
               {isPublish ? 'Publish' : postText ?? 'Post'}
             </Text>
           </TouchableOpacity>

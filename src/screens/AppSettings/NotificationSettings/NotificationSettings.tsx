@@ -21,7 +21,7 @@ const NotificationSettings = () => {
       name: 'Email',
       icon:EmailIcon,
       onPress:()=>{
-        null
+        _goTo('EmailNotification')
       }
     },
     

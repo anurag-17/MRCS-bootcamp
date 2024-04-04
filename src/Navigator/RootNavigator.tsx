@@ -44,6 +44,9 @@ import Followers from '../screens/Profile/Followers/Followers';
 import EditProfile from '../screens/Profile/EditProfile/EditProfile';
 import NotificationSettings from '../screens/AppSettings/NotificationSettings/NotificationSettings';
 import SavedCreditCard from '../screens/AppSettings/SavedCreditCard/SavedCreditCard';
+import AppLanguage from '../screens/AppSettings/AppLanguage/AppLanguage';
+import EmailNotification from '../screens/AppSettings/EmailNotification/EmailNotification';
+import DeleteAccount from '../screens/AppSettings/DeleteAccount/DeleteAccount';
 
 const Stack = createNativeStackNavigator();
 
@@ -96,6 +99,9 @@ const AuthStack = ()=>{
              <Stack.Screen name='Followers' component={Followers} />
              <Stack.Screen name='NotificationSettings' component={NotificationSettings} />
              <Stack.Screen name='SavedCreditCard' component={SavedCreditCard} />
+             <Stack.Screen name='AppLanguage' component={AppLanguage} />
+             <Stack.Screen name='EmailNotification' component={EmailNotification} />
+             <Stack.Screen name='DeleteAccount' component={DeleteAccount} />
 
 
             {/* Notes Tab Screen */}

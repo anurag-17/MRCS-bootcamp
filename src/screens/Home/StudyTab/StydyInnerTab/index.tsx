@@ -53,7 +53,12 @@ const StudyInnerTab = () => {
       
       activeColor={DarkBlue}
       labelStyle={{fontFamily: Fonts.POPPINS_MEDIUM}}
+      scrollEnabled
       indicatorStyle={{backgroundColor: DarkBlue}}
+      contentContainerStyle={{justifyContent:'space-between'}}
+      // tabStyle={{alignSelf: 'flex-start', justifyContent: 'flex-start', flexDirection: 'row', width: 'auto', padding: 0,}}
+      // style={{ elevation: 0, borderBottomWidth: 1, borderColor: '#42C2AB', backgroundColor: 'transparent', width: 'auto', }}
+      // contentContainerStyle={{ justifyContent: 'flex-start', flexDirection: 'row', width: 'auto', }}
     />
   );
   return (

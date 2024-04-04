@@ -1,5 +1,5 @@
 import React, {FC} from 'react';
-import {StyleSheet, Text, View,TouchableOpacity} from 'react-native';
+import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 import Fonts from '../../assets/Fonts';
 import {DarkBlue, LightGrayColor, green00A} from '../../theme/Colors';
 import {PlaceholderProfile} from '../../assets/images';
@@ -12,8 +12,8 @@ interface ProfileHeaderProps {
   timeText: string;
   followersCount: string;
   followingCount: string;
-  onPressSubscription?:()=>void;
-  onPressFollowers:()=>void;
+  onPressSubscription?: () => void;
+  onPressFollowers: () => void;
 }
 
 const ProfileHeader: FC<ProfileHeaderProps> = ({
@@ -24,7 +24,7 @@ const ProfileHeader: FC<ProfileHeaderProps> = ({
   followersCount,
   followingCount,
   onPressSubscription,
-  onPressFollowers
+  onPressFollowers,
 }) => {
   return (
     <View style={styles.container}>
@@ -33,7 +33,7 @@ const ProfileHeader: FC<ProfileHeaderProps> = ({
         <View>
           <Text style={styles.nameText}>{name}</Text>
           <Text style={styles.memberText}>
-            {isAdmin ? 'Admin ' : 'Member . '}
+            {isAdmin ? 'Admin |' : 'Member . '}
             <Text style={styles.timeText}>{timeText}</Text>
           </Text>
         </View>
@@ -44,17 +44,27 @@ const ProfileHeader: FC<ProfileHeaderProps> = ({
         </View>
       </View>
       {/* Buttons rows */}
-      <TouchableOpacity  style={[styles.flexRow,]} onPress={onPressSubscription}>
+      <TouchableOpacity style={[styles.flexRow]} onPress={onPressSubscription}>
         <IconButton
           isIcon
           title={'Part B Subscription'}
+          titleStyle={{alignSelf: 'center'}}
           isStar={true}
-          btnStyle={{marginRight: 20}}
+          btnStyle={{marginRight: 20,justifyContent:'center',padding:0,paddingTop:2}}
+
         />
-        <IconButton isIcon title={'Tester'} isStar={false} />
+        <IconButton
+          isIcon
+          title={'Tester'}
+          titleStyle={{alignSelf: 'center'}}
+          btnStyle={{justifyContent:'center',padding:0,paddingTop:2}}
+          isStar={false}
+        />
       </TouchableOpacity>
       {/* Follower Following Row */}
-      <TouchableOpacity style={[styles.flexRow,{marginTop:10}]} onPress={onPressFollowers}>
+      <TouchableOpacity
+        style={[styles.flexRow, {marginTop: 10}]}
+        onPress={onPressFollowers}>
         <Text style={[styles.text13Semi, {marginRight: 15}]}>
           {followersCount}
           <Text style={styles.text13Regular}> Followers</Text>

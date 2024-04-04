@@ -36,17 +36,17 @@ const AppSettings = () => {
   const SETTINGS: settingsInterface[] = [
     {
       name: 'App language',
-      onPress: () => null,
+      onPress: () => _goTo('AppLanguage'),
     },
     {
       name: 'Notifictions settings',
 
-      onPress: () => navigation.navigate('NotificationSettings'),
+      onPress: () => _goTo('NotificationSettings'),
     },
     {
       name: 'Saved Credit Cards',
 
-      onPress: () => navigation.navigate('SavedCreditCard'),
+      onPress: () => _goTo('SavedCreditCard'),
     },
     {
       name: 'App display',
@@ -54,7 +54,7 @@ const AppSettings = () => {
     },
     {
       name: 'Delete you account',
-      onPress: () => null,
+      onPress: () => _goTo('DeleteAccount'),
     },
     {
       name: 'About the app',

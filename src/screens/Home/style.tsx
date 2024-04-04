@@ -60,9 +60,10 @@ export const styles = StyleSheet.create({
   },
   tabTopContainer: {
     marginTop:-35,
-    paddingBottom:5,
+    // paddingBottom:5,
     borderTopLeftRadius: 20,
     borderTopRightRadius: 20,
+    paddingVertical:20,
     borderColor:white,
     backgroundColor: white,
     shadowOffset: {
@@ -100,6 +101,7 @@ export const styles = StyleSheet.create({
   tagText:{
     fontFamily:Fonts.WIX_SEMI_BOLD,
     fontSize:20,
+    color:DarkBlue,
     alignSelf:'center'
   },
   buttonStyle:{

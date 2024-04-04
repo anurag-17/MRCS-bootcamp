@@ -18,7 +18,7 @@ const OverView = () => {
       <Header
         type="white"
         titleStyle={styles.headerTitle}
-        title="OverView"
+        title="Overview"
         containerStyle={Platform.OS == 'android' ? {marginTop: 35} : {}}
       />
       <View style={styles.topView}>

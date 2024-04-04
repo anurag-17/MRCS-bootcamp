@@ -125,14 +125,14 @@ const ContactUsScreen = () => {
           />
         </View>
         <View
-          style={{
+          style={[{
             flexDirection: 'row',
             justifyContent: 'space-between',
             marginTop: 15,
-          }}>
+          },Platform.OS=='android'?{marginBottom:10}:{}]}>
           <View style={{flexDirection: 'row'}}>
             <ChatIcon height={14} style={{alignSelf: 'center'}} />
-            <Text style={{fontFamily: Fonts.POPPINS_MEDIUM}}>Chat</Text>
+            <Text style={{fontFamily: Fonts.POPPINS_MEDIUM,alignSelf:'center'}}>Chat</Text>
           </View>
           <View style={{flexDirection: 'row'}}>
             <ImageIcon  height={16} style={{alignSelf: 'center'}}/>

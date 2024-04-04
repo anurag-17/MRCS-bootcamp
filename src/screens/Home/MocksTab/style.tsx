@@ -13,7 +13,7 @@ export const styles  = StyleSheet.create({
     joinFreeText:{
         color:secondaryTextColor,
         fontSize:16,
-        fontFamily:Fonts.WIX_MEDIUM,
+        fontFamily:Fonts.POPPINS_SEMIBOLD,
         marginLeft:20,
         marginTop:20
     },

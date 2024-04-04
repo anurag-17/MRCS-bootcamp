@@ -70,26 +70,24 @@ const Home = () => {
   
     <>
         <StatusBar translucent backgroundColor={'transparent'} />
-        <TabsProvider defaultIndex={0} onChangeIndex={(i)=>setIndex(i)}>
+        <TabsProvider  defaultIndex={0} onChangeIndex={(i)=>setIndex(i)}>
         {_renderHeader()}
           <Tabs
-          
+            
             // tabLabelStyle={tabLabelStyleOptions}
             theme={{colors: {
-              primary:DarkBlue,
-              
+              primary:DarkBlue
              
             }
           }
             }
+            
             tabLabelStyle={{fontFamily:Fonts.POPPINS_MEDIUM,fontSize:14}}
             style={styles.tabsShadowEffect}
             mode={'scrollable'}
-            
-            
             showLeadingSpace={false}
             disableSwipe>
-            <TabScreen label={'Home'}  icon={null} key={'1'} >
+            <TabScreen  label={'Home'}  icon={null} key={'1'} >
               <HomeTab />
             </TabScreen>
             <TabScreen label={'Hall of Fame'} icon={null} key={'2'} >

@@ -38,7 +38,9 @@ const AchievedBadges: FC<AchievedBadgesProps> = ({
           isIcon
           title={'Part B Subscription'}
           isStar={true}
-          btnStyle={{width: '42%'}}
+          titleStyle={{alignSelf:'center'}}
+          btnStyle={{width: '42%',padding:0,paddingTop:2}}
+
         />
         <View style={{flexDirection: 'row'}}>
           {[1, 2].map((item, index) => {
@@ -61,7 +63,8 @@ const AchievedBadges: FC<AchievedBadgesProps> = ({
               isIcon
               title={'Tester'}
               isStar={false}
-              btnStyle={{width: '32%'}}
+              titleStyle={{alignSelf:'center'}}
+              btnStyle={{width: '20%',padding:0,paddingTop:2,}}
             />
             <View style={{flexDirection: 'row'}}>
               {[1, 2, 3].map((item, index) => {

@@ -60,8 +60,8 @@ export const styles  = StyleSheet.create({
     },
     upcomingText:{
         color:secondaryTextColor,
-        fontSize:15,
-        fontFamily:Fonts.WIX_MEDIUM,
+        fontSize:14,
+        fontFamily:Fonts.POPPINS_SEMIBOLD,
         marginLeft:20,
         marginVertical:20
     },
@@ -108,14 +108,13 @@ export const styles  = StyleSheet.create({
         justifyContent:'space-between',
     },
     whatPreviousText:{
-        fontFamily:Fonts.WIX_SEMI_BOLD,
-        fontWeight:'600',
+        fontFamily:Fonts.POPPINS_SEMIBOLD,
         fontSize:14,
-        color:DarkBlue
+        color:secondaryTextColor,
+        alignSelf:'center'
     },
     viewAllText:{
-        fontFamily:Fonts.WIX_BOLD,
-        fontWeight:'600',
+        fontFamily:Fonts.POPPINS_SEMIBOLD,
         fontSize:16,
         color:DarkBlue
     },

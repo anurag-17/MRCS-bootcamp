@@ -52,6 +52,7 @@ export const B9B9B9 = '#B9B9B9'
 export const F8F9FB = '#F8F9FB'
 export const LightBlueADD = '#ADD4FF'
 export const logoutRed = '#EE2424'
+export const D2D6D9 = '#D2D6D9'
 
 
 

@@ -7,6 +7,7 @@ const {height, width} = Dimensions.get('window');
 
 const GroupTab = () => {
   const [activeSlide, setActiveSlide] = useState(0);
+
   const SLIDER_WIDTH = Dimensions.get('window').width + 30;
   const ITEM_WIDTH = Math.round(SLIDER_WIDTH * 0.7);
   const entries = [
@@ -54,6 +55,7 @@ const GroupTab = () => {
     return <ExamStudyCard {...item} />;
   };
   
+  console.log("crrIndx : ",currentIndex)
   return (
     <View style={styles.container}>
       <FlatList
@@ -69,7 +71,7 @@ const GroupTab = () => {
                 <Text style={styles.examNViewAllText}>{'View All'}</Text>
               </TouchableOpacity>
             </View>
-            <View style={styles.dividerLine} />
+            <View style={[styles.dividerLine,{marginBottom:40}]} />
             <View>
               <FlatList
                 data={entries}
@@ -79,12 +81,21 @@ const GroupTab = () => {
                   paddingHorizontal: 20,
                 }}
                 pagingEnabled
+                onScroll={e => {
+                  // const x = e.nativeEvent.contentOffset.x;
+                  // console.log("x Value : ",(x / width).toFixed(0))
+                  // setCurrentIndex((x / width).toFixed(0));
+                  const { contentOffset, layoutMeasurement } = e.nativeEvent;
+                  const currentIndex = Math.floor(contentOffset.x / layoutMeasurement.width);
+                  console.log("currentIndex : ",currentIndex)
+                }}
                 renderItem={_renderItem}
                 ItemSeparatorComponent={() => <View style={{width: 15}} />}
                 keyExtractor={(item, index) => `${item.type}-${index}`} // Ensure each item has a unique key
                 showsHorizontalScrollIndicator={false}
               />
             </View>
+            <View style={[styles.dividerLine,{marginTop:60}]} />
             <Text style={styles.leftGroupText}>{'MY GROUPS'}</Text>
             <View style={{flexDirection: 'row'}}>
               <ImageBackground
@@ -118,6 +129,7 @@ const GroupTab = () => {
             roundImageArray={['']}
           />
         )}
+        ListFooterComponent={()=><View style={{marginBottom:60}}/>}
       />
     </View>
   );
