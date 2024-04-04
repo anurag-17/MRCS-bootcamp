@@ -15,8 +15,8 @@ const Login = () => {
     };
 
     const goToSignIn = ()=>{
-      // navigation.navigate('Home')\
-      navigation.navigate('SignIn')
+      navigation.navigate('Home')
+      // navigation.navigate('SignIn')
 
     }
 

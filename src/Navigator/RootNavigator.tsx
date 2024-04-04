@@ -41,6 +41,9 @@ import GroupsScreen from '../screens/Profile/GroupsScreen/GroupsScreen';
 import AppSettings from '../screens/AppSettings/AppSettings';
 import EditContent from '../screens/Profile/EditContent/EditContent';
 import Followers from '../screens/Profile/Followers/Followers';
+import EditProfile from '../screens/Profile/EditProfile/EditProfile';
+import NotificationSettings from '../screens/AppSettings/NotificationSettings/NotificationSettings';
+import SavedCreditCard from '../screens/AppSettings/SavedCreditCard/SavedCreditCard';
 
 const Stack = createNativeStackNavigator();
 
@@ -85,11 +88,15 @@ const AuthStack = ()=>{
             <Stack.Screen name='Events' component={Events}/>
             <Stack.Screen name='MyPrograms' component={MyPrograms}/>
             <Stack.Screen name='GroupsScreen' component={GroupsScreen}/>
-            
+            <Stack.Screen name='EditProfile' component={EditProfile}  options={{animation:'slide_from_bottom'}}/>
+
              {/* App Settings Screens */}
              <Stack.Screen name='AppSettings' component={AppSettings} />
              <Stack.Screen name='EditContent' component={EditContent} options={{animation:'slide_from_bottom'}}/>
              <Stack.Screen name='Followers' component={Followers} />
+             <Stack.Screen name='NotificationSettings' component={NotificationSettings} />
+             <Stack.Screen name='SavedCreditCard' component={SavedCreditCard} />
+
 
             {/* Notes Tab Screen */}
             <Stack.Screen name='NotesContent' component={NotesContent}/>

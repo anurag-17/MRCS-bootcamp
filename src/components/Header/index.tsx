@@ -33,6 +33,7 @@ interface HeaderProps {
   isEdit?: boolean;
   containerStyle?: StyleProp<ViewStyle>;
   titleStyle?: TextStyle;
+  subTitleStyle?: TextStyle;
   type: 'blue' | 'white';
   isShare?: boolean;
   onPressShare?:()=>void;
@@ -43,7 +44,8 @@ interface HeaderProps {
   profileImageUri?:string;
   isProfileImage?:boolean
   onPressEditBoard?:()=>void
-  onPressSettings?:()=>void
+  onPressSettings?:()=>void,
+  postText?:string
 }
 
 const Header: React.FC<HeaderProps> = ({
@@ -55,11 +57,13 @@ const Header: React.FC<HeaderProps> = ({
   isEdit,
   containerStyle,
   titleStyle,
+  subTitleStyle,
   isShare,
   onPressDots,
   onPressShare,
   isPost,
   isPublish,
+  postText,
   onPost,
   isProfileImage = false,
   onPressEditBoard,
@@ -83,7 +87,7 @@ const Header: React.FC<HeaderProps> = ({
               <View style={styles.profileImage}/>
               <View style={{alignSelf:'center',}}>
                 <Text style={[styles.title, titleStyle]}>{title}</Text>
-                <Text style={styles.mrcsText}>{subTitle}</Text>
+                <Text style={[styles.mrcsText,subTitleStyle]}>{subTitle}</Text>
               </View>
             </View>
           ) : (
@@ -130,13 +134,23 @@ const Header: React.FC<HeaderProps> = ({
             />
           </TouchableOpacity>
         )}
+        {onPost && (
+          <TouchableOpacity
+            disabled={!isPost}
+            style={{alignSelf: 'center'}}
+            onPress={onPost}>
+            <Text style={{color:'white'}}>
+              {postText}
+            </Text>
+          </TouchableOpacity>
+        )}
         </View>
       </View>
     );
   else {
     return (
       <View style={[styles.whiteMainContainer, containerStyle]}>
-        <View style={{flexDirection: 'row',}}>
+        <View style={{flexDirection: 'row'}}>
           <TouchableOpacity
             style={{alignSelf: 'center'}}
             onPress={() => navigation.goBack()}>
@@ -145,27 +159,49 @@ const Header: React.FC<HeaderProps> = ({
           {isLogo && (
             <BootCampRoundLogo style={{alignSelf: 'center', marginLeft: 20}} />
           )}
-          <Text style={[styles.title, {color: black}, titleStyle]}>
-            {title}
-          </Text>
+
+          {subTitle ? (
+            <View>
+              <Text style={[styles.title, {color: black}, titleStyle]}>
+                {title}
+              </Text>
+              <Text style={[styles.mrcsText, {color: black}, subTitleStyle]}>
+                {subTitle}
+              </Text>
+            </View>
+          ) : (
+            <Text style={[styles.title, {color: black}, titleStyle]}>
+              {title}
+            </Text>
+          )}
         </View>
 
         {isShare && (
-          <TouchableOpacity style={{alignSelf: 'center'}} onPress={onPressShare}>
+          <TouchableOpacity
+            style={{alignSelf: 'center'}}
+            onPress={onPressShare}>
             <Share height={16} width={16} style={{alignSelf: 'center'}} />
           </TouchableOpacity>
         )}
         {isThreeDots && (
           <TouchableOpacity style={{alignSelf: 'center'}} onPress={onPressDots}>
-            <ThreeDotsWhite height={16} width={16} style={{alignSelf: 'center'}} />
+            <ThreeDotsWhite
+              height={16}
+              width={16}
+              style={{alignSelf: 'center'}}
+            />
           </TouchableOpacity>
         )}
-        {
-          onPost &&
-          <TouchableOpacity disabled={!isPost} style={{alignSelf: 'center'}} onPress={onPressDots}>
-            <Text style={isPost?{ color:DarkBlue}: { color:grayD9}}>{isPublish?'Publish': 'Post'}</Text>
+        {onPost && (
+          <TouchableOpacity
+            disabled={!isPost}
+            style={{alignSelf: 'center'}}
+            onPress={onPost}>
+            <Text style={isPost ? {color: DarkBlue} : {color: grayD9}}>
+              {isPublish ? 'Publish' : postText ?? 'Post'}
+            </Text>
           </TouchableOpacity>
-        }
+        )}
       </View>
     );
   }

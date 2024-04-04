@@ -94,7 +94,12 @@ export {default as GroupsScreenIcon} from './GroupsScreenIcon.svg'
 
 export {default as LogoutIcon} from './logout.svg'
 
+export {default as WhiteCamerIcon} from './whiteCamera.svg'
 
+export const PushIcon = require('./smartphone.png')
+export const EmailIcon = require('./email.png')
+
+export {default as CreditCard} from './creditCard.svg'
 
 
 

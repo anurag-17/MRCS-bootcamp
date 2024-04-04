@@ -43,7 +43,7 @@ const AchievedBadges: FC<AchievedBadgesProps> = ({
         <View style={{flexDirection: 'row'}}>
           {[1, 2].map((item, index) => {
             return (
-              <View
+              <View key={index}
                 style={[styles.roundImage, index !== 0 && {marginLeft: -7}]}>
                 <Text style={styles.singleChar}>A</Text>
               </View>
@@ -66,7 +66,7 @@ const AchievedBadges: FC<AchievedBadgesProps> = ({
             <View style={{flexDirection: 'row'}}>
               {[1, 2, 3].map((item, index) => {
                 return (
-                  <View
+                  <View key={index}
                     style={[
                       styles.roundImage,
                       index !== 0 && {marginLeft: -7},

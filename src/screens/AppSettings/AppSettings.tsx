@@ -41,12 +41,12 @@ const AppSettings = () => {
     {
       name: 'Notifictions settings',
 
-      onPress: () => null,
+      onPress: () => navigation.navigate('NotificationSettings'),
     },
     {
       name: 'Saved Credit Cards',
 
-      onPress: () => null,
+      onPress: () => navigation.navigate('SavedCreditCard'),
     },
     {
       name: 'App display',
@@ -62,9 +62,9 @@ const AppSettings = () => {
     },
   ];
 
-  const _renderSettings = ({item}: {item: settingsInterface}) => {
+  const _renderSettings = ({item,index}: {item: settingsInterface,index:number}) => {
     return (
-      <TouchableOpacity onPress={item.onPress}>
+      <TouchableOpacity onPress={item.onPress} key={index}>
         <View style={styles.settingRow}>
           <Text style={styles.settingName}>{item.name}</Text>
           <ForwardArrow style={{alignSelf: 'center'}} />
@@ -101,7 +101,7 @@ const AppSettings = () => {
             ]}>
             Settings
           </Text>
-          {SETTINGS.map((item, index) => _renderSettings({item}))}
+          {SETTINGS.map((item, index) => _renderSettings({item,index}))}
         </View>
         <TouchableOpacity style={styles.bottomButton} onPress={_logoutAlert}>
             <View style={styles.logoutView}>

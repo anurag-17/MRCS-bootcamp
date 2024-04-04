@@ -49,6 +49,7 @@ const Profile = () => {
         containerStyle={[styles.headerStyle]}
         subTitle={'MRCS Boot Camp UK'}
         onPressSettings={() => navigation.navigate('AppSettings')}
+      
       />
       <ProfileHeader
         name="User Name"
@@ -62,7 +63,7 @@ const Profile = () => {
       <CustomButton
         buttonStyle={styles.editButton}
         textStyle={styles.editTxt}
-        onPress={() => null}
+        onPress={() => navigation.navigate('EditProfile')}
         title="Edit Profile"
         validate={false}
         isTouchableHighLight
