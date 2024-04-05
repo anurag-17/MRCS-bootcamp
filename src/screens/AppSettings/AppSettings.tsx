@@ -50,7 +50,7 @@ const AppSettings = () => {
     },
     {
       name: 'App display',
-      onPress: () => null,
+      onPress: () => _goTo('AppDisplay'),
     },
     {
       name: 'Delete you account',
@@ -58,7 +58,7 @@ const AppSettings = () => {
     },
     {
       name: 'About the app',
-      onPress: () => null,
+      onPress: () => _goTo('AboutApp'),
     },
   ];
 

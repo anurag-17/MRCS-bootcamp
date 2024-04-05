@@ -163,8 +163,8 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     backgroundColor: DarkBlue,
     justifyContent: 'space-between',
-    paddingTop: Platform.OS == 'android' ? 25 : 40,
-    height: Platform.OS == 'android' ? 90 : 100,
+    paddingTop: Platform.OS == 'android' ? 30 : 40,
+    height: 100,
   },
   notificationItemView: {
     marginLeft: 10,

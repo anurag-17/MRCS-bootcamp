@@ -55,85 +55,86 @@ const NotesPostScreen = () => {
   const route = useRoute();
 
   return (
-
+    <>
+    <StatusBar translucent backgroundColor={DarkBlue} />
+        <Header
+          type="blue"
+          title={'Post'}
+          titleStyle={{alignSelf: 'center', marginTop: 15}}
+          containerStyle={styles.headerStyle}
+          isThreeDots={true}
+        />
     <ScrollView style={styles.mainContainer}>
-          <KeyboardAwareScrollView>
-
-      <StatusBar translucent backgroundColor={DarkBlue} />
-      <Header
-        type="blue"
-        title={'Post'}
-        titleStyle={{alignSelf: 'center', marginTop: 15}}
-        containerStyle={styles.headerStyle}
-        isThreeDots={true}
-      />
-      {/* Post section */}
-      <View style={styles.postContainer}>
-        <Text style={styles.topicText}>{'Anterior Abdominal Wall'}</Text>
-        <View style={styles.exclusiveButton}>
-          <Text style={styles.exclusiveText}>Exclusive</Text>
-        </View>
-        <Text style={styles.dateText}>Updated: Jul 21, 2023</Text>
-        <View style={styles.borderLeftView}>
-          <Text style={styles.paraText}>
-            {
-              'A 65-year-old gentleman presented with swelling in the groin. You will be asked a series of questions related to this scenario.'
-            }
-          </Text>
-        </View>
-        <View style={styles.bulletListContainer}>
-          {QUESTIONS.map((item, index) => {
-            return (
-              <View style={styles.pointsView} key={index}>
-                <ForwardArrow
-                  style={styles.forwardIcon}
-                  height={11}
-                  width={11}
-                />
-                <Text style={styles.paraText}>{item.question}</Text>
+      <KeyboardAwareScrollView>
+        
+        {/* Post section */}
+        <View style={styles.postContainer}>
+          <Text style={styles.topicText}>{'Anterior Abdominal Wall'}</Text>
+          <View style={styles.exclusiveButton}>
+            <Text style={styles.exclusiveText}>Exclusive</Text>
+          </View>
+          <Text style={styles.dateText}>Updated: Jul 21, 2023</Text>
+          <View style={styles.borderLeftView}>
+            <Text style={styles.paraText}>
+              {
+                'A 65-year-old gentleman presented with swelling in the groin. You will be asked a series of questions related to this scenario.'
+              }
+            </Text>
+          </View>
+          <View style={styles.bulletListContainer}>
+            {QUESTIONS.map((item, index) => {
+              return (
+                <View style={styles.pointsView} key={index}>
+                  <ForwardArrow
+                    style={styles.forwardIcon}
+                    height={11}
+                    width={11}
+                  />
+                  <Text style={styles.paraText}>{item.question}</Text>
+                </View>
+              );
+            })}
+          </View>
+          <Text style={styles.subjectText}>Surgical Anatomy</Text>
+          <View style={styles.bottomView}>
+            <View style={{flexDirection: 'row'}}>
+              <View style={styles.eyeIconRow}>
+                <Eye style={styles.icon} />
+                <Text style={styles.countText}>{20}</Text>
               </View>
-            );
-          })}
-        </View>
-        <Text style={styles.subjectText}>Surgical Anatomy</Text>
-        <View style={styles.bottomView}>
-          <View style={{flexDirection: 'row'}}>
-            <View style={styles.eyeIconRow}>
-              <Eye style={styles.icon} />
-              <Text style={styles.countText}>{20}</Text>
+              <View style={styles.chatIconRow}>
+                <Chat style={styles.icon} />
+                <Text style={styles.countText}>{0}</Text>
+              </View>
             </View>
-            <View style={styles.chatIconRow}>
-              <Chat style={styles.icon} />
-              <Text style={styles.countText}>{0}</Text>
-            </View>
+            <TouchableOpacity onPress={() => console.log('share..')}>
+              <Share />
+            </TouchableOpacity>
           </View>
-          <TouchableOpacity onPress={() => console.log('share..')}>
-            <Share />
-          </TouchableOpacity>
         </View>
-      </View>
-      {/* Comment section */}
-      <View>
-        <Thoughts height={61} width={106} style={styles.thoughtsIcons} />
-        <Text style={styles.shareThoughts}>Share Your Thoughts</Text>
-        <Text style={styles.beTheFirst}>Be the first to comment.</Text>
-          <View style={styles.commentBox}>
-            <View style={styles.profileBox}>
-              <Text style={styles.singleletter}>A</Text>
-            </View>
-
-            <TextInput
-              placeholder="Write a comment"
-              placeholderTextColor={'black'}
-              onChangeText={txt => console.log(txt)}
-              style={styles.commentInput}
-            />
-          </View>
-      </View>
+        {/* Comment section */}
+        <View style={{marginBottom:60}}>
+          <Thoughts height={61} width={106} style={styles.thoughtsIcons} />
+          <Text style={styles.shareThoughts}>Share Your Thoughts</Text>
+          <Text style={styles.beTheFirst}>Be the first to comment.</Text>
+        </View>
+        
       </KeyboardAwareScrollView>
-
+      
     </ScrollView>
+    <View style={[styles.commentBox,Platform.OS=="android"?{paddingBottom:10}:{paddingBottom:40}]}>
+          <View style={styles.profileBox}>
+            <Text style={styles.singleletter}>A</Text>
+          </View>
 
+          <TextInput
+            placeholder="Write a comment"
+            placeholderTextColor={'black'}
+            onChangeText={txt => console.log(txt)}
+            style={styles.commentInput}
+          />
+        </View>
+    </>
   );
 };
 

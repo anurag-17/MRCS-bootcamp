@@ -47,6 +47,10 @@ import SavedCreditCard from '../screens/AppSettings/SavedCreditCard/SavedCreditC
 import AppLanguage from '../screens/AppSettings/AppLanguage/AppLanguage';
 import EmailNotification from '../screens/AppSettings/EmailNotification/EmailNotification';
 import DeleteAccount from '../screens/AppSettings/DeleteAccount/DeleteAccount';
+import AboutApp from '../screens/AppSettings/AboutApp/AboutApp';
+import TermsPolicyWebView from '../screens/AppSettings/AboutApp/TermsPolicyWebView/TermsPolicyWebView';
+import AppDisplay from '../screens/AppSettings/AppDisplay/AppDisplay';
+import Groups from '../screens/Home/GroupsTab/Groups/Groups';
 
 const Stack = createNativeStackNavigator();
 
@@ -102,6 +106,10 @@ const AuthStack = ()=>{
              <Stack.Screen name='AppLanguage' component={AppLanguage} />
              <Stack.Screen name='EmailNotification' component={EmailNotification} />
              <Stack.Screen name='DeleteAccount' component={DeleteAccount} />
+             <Stack.Screen name='AboutApp' component={AboutApp} />
+             <Stack.Screen name='TermsPolicyWebView' component={TermsPolicyWebView} />
+             <Stack.Screen name='AppDisplay' component={AppDisplay} />
+
 
 
             {/* Notes Tab Screen */}
@@ -109,6 +117,10 @@ const AuthStack = ()=>{
             <Stack.Screen name='NotesSearch' component={NotesSearch}/>
             <Stack.Screen name='NotesTagScreen' component={NotesTagScreen}/>
             <Stack.Screen name='NotesPostScreen' component={NotesPostScreen}/>
+
+            {/* Groups Tab Screen */}
+            <Stack.Screen name='Groups' component={Groups}/>
+
 
         </Stack.Navigator>
     )

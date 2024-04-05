@@ -102,6 +102,11 @@ export const EmailIcon = require('./email.png')
 
 export {default as CreditCard} from './creditCard.svg'
 
+export {default as AboutAppIcon} from './aboutApp.svg'
 
+
+export {default as SearchIcon} from './searchIcon.svg'
+
+export {default as MemberPlus} from './memberPlus.svg'
 
 

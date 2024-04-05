@@ -3,11 +3,12 @@ import { Dimensions, ImageBackground, Text, TouchableOpacity, View,FlatList, Ani
 import { styles } from './styles';
 import ExamStudyCard from '../../../components/ExamStudyCard';
 import { blueTypeTextColor, grayD9, grayE8, grayOuterLine, secondaryTextColor } from '../../../theme/Colors';
+import { NavigationProp, useNavigation } from '@react-navigation/native';
 const {height, width} = Dimensions.get('window');
 
 const GroupTab = () => {
   const [activeSlide, setActiveSlide] = useState(0);
-
+  const navigation = useNavigation() as NavigationProp <any>
   const SLIDER_WIDTH = Dimensions.get('window').width + 30;
   const ITEM_WIDTH = Math.round(SLIDER_WIDTH * 0.7);
   const entries = [
@@ -67,7 +68,7 @@ const GroupTab = () => {
                 style={[styles.examNViewAllText, {color: secondaryTextColor}]}>
                 {'Exam Cohorts'}
               </Text>
-              <TouchableOpacity>
+              <TouchableOpacity onPress={()=>navigation.navigate('Groups')}>
                 <Text style={styles.examNViewAllText}>{'View All'}</Text>
               </TouchableOpacity>
             </View>

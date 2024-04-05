@@ -4,6 +4,7 @@ import {
   Platform,
   SafeAreaView,
   ScrollView,
+  StatusBar,
   StyleSheet,
   Text,
   TextInput,
@@ -36,10 +37,12 @@ const ForumCreateNewPost = () => {
       <Header
         type="white"
         titleStyle={styles.headerTitle}
+        containerStyle={ Platform.OS=='android'? {marginTop:35}:{}}
         title="New Post"
         isPost={postTitle.length > 0 ? true : false}
         onPost={() => null}
       />
+      <StatusBar barStyle={'dark-content'} />
       <View style={styles.nameRow}>
         <Text style={[styles.text14regular, {marginVertical: 5}]}>
           Posting as username

@@ -2,8 +2,10 @@ import React, {FC, useEffect, useState} from 'react';
 import {
   Alert,
   KeyboardAvoidingView,
+  Platform,
   SafeAreaView,
   ScrollView,
+  StatusBar,
   StyleSheet,
   Text,
   TextStyle,
@@ -85,9 +87,11 @@ const EditProfile = () => {
 
   return (
     <SafeAreaView style={styles.mainContainer}>
+      
       <Header
         type="white"
         titleStyle={styles.headerTitle}
+        containerStyle={[Platform.OS=='android'?{marginTop:30}:{}]}
         title="Edit Profile"
         subTitleStyle={{marginLeft: 30}}
         subTitle="MRCS Boot Camp UK"
@@ -95,6 +99,7 @@ const EditProfile = () => {
         isPost={isChanged}
         onPost={() => navigation.goBack()}
       />
+      <StatusBar  barStyle={'dark-content'}/>
       <KeyboardAwareScrollView
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{paddingBottom: 50}}>
