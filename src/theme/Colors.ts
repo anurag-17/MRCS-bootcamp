@@ -54,6 +54,9 @@ export const LightBlueADD = '#ADD4FF'
 export const logoutRed = '#EE2424'
 export const D2D6D9 = '#D2D6D9'
 
+export const orangeFD3D30 = '#FD3D30'
+
+export const blueDAE9FE = '#DAE9FE'
 
 
 

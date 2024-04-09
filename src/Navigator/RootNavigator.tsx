@@ -51,6 +51,8 @@ import AboutApp from '../screens/AppSettings/AboutApp/AboutApp';
 import TermsPolicyWebView from '../screens/AppSettings/AboutApp/TermsPolicyWebView/TermsPolicyWebView';
 import AppDisplay from '../screens/AppSettings/AppDisplay/AppDisplay';
 import Groups from '../screens/Home/GroupsTab/Groups/Groups';
+import ViewGroups from '../screens/Home/GroupsTab/ViewGroups/ViewGroups';
+import MembersScreenTab from '../screens/Home/GroupsTab/MembersScreenTab/MembersScreenTab';
 
 const Stack = createNativeStackNavigator();
 
@@ -120,6 +122,8 @@ const AuthStack = ()=>{
 
             {/* Groups Tab Screen */}
             <Stack.Screen name='Groups' component={Groups}/>
+            <Stack.Screen name='ViewGroups' component={ViewGroups}/>
+            <Stack.Screen name='MembersScreenTab' component={MembersScreenTab} />
 
 
         </Stack.Navigator>

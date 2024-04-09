@@ -109,4 +109,14 @@ export {default as SearchIcon} from './searchIcon.svg'
 
 export {default as MemberPlus} from './memberPlus.svg'
 
+//Groups Icon
+
+export {default as InfoIcon} from  './group/infoIcon.svg'
+export {default as MediaIcon} from  './group/mediaIcon.svg'
+export {default as MemberIcon} from  './group/memberIcon.svg'
+export {default as PinIcon} from  './group/pinIcon.svg'
+export {default as PinnedPostIcon} from  './group/pinnedPostIcon.svg'
+
+
+
 

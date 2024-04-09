@@ -34,7 +34,8 @@ interface HeaderProps {
   containerStyle?: StyleProp<ViewStyle>;
   titleStyle?: TextStyle;
   subTitleStyle?: TextStyle;
-  type: 'blue' | 'white';
+  type: 'blue' | 'white' |'centerTitle';
+  imageUri? : string;
   isShare?: boolean;
   onPressShare?:()=>void;
   onPressDots?:()=>void;
@@ -75,7 +76,7 @@ const Header: React.FC<HeaderProps> = ({
   if (type == 'blue')
     return (
       <View style={[styles.mainContainer, containerStyle]}>
-        <View style={{flexDirection: 'row',flex:1}}>
+        <View style={{flexDirection: 'row', flex: 1}}>
           <TouchableOpacity
             onPress={() => navigation.goBack()}
             style={{alignSelf: 'center'}}>
@@ -83,11 +84,16 @@ const Header: React.FC<HeaderProps> = ({
           </TouchableOpacity>
 
           {isProfileImage ? (
-            <View style={{marginLeft: 30, alignSelf: 'center',flexDirection:'row'}}>
-              <View style={styles.profileImage}/>
-              <View style={{alignSelf:'center',}}>
+            <View
+              style={{
+                marginLeft: 30,
+                alignSelf: 'center',
+                flexDirection: 'row',
+              }}>
+              <View style={styles.profileImage} />
+              <View style={{alignSelf: 'center'}}>
                 <Text style={[styles.title, titleStyle]}>{title}</Text>
-                <Text style={[styles.mrcsText,subTitleStyle]}>{subTitle}</Text>
+                <Text style={[styles.mrcsText, subTitleStyle]}>{subTitle}</Text>
               </View>
             </View>
           ) : (
@@ -97,6 +103,9 @@ const Header: React.FC<HeaderProps> = ({
             </View>
           )}
         </View>
+        {isLogo && (
+          <BootCampRoundLogo style={{alignSelf: 'center', marginLeft: 20}} />
+        )}
         {isShare && (
           <TouchableOpacity
             style={{alignSelf: 'center'}}
@@ -108,46 +117,86 @@ const Header: React.FC<HeaderProps> = ({
             />
           </TouchableOpacity>
         )}
-        <View style={{alignSelf:'center',flexDirection:'row'}}>
-        {onPressEditBoard && (
-          <TouchableOpacity style={{alignSelf: 'center'}} onPress={onPressEditBoard}>
-            <Image source={EditBoard} style={{alignSelf:'center',height:20,width:20,marginRight:30}} />
-          </TouchableOpacity>
-        )}
-        {isThreeDots && (
-          <TouchableOpacity style={{alignSelf: 'center'}} onPress={onPressDots}>
-            <ThreeDotsWhite
-              fill={'white'}
-              height={16}
-              width={16}
+        <View style={{alignSelf: 'center', flexDirection: 'row'}}>
+          {onPressEditBoard && (
+            <TouchableOpacity
               style={{alignSelf: 'center'}}
-            />
-          </TouchableOpacity>
-        )}
-        {onPressSettings && (
-          <TouchableOpacity style={{alignSelf: 'center'}} onPress={onPressSettings}>
-            <SettingsWhite
-              fill={'white'}
-              height={16}
-              width={16}
+              onPress={onPressEditBoard}>
+              <Image
+                source={EditBoard}
+                style={{
+                  alignSelf: 'center',
+                  height: 20,
+                  width: 20,
+                  marginRight: 30,
+                }}
+              />
+            </TouchableOpacity>
+          )}
+          {isThreeDots && (
+            <TouchableOpacity
               style={{alignSelf: 'center'}}
-            />
-          </TouchableOpacity>
-        )}
-        {onPost && (
-          <TouchableOpacity
-            disabled={!isPost}
-            style={{alignSelf: 'center'}}
-            onPress={onPost}>
-            <Text style={{color:'white',fontFamily:Fonts.POPPINS_BOLD}}>
-              {postText}
-            </Text>
-          </TouchableOpacity>
-        )}
+              onPress={onPressDots}>
+              <ThreeDotsWhite
+                fill={'white'}
+                height={16}
+                width={16}
+                style={{alignSelf: 'center'}}
+              />
+            </TouchableOpacity>
+          )}
+          {onPressSettings && (
+            <TouchableOpacity
+              style={{alignSelf: 'center'}}
+              onPress={onPressSettings}>
+              <SettingsWhite
+                fill={'white'}
+                height={16}
+                width={16}
+                style={{alignSelf: 'center'}}
+              />
+            </TouchableOpacity>
+          )}
+          {onPost && (
+            <TouchableOpacity
+              disabled={!isPost}
+              style={{alignSelf: 'center'}}
+              onPress={onPost}>
+              <Text style={{color: 'white', fontFamily: Fonts.POPPINS_BOLD}}>
+                {postText}
+              </Text>
+            </TouchableOpacity>
+          )}
         </View>
       </View>
     );
-  else {
+  else if (type == 'centerTitle') {
+    return (
+      <View style={[styles.mainContainer, containerStyle]}>
+        <View style={{flexDirection: 'row', flex: 1}}>
+          <TouchableOpacity
+            onPress={() => navigation.goBack()}
+            style={{alignSelf: 'center'}}>
+            <WhiteBackArrow style={styles.backArrow} />
+          </TouchableOpacity>
+            <View style={styles.imageUri} />
+            <Text style={[styles.title, titleStyle]}>{title}</Text>
+          </View>
+          {onPressSettings && (
+            <TouchableOpacity
+              style={{alignSelf: 'center'}}
+              onPress={onPressSettings}>
+              <SettingsWhite
+                fill={'white'}
+                height={16}
+                width={16}
+                style={{alignSelf: 'center'}}
+              />
+            </TouchableOpacity>
+          )}
+      </View>
+    );
+  } else {
     return (
       <View style={[styles.whiteMainContainer, containerStyle]}>
         <View style={{flexDirection: 'row'}}>
@@ -197,7 +246,11 @@ const Header: React.FC<HeaderProps> = ({
             disabled={!isPost}
             style={{alignSelf: 'center'}}
             onPress={onPost}>
-            <Text style={[isPost ? {color: DarkBlue} : {color: grayD9},{fontFamily:Fonts.POPPINS_BOLD}]}>
+            <Text
+              style={[
+                isPost ? {color: DarkBlue} : {color: grayD9},
+                {fontFamily: Fonts.POPPINS_BOLD},
+              ]}>
               {isPublish ? 'Publish' : postText ?? 'Post'}
             </Text>
           </TouchableOpacity>
@@ -230,6 +283,14 @@ const styles = StyleSheet.create({
     fontFamily: Fonts.POPPINS_MEDIUM,
     fontSize: 14,
     color: white,
+  },
+  imageUri:{
+    height:31,
+    width:31,
+    borderRadius:50,
+    alignSelf:'center',
+    marginLeft:20,
+    backgroundColor:grayD9
   },
   mrcsText: {
     fontFamily: Fonts.POPPINS_LIGHT,
