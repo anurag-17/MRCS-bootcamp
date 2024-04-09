@@ -117,6 +117,13 @@ export {default as MemberIcon} from  './group/memberIcon.svg'
 export {default as PinIcon} from  './group/pinIcon.svg'
 export {default as PinnedPostIcon} from  './group/pinnedPostIcon.svg'
 
+export const EditPencil = require('./group/pencil.png')
+
+export const AddPlus = require('./group/add.png')
+export const Clock = require('./group/clock.png')
+export const PadLock = require('./group/padlock.png')
+export const VisibleEye = require('./group/visible.png')
+
 
 
 

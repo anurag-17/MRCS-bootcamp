@@ -56,7 +56,7 @@ const Profile = () => {
         isAdmin
         followersCount="6"
         followingCount="2"
-        timeText=". Active Now"
+        timeText=" Active Now"
         onPressSubscription={() => navigation.navigate('BadgesScreen',{isAll:false,profileName:'Myaat'})}
         onPressFollowers={()=>navigation.navigate('Followers')}
       />

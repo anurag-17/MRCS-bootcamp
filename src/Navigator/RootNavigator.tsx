@@ -53,6 +53,10 @@ import AppDisplay from '../screens/AppSettings/AppDisplay/AppDisplay';
 import Groups from '../screens/Home/GroupsTab/Groups/Groups';
 import ViewGroups from '../screens/Home/GroupsTab/ViewGroups/ViewGroups';
 import MembersScreenTab from '../screens/Home/GroupsTab/MembersScreenTab/MembersScreenTab';
+import AddCreditCard from '../screens/AppSettings/SavedCreditCard/AddCreditCard/AddCreditCard';
+import AboutGroup from '../screens/Home/GroupsTab/AboutGroup/AboutGroup';
+import Files from '../screens/Home/GroupsTab/Files/Files';
+import Media from '../screens/Home/GroupsTab/Media/Media';
 
 const Stack = createNativeStackNavigator();
 
@@ -111,6 +115,8 @@ const AuthStack = ()=>{
              <Stack.Screen name='AboutApp' component={AboutApp} />
              <Stack.Screen name='TermsPolicyWebView' component={TermsPolicyWebView} />
              <Stack.Screen name='AppDisplay' component={AppDisplay} />
+             <Stack.Screen name='AddCreditCard' component={AddCreditCard} />
+
 
 
 
@@ -124,6 +130,10 @@ const AuthStack = ()=>{
             <Stack.Screen name='Groups' component={Groups}/>
             <Stack.Screen name='ViewGroups' component={ViewGroups}/>
             <Stack.Screen name='MembersScreenTab' component={MembersScreenTab} />
+            <Stack.Screen name='AboutGroup' component={AboutGroup}/>
+            <Stack.Screen name='Files' component={Files}/>
+            <Stack.Screen name='Media' component={Media}/>
+
 
 
         </Stack.Navigator>

@@ -45,7 +45,7 @@ const ForumSearchPost = () => {
 
   const navigation = useNavigation();
   const [searchText, setSearchText] = useState('');
-  const [categorButton, setCategorButton] = useState('All');
+  const [categoryButton, setCategoryButton] = useState('All');
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [selctedIndex, setSelctedIndex] = useState(0);
 
@@ -82,25 +82,25 @@ const ForumSearchPost = () => {
       <View style={styles.btnRow}>
         <CustomButton
           buttonStyle={[
-            categorButton == 'All' ? styles.altButtonStyle : styles.buttonStyle,
+            categoryButton == 'All' ? styles.altButtonStyle : styles.buttonStyle,
             {marginRight: 10},
           ]}
           textStyle={[
-            categorButton == 'All' ? styles.altBtnTexStyle : styles.btnTexStyle,
+            categoryButton == 'All' ? styles.altBtnTexStyle : styles.btnTexStyle,
           ]}
-          onPress={() => setCategorButton('All')}
+          onPress={() => setCategoryButton('All')}
           title="All Categories"
           validate={false}
           isTouchableHighLight={true}
         />
         <CustomButton
           buttonStyle={[
-            categorButton == 'Gen' ? styles.altButtonStyle : styles.buttonStyle,
+            categoryButton == 'Gen' ? styles.altButtonStyle : styles.buttonStyle,
           ]}
           textStyle={[
-            categorButton == 'Gen' ? styles.altBtnTexStyle : styles.btnTexStyle,
+            categoryButton == 'Gen' ? styles.altBtnTexStyle : styles.btnTexStyle,
           ]}
-          onPress={() => setCategorButton('Gen')}
+          onPress={() => setCategoryButton('Gen')}
           title="General Disscussion"
           validate={false}
           isTouchableHighLight={true}

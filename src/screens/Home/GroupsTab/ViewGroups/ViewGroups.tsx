@@ -38,12 +38,12 @@ const ViewGroups = () => {
       <View style={styles.flexBtwn}>
         <TopIconButton
           title="Media"
-          onPress={() => console.log('o ,,')}
+          onPress={() => _gotoScreen('Media')}
           children={<MediaIcon style={styles.topButtonIcon} />}
         />
         <TopIconButton
           title="Files"
-          onPress={() => console.log('o ,,')}
+          onPress={() => _gotoScreen('Files')}
           children={<PinIcon style={styles.topButtonIcon} />}
         />
         <TopIconButton
@@ -53,7 +53,7 @@ const ViewGroups = () => {
         />
         <TopIconButton
           title="About"
-          onPress={() => console.log('o ,,')}
+          onPress={() => _gotoScreen('AboutGroup')}
           children={<InfoIcon style={styles.topButtonIcon} />}
         />
       </View>

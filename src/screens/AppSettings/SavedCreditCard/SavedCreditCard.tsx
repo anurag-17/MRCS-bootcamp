@@ -5,8 +5,10 @@ import { DarkBlue, secondaryTextColor } from '../../../theme/Colors'
 import Header from '../../../components/Header'
 import { CreditCard } from '../../../assets/images'
 import CustomButton from '../../../components/CustomButton'
+import { NavigationProp, useNavigation } from '@react-navigation/native'
 
 const SavedCreditCard = () => {
+  const navigation  = useNavigation() as NavigationProp<any>
   return (
    <View style={styles.mainContanier}>
     <Header
@@ -25,7 +27,7 @@ const SavedCreditCard = () => {
         <CustomButton
         buttonStyle={{backgroundColor:DarkBlue,paddingHorizontal:30,marginVertical:30}}
         textStyle={{fontFamily:Fonts.POPPINS_SEMIBOLD,}}
-        onPress={() => null}
+        onPress={() => navigation.navigate('AddCreditCard')}
         title="Add Card"
         validate={false}
       />
