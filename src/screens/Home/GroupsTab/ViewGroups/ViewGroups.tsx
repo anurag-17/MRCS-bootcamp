@@ -32,7 +32,7 @@ const ViewGroups = () => {
         title={'July 2024 Exam Cohort'}
         titleStyle={styles.headerTitle}
         containerStyle={styles.headerStyle}
-        onPressSettings={() => null}
+        onPressSettings={() => navigation.navigate('GroupDashBoard')}
       />
 
       <View style={styles.flexBtwn}>

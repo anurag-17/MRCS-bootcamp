@@ -33,7 +33,7 @@ import EditProfileTextInput from '../../../components/EditProfileTextInput/EditP
 import LeftRightText from '../../../components/LeftRightText';
 import {NavigationProp, useNavigation} from '@react-navigation/native';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
-import ToggleSwitch from 'toggle-switch-react-native';
+import { Switch } from 'react-native-ui-lib';
 
 const EditProfile = () => {
   const [profileName, setProfileName] = useState('user@gmail.com');
@@ -233,12 +233,11 @@ const EditProfile = () => {
               Members can see and interact with you
             </Text>
             <View style={{marginTop: -15}}>
-              <ToggleSwitch
-                isOn={publicToggle}
+              <Switch
+                value={publicToggle}
                 onColor={DarkBlue}
                 offColor={DDDDDD}
-                size="medium"
-                onToggle={isOn => {
+                onValueChange={isOn => {
                   if (isOn) {
                     _privateProfileAlert();
                   } else {

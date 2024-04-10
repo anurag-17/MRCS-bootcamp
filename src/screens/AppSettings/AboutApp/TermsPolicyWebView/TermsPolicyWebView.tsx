@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import {
     ActivityIndicator,
+  Platform,
   SafeAreaView,
   StyleSheet,
   Text,
@@ -30,8 +31,8 @@ const TermsPolicyWebView = () => {
 
   return (
     <SafeAreaView style={styles.mainContainer}>
-      <View style={styles.headerRow}>
-        <TouchableOpacity onPress={() => navigation.goBack()}>
+      <View style={[styles.headerRow, Platform.OS==="android"?{marginTop:35}:{}]}>
+        <TouchableOpacity onPress={() => navigation.goBack()} >
           <BackArrow style={{ alignSelf: 'center' }} />
         </TouchableOpacity>
         <Text style={styles.title}>{title}</Text>

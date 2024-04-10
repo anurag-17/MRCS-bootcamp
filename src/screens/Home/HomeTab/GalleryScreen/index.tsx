@@ -28,7 +28,7 @@ const GalleryScreen = () => {
       <StatusBar translucent backgroundColor={DarkBlue} />
       <Header
         type="blue"
-        title={'Gallery'}
+        title={'Gallery dd'}
         titleStyle={{ alignSelf: 'center', marginTop: 15 }}
         containerStyle={styles.headerStyle}
         isShare={true}
@@ -44,6 +44,7 @@ const GalleryScreen = () => {
       <MasonryList
         data={[1, 2, 3, 4, 5, 6, 7, 8]}
         numColumns={toggle ? 1 : 2}
+        contentContainerStyle={{paddingBottom:50}}
         showsVerticalScrollIndicator={false}
         loading={false}
         renderItem={({ item, index }) => (
@@ -53,6 +54,7 @@ const GalleryScreen = () => {
             resizeMode="cover"
           />
         )}
+       
       />
     </View>
   );

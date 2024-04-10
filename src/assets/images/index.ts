@@ -124,6 +124,9 @@ export const Clock = require('./group/clock.png')
 export const PadLock = require('./group/padlock.png')
 export const VisibleEye = require('./group/visible.png')
 
+export const CirclePlus = require('./circlePlus.png')
+export const NotifciationIcon = require('./notificationIcon.png')
 
 
 
+export {default as AddMemberIcon} from  './addMember.svg'

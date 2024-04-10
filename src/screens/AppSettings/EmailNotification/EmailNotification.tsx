@@ -13,7 +13,7 @@ import {
 } from '../../../theme/Colors';
 import Header from '../../../components/Header';
 import CustomButton from '../../../components/CustomButton';
-import ToggleSwitch from 'toggle-switch-react-native';
+import { Switch } from 'react-native-ui-lib';
 
 interface DataItem {
     id: string;
@@ -78,10 +78,13 @@ const EmailNotification = () => {
 
   const toggleSwitch = (sectionIndex: number, itemIndex: number) => {
     const newData = [...data];
+    console.log("sectionIndex : ",sectionIndex)
+    console.log('itemIndex : ',)
     newData[sectionIndex].data[itemIndex].status = !newData[sectionIndex].data[itemIndex].status;
     setData(newData);
   };
 
+  const [isToggle , setIsToggle  ] = useState(false);
   const renderItem = ({ item, index, section }: { item: DataItem; index: number; section: any }) => {
     return (
       <View
@@ -93,12 +96,12 @@ const EmailNotification = () => {
 
         }}>
         <Text style={styles.text13LightSecondary}>{item.name}</Text>
-        <ToggleSwitch
-          isOn={item.status}
+
+        <Switch
+          value={item.status}
           onColor={DarkBlue}
           offColor={'rgba(0,33,71,0.1)'}
-          size="medium"
-          onToggle={() => toggleSwitch(data.findIndex(sectionItem => sectionItem === section), index)}
+          onValueChange={() => toggleSwitch(data.findIndex(sectionItem => sectionItem === section), index)}
         />
       </View>
     );
@@ -133,17 +136,20 @@ const EmailNotification = () => {
       <FlatList
       data={data}
       keyExtractor={(item, index) => item.title + index.toString()}
-      renderItem={({ item }) => (
+      renderItem={({ item ,index}) => {
+        const section = item
+        return(
         <View style={styles.sectionBox}>
           <Text style={styles.text14SemiP}>{item.title}</Text>
+          
           <FlatList
             data={item.data}
             keyExtractor={(item, index) => item.id + index.toString()}
-            renderItem={({ item, index }) => renderItem({ item, index })}
+            renderItem={({ item, index }) => renderItem({ item, index,section })}
             showsVerticalScrollIndicator={false}
           />
         </View>
-      )}
+      )}}
       ListFooterComponent={()=><View style={{marginBottom:60}}/>}
       showsVerticalScrollIndicator={false}
     />

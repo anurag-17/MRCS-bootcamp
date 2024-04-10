@@ -57,6 +57,9 @@ import AddCreditCard from '../screens/AppSettings/SavedCreditCard/AddCreditCard/
 import AboutGroup from '../screens/Home/GroupsTab/AboutGroup/AboutGroup';
 import Files from '../screens/Home/GroupsTab/Files/Files';
 import Media from '../screens/Home/GroupsTab/Media/Media';
+import GroupDashBoard from '../screens/Home/GroupsTab/GroupDashBoard/GroupDashBoard';
+import PushNotificationScreen from '../screens/AppSettings/PushNotification/PushNotificationScreen';
+import AddMembers from '../screens/Home/GroupsTab/GroupDashBoard/AddMembers/AddMembers';
 
 const Stack = createNativeStackNavigator();
 
@@ -111,6 +114,8 @@ const AuthStack = ()=>{
              <Stack.Screen name='SavedCreditCard' component={SavedCreditCard} />
              <Stack.Screen name='AppLanguage' component={AppLanguage} />
              <Stack.Screen name='EmailNotification' component={EmailNotification} />
+             <Stack.Screen name='PushNotificationScreen' component={PushNotificationScreen} />
+
              <Stack.Screen name='DeleteAccount' component={DeleteAccount} />
              <Stack.Screen name='AboutApp' component={AboutApp} />
              <Stack.Screen name='TermsPolicyWebView' component={TermsPolicyWebView} />
@@ -133,6 +138,9 @@ const AuthStack = ()=>{
             <Stack.Screen name='AboutGroup' component={AboutGroup}/>
             <Stack.Screen name='Files' component={Files}/>
             <Stack.Screen name='Media' component={Media}/>
+            <Stack.Screen name='GroupDashBoard' component={GroupDashBoard}/>
+            <Stack.Screen name='AddMembers' component={AddMembers}/>
+
 
 
 

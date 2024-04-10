@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {SafeAreaView, StyleSheet, Text, TextInput, View} from 'react-native';
+import {Platform, SafeAreaView, StatusBar, StyleSheet, Text, TextInput, View} from 'react-native';
 import Header from '../../../components/Header';
 import Fonts from '../../../assets/Fonts';
 import {white, DarkBlue, secondaryTextColor, grayE8EB, LightGrayColor, grayOuterLine, gray8E} from '../../../theme/Colors';
@@ -10,6 +10,7 @@ const EditContent = () => {
 
   return (
     <SafeAreaView style={styles.mainContainer}>
+      <StatusBar barStyle={'dark-content'}/>
       <Header
         type="white"
         titleStyle={styles.headerTitle}
@@ -17,6 +18,7 @@ const EditContent = () => {
         isPublish={true}
         isPost={true}
         onPost={() => null}
+        containerStyle={ Platform.OS=='android'? {marginTop:35}:{}}
       />
     <View>
 

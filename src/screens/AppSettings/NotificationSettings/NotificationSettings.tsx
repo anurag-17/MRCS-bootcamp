@@ -13,19 +13,19 @@ const NotificationSettings = () => {
   const NOTIFICATION = [
     {
       name: 'Push',
-      icon:PushIcon,
-      onPress:()=>null
-  
+      icon: PushIcon,
+      onPress: () => {
+        _goTo('PushNotificationScreen');
+      },
     },
     {
       name: 'Email',
-      icon:EmailIcon,
-      onPress:()=>{
-        _goTo('EmailNotification')
-      }
+      icon: EmailIcon,
+      onPress: () => {
+        _goTo('EmailNotification');
+      },
     },
-    
-  ]
+  ];
   return (
     <View style={styles.mainContainer}>
     <StatusBar translucent backgroundColor={DarkBlue} />
