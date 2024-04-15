@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, Text, TouchableOpacity, TextInput, ViewStyle} from 'react-native';
+import {StyleSheet, Text, TouchableOpacity, TextInput, ViewStyle, TextStyle} from 'react-native';
 import {LightPrimaryTextColor, dividerLineColor} from '../../theme/Colors';
 import Fonts from '../../assets/Fonts';
 import {Search} from '../../assets/images';
@@ -7,10 +7,12 @@ import {Search} from '../../assets/images';
 interface SearchCustomProps {
   onPress: () => void;
   titleText?: string;
+  titleTextStyle?:TextStyle;
   isSearch?: boolean;
   containerStyle?:ViewStyle
   onChangeText?: (text: string) => void;
   onCancel?: () => void;
+  placeholderTextColor?:string
 }
 
 const SearchCustom: React.FC<SearchCustomProps> = ({
@@ -19,7 +21,9 @@ const SearchCustom: React.FC<SearchCustomProps> = ({
   isSearch = false,
   onChangeText,
   onCancel,
-  containerStyle
+  containerStyle,
+  titleTextStyle,
+  placeholderTextColor
 }) => {
   return (
     <TouchableOpacity
@@ -29,13 +33,14 @@ const SearchCustom: React.FC<SearchCustomProps> = ({
       <Search style={styles.searchIcon} />
       {isSearch ? (
         <TextInput
-          style={styles.searchText}
+          style={[styles.searchText,titleTextStyle]}
           placeholder={titleText ?? 'Search'}
+          placeholderTextColor={placeholderTextColor}
           clearButtonMode="always"
           onChangeText={onChangeText}
         />
       ) : (
-        <Text style={styles.searchText}>{titleText ?? 'Search'}</Text>
+        <Text style={[styles.searchText,titleTextStyle]}>{titleText ?? 'Search'}</Text>
       )}
       {onCancel && (
         <TouchableOpacity onPress={onCancel} style={{alignSelf:'center',justifyContent:'center'}}>

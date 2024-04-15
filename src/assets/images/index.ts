@@ -130,3 +130,6 @@ export const NotifciationIcon = require('./notificationIcon.png')
 
 
 export {default as AddMemberIcon} from  './addMember.svg'
+export const ShareLinkIcon = require('./link.png')
+
+export {default as CatNap} from './catNap.svg'

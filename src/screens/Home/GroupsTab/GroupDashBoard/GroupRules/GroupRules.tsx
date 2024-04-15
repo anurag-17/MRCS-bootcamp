@@ -6,26 +6,26 @@ import Header from '../../../../../components/Header';
 import { CatNap } from '../../../../../assets/images';
 import { Button } from 'react-native-ui-lib';
 
-const TopicsScreen = () => {
+const GroupRules = () => {
   return (
     <View style={styles.mainContainer}>
       <Header
         type="blue"
-        title={'Topics'}
+        title={'Group Rules'}
         titleStyle={styles.headerTitle}
         containerStyle={styles.headerStyle}
       />
       <View style={{justifyContent:'center',flex:1,alignItems:'center'}}>
       <CatNap />
-      <Text style={styles.h1}>Add a Topic</Text>
-      <Text style={styles.h3}>Add a new topoc to organize posts in the group feed.</Text>
-      <Button activeOpacity={0.5} size={'medium'} label={'+  New Topic'} style={{backgroundColor:DarkBlue,marginTop:30}}  labelStyle={{fontFamily:Fonts.POPPINS_SEMIBOLD,fontWeight:'600'}}/>
+      <Text style={styles.h1}>Create Rules for Your Group</Text>
+      <Text style={styles.h3}>Add a few guidelines for your gruop to ensure members post responsibly and respectfully.</Text>
+    <Button activeOpacity={0.5} size={'medium'} label={'+  Add Group Rules'} style={{backgroundColor:DarkBlue,marginTop:30}}  labelStyle={{fontFamily:Fonts.POPPINS_SEMIBOLD,fontWeight:'600'}}/>
       </View>
     </View>
   );
 };
 
-export default TopicsScreen;
+export default GroupRules;
 
 const styles = StyleSheet.create({
   mainContainer: {

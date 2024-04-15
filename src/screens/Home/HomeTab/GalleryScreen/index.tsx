@@ -28,7 +28,7 @@ const GalleryScreen = () => {
       <StatusBar translucent backgroundColor={DarkBlue} />
       <Header
         type="blue"
-        title={'Gallery dd'}
+        title={'Gallery'}
         titleStyle={{ alignSelf: 'center', marginTop: 15 }}
         containerStyle={styles.headerStyle}
         isShare={true}

@@ -73,7 +73,7 @@ const AddCreditCard = () => {
         placeholderTextColor={grayD9}
         value={formattedCreditCardNumber}
         onChangeText={handleCreditCardChange}
-        validationMessage={["Enter a valid car number"]}
+        validationMessage={["Enter a valid card number"]}
         enableErrors
         validationMessageStyle={styles.errorMessage}
         validateOnChange={true}

@@ -39,11 +39,11 @@ const GroupDashBoard = () => {
     },
     {
       name: 'Permissions',
-      onPress: () => null,
+      onPress: () => _goTo('MemberPermissions'),
     },
     {
       name: 'Membership questions',
-      onPress: () => null,
+      onPress: () => _goTo("MembershipQuestions"),
     },
   ];
 
@@ -54,7 +54,7 @@ const GroupDashBoard = () => {
     },
     {
       name: 'Rules',
-      onPress: () => null,
+      onPress: () => _goTo('GroupRules'),
     },
     {
       name: 'Tabs',
@@ -66,7 +66,7 @@ const GroupDashBoard = () => {
     },
     {
       name: 'Topics',
-      onPress: () => null,
+      onPress: () => _goTo('TopicsScreen'),
     },
   ];
 
@@ -168,7 +168,7 @@ const GroupDashBoard = () => {
               </View>
             </View>
           </TouchableOpacity>
-          <TouchableOpacity style={{flexDirection: 'row'}} onPress={()=>_goTo('AddMembers')}>
+          <TouchableOpacity style={{flexDirection: 'row'}} onPress={()=>_goTo('InviteMembers')}>
             <Image source={CirclePlus} style={styles.circlePlus} />
             <Text style={styles.itemName}>{'Invite Members'}</Text>
           </TouchableOpacity>

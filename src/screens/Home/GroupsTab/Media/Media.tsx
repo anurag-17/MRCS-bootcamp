@@ -72,7 +72,7 @@ const Media = () => {
       <View style={{flex:1,justifyContent:'center'}}>
         <Text style={styles.uploadText}>No Group Media Yet</Text>
         <Text style={styles.lighText}>
-         Start a conersation by attaching media to your post.
+         Start a conversation by attaching media to your post.
         </Text>
 
         <CustomImageButton

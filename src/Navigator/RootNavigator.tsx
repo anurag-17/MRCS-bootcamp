@@ -59,7 +59,12 @@ import Files from '../screens/Home/GroupsTab/Files/Files';
 import Media from '../screens/Home/GroupsTab/Media/Media';
 import GroupDashBoard from '../screens/Home/GroupsTab/GroupDashBoard/GroupDashBoard';
 import PushNotificationScreen from '../screens/AppSettings/PushNotification/PushNotificationScreen';
+import InviteMembers from '../screens/Home/GroupsTab/GroupDashBoard/InviteMembers/InviteMembers';
 import AddMembers from '../screens/Home/GroupsTab/GroupDashBoard/AddMembers/AddMembers';
+import MemberPermissions from '../screens/Home/GroupsTab/GroupDashBoard/MemberPermissions/MemberPermissions';
+import MembershipQuestions from '../screens/Home/GroupsTab/GroupDashBoard/MembershipQuestions/MembershipQuestions';
+import GroupRules from '../screens/Home/GroupsTab/GroupDashBoard/GroupRules/GroupRules';
+import TopicsScreen from '../screens/Home/GroupsTab/GroupDashBoard/TopicScreen/TopicsScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -139,8 +144,12 @@ const AuthStack = ()=>{
             <Stack.Screen name='Files' component={Files}/>
             <Stack.Screen name='Media' component={Media}/>
             <Stack.Screen name='GroupDashBoard' component={GroupDashBoard}/>
+            <Stack.Screen name='InviteMembers' component={InviteMembers}/>
             <Stack.Screen name='AddMembers' component={AddMembers}/>
-
+            <Stack.Screen name='MemberPermissions' component={MemberPermissions}/>
+            <Stack.Screen name='MembershipQuestions' component={MembershipQuestions}/>
+            <Stack.Screen name='GroupRules' component={GroupRules}/>
+            <Stack.Screen name='TopicsScreen' component={TopicsScreen}/>
 
 
 
